@@ -33,8 +33,12 @@ https://templatemo.com/tm-559-zay-shop
                 <div>
                 </div>
                 <div>
-                <button>회원가입</button>
-                <button>로그인</button>
+                	<h3>
+                		<a href = "login.html">회원가입</a>
+                	</h3>
+                	<h3>	
+                		<a href = "join.html">로그인</a>
+                	</h3>
                 </div>
             </div>
         </div>
