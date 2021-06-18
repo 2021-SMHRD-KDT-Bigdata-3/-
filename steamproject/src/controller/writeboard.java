@@ -49,6 +49,7 @@ public class writeboard extends HttpServlet {
 			System.out.println("파일 업로드 실패");
 		}
 
+		
 	}
 
 }
