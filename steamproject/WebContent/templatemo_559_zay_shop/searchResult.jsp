@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -21,8 +23,8 @@
                 <div>
                 </div>
                 <div>
-                <button class="btn btn-success" type="button" onclick="location.href='join.html' ">È¸¿ø°¡ÀÔ</button>
-                <button class="btn btn-success" type="button" onclick="location.href='login.html' ">·Î±×ÀÎ</button>
+                <button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">íšŒì›ê°€ì…</button>
+                <button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">ë¡œê·¸ì¸</button>
                 </div>
             </div>
         </div>
@@ -30,7 +32,7 @@
      <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
         </div>

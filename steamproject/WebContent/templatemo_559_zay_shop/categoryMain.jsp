@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <title>Zay Shop - Product Listing Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,11 +25,16 @@ TemplateMo 559 Zay Shop
 https://templatemo.com/tm-559-zay-shop
 
 -->
+<style>
+	.row2{
+		justify-content: center;
+	}
+</style>
 </head>
 
 <body>
     <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+   <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
                 <div class="container text-light">
               		<div>
               		</div>
@@ -58,16 +63,16 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp" ">추천</a>
+                            <a class="nav-link" href="recom.jsp">추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp">카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
+                            <a class="nav-link" href="popChart.jsp">인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.jsp" >게시판</a>
+                            <a class="nav-link" href="board.jsp">게시판</a>
                         </li>
                     </ul>
                 </div>
@@ -84,6 +89,7 @@ https://templatemo.com/tm-559-zay-shop
                     <a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" >
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
+                   
                 </div>
             </div>
 
@@ -110,87 +116,61 @@ https://templatemo.com/tm-559-zay-shop
 
 
 
-    <!-- Start Banner Hero -->
-    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/steam.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>스팀게임</b> 추천 서비스</h1>
-                                <h3 class="h2">저희 SUGE는 사용자의 성향을 분석해 게임을 추천 해드립니다!</h3>
-                                <p>
-                                상단의 추천 버튼을 눌러 게임을 추천받아 보세요!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+	
+
+    <!-- Start Brands -->
+    <section class="bg-light py-5">
+        <div class="container my-4">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1" align="center">카테고리</h1>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/machine.png" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">머신러닝 기반 학습</h1>
-                                <h3 class="h2">게임을 추천해주는 머신러닝</h3>
-                                <p>
-                                    100개의 게임중 20개를 고르면 그것의 특성에 기반해 공통점을 찾아 게임을 추천해 드립니다.
-                                </p>
+            <div class="row text-center py-3">
+                <div class="col-lg-9 m-auto tempaltemo-carousel">
+                    <div class="row d-flex flex-row">
+	
+                        <!--Carousel Wrapper-->
+                        <div class="col">
+                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
+
+                                    <div class="carousel-item active">
+                                        <div class="row row2">
+                                            <div class="col-3 p-md-5">
+                                                <a href="category.jsp"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                            </div>
+										</div>
+                                        <div class="row row2">
+                                            
+                                            <div class="col-3 p-md-5">
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            </div>
+                                             <div class="col-3 p-md-5">
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            </div>
+                                             <div class="col-3 p-md-5">
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+
+                                <!--End Slides-->
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_03.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">비지도학습 이용</h1>
-                                <h3 class="h2">배우진 않았지만 사용했습니다.</h3>
-                                <p>
-                                	PCA를 활용한 비지도학습을 사용했습니다 !
-                                </p>
-                            </div>
-                        </div>
+
+                        
+                        <!--End Controls-->
                     </div>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-            <i class="fas fa-chevron-left"></i>
-        </a>
-        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-            <i class="fas fa-chevron-right"></i>
-        </a>
-    </div>
-    <!-- End Banner Hero -->
-
-
-    <!-- Start Categories of The Month -->
-
-    <!-- End Categories of The Month -->
-
-
-    <!-- Start Featured Product -->
-
-    <!-- End Featured Product -->
+    </section>
+    <!--End Brands-->
 
 
     <!-- Start Footer -->
@@ -199,11 +179,11 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            123 Consectetur at ligula 10660
+                            광주CGI센터
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
@@ -211,7 +191,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com">재웅@company.com</a>
                         </li>
                     </ul>
                 </div>
@@ -276,10 +256,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
-                        <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                        </p>
+                        
                     </div>
                 </div>
             </div>

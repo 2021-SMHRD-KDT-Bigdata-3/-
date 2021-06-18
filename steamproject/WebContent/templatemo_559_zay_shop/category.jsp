@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,15 +35,15 @@ https://templatemo.com/tm-559-zay-shop
               		<div>
               		</div>
                 	<div>
-                		<button class="btn btn-success" type="button" onclick="location.href='join.html' ">회원가입</button>
-                		<button class="btn btn-success" type="button" onclick="location.href='login.html' ">로그인</button>
+                		<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
                 	</div>
                 </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -52,16 +55,16 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.html" style="color:#59ab6e; font-weight: 900;">추천</a>
+                            <a class="nav-link" href="recom.jsp" >추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.html" style="color:#59ab6e; font-weight: 900;">카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.html" style="color:#59ab6e; font-weight: 900;">인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.html" style="color:#59ab6e; font-weight: 900;">게시판</a>
+                            <a class="nav-link" href="board.jsp" >게시판</a>
                         </li>
                     </ul>
                 </div>
@@ -112,7 +115,7 @@ https://templatemo.com/tm-559-zay-shop
                 <!--<h1 class="h2 pb-4">카테고리</h1>-->
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="category.html">
+                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="category.jsp">
                             카테고리
                         </a>
                         <ul class="collapse show list-unstyled pl-3 action" >
@@ -152,7 +155,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -168,7 +171,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -184,7 +187,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -200,7 +203,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -216,7 +219,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -232,7 +235,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -248,7 +251,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -264,7 +267,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>
@@ -280,7 +283,7 @@ https://templatemo.com/tm-559-zay-shop
                                
                             </div>
                             <div class="card-body">
-                                <a href="game-single.html" class="h3 text-decoration-none">게임이름</a>
+                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
                                 
                                 <div class="list-unstyled d-flex justify-content-center mb-1">
                                     <i>태그이름</i>

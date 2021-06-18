@@ -1,8 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Product Listing Page</title>
+    <title>board</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,27 +18,22 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<!--
-    
-TemplateMo 559 Zay Shop
 
-https://templatemo.com/tm-559-zay-shop
-
--->
-<style>
-	.row2{
-		justify-content: center;
-	}
-</style>
-</head>
+</head> 
 
 <body>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-        <div class="container text-light">
-            
+    	<div class="container text-light">
+                <div>
+                </div>
+                <div>
+                	<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+                	<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+                </div>
         </div>
     </nav>
+    
     <!-- Close Top Nav -->
 
 
@@ -44,7 +41,7 @@ https://templatemo.com/tm-559-zay-shop
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -56,33 +53,26 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.html">추천</a>
+                            <a class="nav-link" href="recom.jsp" >추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.html">카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.html">인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.html">게시판</a>
+                            <a class="nav-link" href="board.jsp" >게시판</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
                     </div>
-                    <input type= "text" name = "search" placeholder = "게임 이름을 입력해주세요."> 
-                    <a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" >
+                    <input type= "text" name = "search" placeholder = "게임 검색">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                   
                 </div>
             </div>
 
@@ -108,62 +98,60 @@ https://templatemo.com/tm-559-zay-shop
     </div>
 
 
-
-	
-
-    <!-- Start Brands -->
-    <section class="bg-light py-5">
-        <div class="container my-4">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1" align="center">카테고리</h1>
-                </div>
-            <div class="row text-center py-3">
-                <div class="col-lg-9 m-auto tempaltemo-carousel">
-                    <div class="row d-flex flex-row">
-	
-                        <!--Carousel Wrapper-->
-                        <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
-
-                                    <div class="carousel-item active">
-                                        <div class="row row2">
-                                            <div class="col-3 p-md-5">
-                                                <a href="category.html"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
-										</div>
-                                        <div class="row row2">
-                                            
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  
-
-                                <!--End Slides-->
-                            </div>
-                        </div>
-
-                        
-                        <!--End Controls-->
-                    </div>
-                </div>
-            </div>
+    <!-- Start Content Page -->
+        <div class="col-md-6 m-auto text-center">
+            <br>
+            <h1 class="h1" style="color:#59ab6e; font-weight: 900;"	>자유 게시판</h1>
+            <br>
         </div>
-    </section>
-    <!--End Brands-->
+    <!-- Start Contact -->
+    <div class="container">
+    	<table class="table table-striped" border = "1px">
+    		<head>
+    			<tr>
+    				<th>번호</th>
+    				<th>제목</th>
+    				<th>작성자</th>
+    				<th>날짜</th>
+    				<th>조회수</th>
+    			</tr>
+    		</head>
+    		<body>
+    			<tr>
+    				<th>1</th>
+    				<th>test</th>
+    				<th>test</th>
+    				<th>2021-06-18</th>
+    				<th>4</th>
+    			</tr>
+    			<tr>
+    				<th>2</th>
+    				<th>test</th>
+    				<th>test</th>
+    				<th>2021-06-18</th>
+    				<th>4</th>
+    			</tr>
+    			<tr>
+    				<th>3</th>
+    				<th>test</th>
+    				<th>test</th>
+    				<th>2021-06-18</th>
+    				<th>5</th>
+    			</tr>
+    		</body>
+    	</table>
+    	<div align = "right">
+    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
+		</div>
+    	<div align = "center">
+    			<a href="#">1</a>
+    			<a href="#">2</a>
+    			<a href="#">3</a>
+    			<a href="#">4</a>
+    			<a href="#">5</a>
+    	</div>
+    </div>
+    <!-- End Contact -->
 
 
     <!-- Start Footer -->
@@ -176,15 +164,15 @@ https://templatemo.com/tm-559-zay-shop
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            광주CGI센터
+                            광주광역시 남구 송암동 CGI센터
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-6626-8171</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">재웅@company.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com">ruaql2@naver.com</a>
                         </li>
                     </ul>
                 </div>
@@ -219,29 +207,6 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 mb-3">
                     <div class="w-100 my-3 border-top border-light"></div>
                 </div>
-                <div class="col-auto me-auto">
-                    <ul class="list-inline text-left footer-icons">
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -249,7 +214,10 @@ https://templatemo.com/tm-559-zay-shop
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
-                        
+                        <p class="text-left text-light">
+                            Copyright &copy; 2021 Company Name 
+                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                        </p>
                     </div>
                 </div>
             </div>

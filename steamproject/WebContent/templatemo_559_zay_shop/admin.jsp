@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -22,13 +22,13 @@
               		<div>
               		</div>
                 	<div>
-                		<button class="btn btn-success" type="button" onclick="location.href='guestmanage.html' ">°ü¸®ÀÚ ÆäÀÌÁö</button>
+                		<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">관리자페이지</button>
                 	</div>
                 </div>
     </nav>
      <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
         </div>

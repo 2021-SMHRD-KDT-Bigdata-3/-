@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -21,45 +23,39 @@
                 <div>
                 </div>
                 <div>
-                <button class="btn btn-success">∑Œ±◊æ∆øÙ</button>
+                <button>ÌöåÏõêÍ∞ÄÏûÖ</button>
+                <button>Î°úÍ∑∏Ïù∏</button>
                 </div>
             </div>
         </div>
     </nav>
      <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
-                SUGE
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+                suge
             </a>
 
-        </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </nav>
-    <br>
-    <div align = "center">
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 style="color:#59ab6e;">MYPAGE</h1>
-    <br>
-    		<input type ="text" placeholder="«ˆ¿Á ∫Òπ–π¯»£">
-    		<div>
-    		<br>
-    		</div>
-    		<input type ="text" placeholder="∫Ø∞Ê«“ ∫Òπ–π¯»£">
-    		<div>
-    		<br>
-    		</div>
-    		<input type ="text" placeholder="∫Òπ–π¯»£ »Æ¿Œ">
-    		<div>
-    		<br>
-    		</div>
-    		<button class="btn btn-success">∫Òπ–π¯»£ ∫Ø∞Ê</button>
-    		<br>
-    		<br>
-    		<button class="btn btn-success">»∏ø¯ ≈ª≈</button>
-    </div>
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>

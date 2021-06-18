@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,18 +19,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
-</head> 
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
 
 <body>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
     	<div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
                 <div>
                 </div>
                 <div>
-                	<button class="btn btn-success" type="button" onclick="location.href='join.html' ">회원가입</button>
-                	<button class="btn btn-success" type="button" onclick="location.href='login.html' ">로그인</button>
+                <button class="btn btn-success">로그아웃</button>
                 </div>
+            </div>
         </div>
     </nav>
     
@@ -39,7 +51,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -51,25 +63,22 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.html" style="color:#59ab6e; font-weight: 900;">추천</a>
+                            <a class="nav-link" href="recom.jsp" style="color:#59ab6e; font-weight: 900;">추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.html" style="color:#59ab6e; font-weight: 900;">카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp" style="color:#59ab6e; font-weight: 900;">카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.html" style="color:#59ab6e; font-weight: 900;">인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" style="color:#59ab6e; font-weight: 900;">인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.html" style="color:#59ab6e; font-weight: 900;">게시판</a>
+                            <a class="nav-link" href="board.jsp" style="color:#59ab6e; font-weight: 900;">게시판</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
                 </div>
             </div>
 
@@ -98,58 +107,35 @@
     <!-- Start Content Page -->
         <div class="col-md-6 m-auto text-center">
             <br>
-            <h1 class="h1" style="color:#59ab6e; font-weight: 900;">자유 게시판</h1>
+            <h1 class="h1" style="color:#59ab6e; font-weight: 900;">글쓰기</h1>
             <br>
         </div>
     <!-- Start Contact -->
-    <div class="container">
-    	<table class="table table-striped" border = "1px">
-    		<head>
-    			<tr>
-    				<th>번호</th>
-    				<th>제목</th>
-    				<th>작성자</th>
-    				<th>날짜</th>
-    				<th>조회수</th>
-    			</tr>
-    		</head>
-    		<body>
-    			<tr>
-    				<th>1</th>
-    				<th>test</th>
-    				<th>test</th>
-    				<th>2021-06-18</th>
-    				<th>4</th>
-    			</tr>
-    			<tr>
-    				<th>2</th>
-    				<th>test</th>
-    				<th>test</th>
-    				<th>2021-06-18</th>
-    				<th>4</th>
-    			</tr>
-    			<tr>
-    				<th>3</th>
-    				<th>test</th>
-    				<th>test</th>
-    				<th>2021-06-18</th>
-    				<th>5</th>
-    			</tr>
-    		</body>
-    	</table>
-    	<div align = "right">
-    	<button type = "button" class="btn btn-success" onclick="location.href='board2.html' ">글쓰기</button>
-		</div>
-    	<div align = "center">
-    			<a href="#">1</a>
-    			<a href="#">2</a>
-    			<a href="#">3</a>
-    			<a href="#">4</a>
-    			<a href="#">5</a>
-    	</div>
-    </div>
+    <div class ="container">
+            <form id ="form_data" method ="POST">
+                <table class ="table table-bordered">
+                    <body>
+                        <tr>
+                            <th>제목 : </th>
+                            <td><input type ="text" name = "title" id = "title" class="form-control" placeholder = "제목을 입력해주세요."></td>
+                        </tr>
+                        <tr>    
+                            <th>작성자 : </th>
+                            <td><input type ="text" name = "id" id = "id" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <th>내용 : </th>
+                            <td><textarea cols="80" name = "contents" id = "contents" class="form-control" placeholder = "내용을 입력해주세요."></textarea></td>
+                        </tr>
+                    </body>
+                </table>
+                <div align = "right">  
+                <button type="button" class="btn btn-success">등록하기</button>
+				</div>                
+                <br>
+            </form>
+        </div>
     <!-- End Contact -->
-
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
@@ -222,7 +208,6 @@
 
     </footer>
     <!-- End Footer -->
-
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -231,5 +216,4 @@
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
 </body>
-
 </html>

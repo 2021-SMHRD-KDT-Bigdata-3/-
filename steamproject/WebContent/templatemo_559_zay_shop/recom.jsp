@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -20,8 +22,8 @@
               		<div>
               		</div>
                 	<div>
-                		<button class="btn btn-success" type="button" onclick="location.href='join.html' ">х╦©Ь╟║ют</button>
-                		<button class="btn btn-success" type="button" onclick="location.href='login.html' ">╥н╠вюн</button>
+                		<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">М ▄Л⌡░Й╟─Л·┘</button>
+                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">К║°Й╥╦Л²╦</button>
                 	</div>
                 </div>
     </nav>
@@ -32,7 +34,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -45,20 +47,20 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                        <li class="nav-item">
-                            <a class="nav-link" href="recom.html" style="color:#59ab6e; font-weight: 900;">цъц╣</a>
+                            <a class="nav-link" href="recom.jsp" >Л╤■Л╡°</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.html" style="color:#59ab6e; font-weight: 900;">д╚ев╟М╦╝</a>
+                            <a class="nav-link" href="categoryMain.jsp" >Л╧╢М┘▄ЙЁ═К╕╛</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.html" style="color:#59ab6e; font-weight: 900;">юн╠Б╪Ью╖</a>
+                            <a class="nav-link" href="popChart.jsp" >Л²╦Й╦╟Л┬°Л°└</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.html" style="color:#59ab6e; font-weight: 900;">╟т╫цфг</a>
+                            <a class="nav-link" href="board.jsp" >Й╡▄Л▀°М▄░</a>
                         </li>
                     </ul>
                 </div>
-                    <input type= "text" name = "search" placeholder = "╟тюс юл╦╖ю╩ ют╥бгьаж╪╪©Д."> 
+                    <input type= "text" name = "search" placeholder = "Й╡▄Л·└ Й╡─Л┐┴"> 
                     	<a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" >
                         	<i class="fa fa-fw fa-search text-dark mr-2"></i>
                     	</a>
@@ -69,9 +71,9 @@
     </nav>
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">╟тюс цъц╣юл©║©К</h1>
+                <h1 class="h1">Й╡▄Л·└ Л╤■Л╡°Л²╢Л≈░Л ╘</h1>
                 <p>
-                    20╟Ё ╟Я╤С╬ъгт
+                    20Й╟° ЙЁ╗К²╪Л∙╪М∙╗
                 </p>
             </div>
         </div>
@@ -80,38 +82,39 @@
             <div class="col-12 col-md-4 p-5 mt-3" align="center">
                 <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
                 <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">╪╠ец</button></p>
+                <p class="text-center"><button class="btn btn-success">Л└═М┐²</button></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3" align="center">
                 <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
                 <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">╪╠ец</button></p>
+                <p class="text-center"><button class="btn btn-success">Л└═М┐²</button></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3" align="center">
                 <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
                 <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">╪╠ец</button></p>
+                <p class="text-center"><button class="btn btn-success">Л└═М┐²</button></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3" align="center">
                 <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
                 <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">╪╠ец</button></p>
+                <p class="text-center"><button class="btn btn-success">Л└═М┐²</button></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3" align="center">
                 <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
                 <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">╪╠ец</button></p>
+                <p class="text-center"><button class="btn btn-success">Л└═М┐²</button></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3" align="center">
                 <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
                 <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">╪╠ец</button></p>
+                <p class="text-center"><button class="btn btn-success">Л└═М┐²</button></p>
             </div>
             
         </div>
         <div align="center">
-        	<button class="btn btn-success" style="width:200px;height:50px">©Ьго╢б ╟тюс цё╠Б</button>
+        	<button class="btn btn-success" style="width:200px;height:50px">Л⌡░М∙≤К┼■ Й╡▄Л·└ Л╟╬Й╦╟</button>
         </div>
+        <br><br>
     </section>
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">

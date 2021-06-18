@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -27,7 +29,7 @@
     </nav>
     <!-- <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html" align="center">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp" align="center">
                 suge
             </a>
         </div>
@@ -45,7 +47,7 @@
             <br>
             <br>
             <br>
-            <a class="navbar-brand text-success logo align-self-center" href="mainPage.html" style="font-size: 80px !important;">SUGE</a>
+            <a class="navbar-brand text-success logo align-self-center" href="mainPage.jsp" style="font-size: 80px !important;">SUGE</a>
             <div class="login_id">
                 <input type="email" name="" id="" placeholder="ID">
             </div>
@@ -55,11 +57,11 @@
             </div>
             <br>
             <div class="submit" id="submit">
-                <input type="submit" value="·Î±×ÀÎ" style="width: 215px; height: 45px; background:#59ab6e; color: white;">
+                <input type="submit" value="ë¡œê·¸ì¸" style="width: 215px; height: 45px; background:#59ab6e; color: white;">
             </div>
             <br>
             <div>
-            	¾ÆÀÌµğ°¡ ¾ø´Ù¸é? <a href="join.html">È¸¿ø°¡ÀÔ</a>
+            	ì•„ì´ë””ê°€ ì—†ë‹¤ë©´? <a href="join.jsp">íšŒì›ê°€ì…</a>
             </div>
         </div>
     </div>
