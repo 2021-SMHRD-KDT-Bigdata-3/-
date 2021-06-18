@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -21,7 +23,7 @@
                 <div>
                 </div>
                 <div>
-                <button class="btn btn-success">·Î±×¾Æ¿ô</button>
+                <button class="btn btn-success">ë¡œê·¸ì•„ì›ƒ</button>
                 </div>
             </div>
         </div>
@@ -29,19 +31,19 @@
      <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
 			</a>
         </div>
     </nav>
     <div>
     <br>
-    <h1 style="color:#59ab6e;" align="center">°ü¸®ÀÚ ÆäÀÌÁö</h1>
+    <h1 style="color:#59ab6e;" align="center">ê´€ë¦¬ìž íŽ˜ì´ì§€</h1>
     </div>
     <div>
     <table style="width:60%" align="center" border="1px">
 		<tr style="background-color: #59ab6e">
-			<th>¾ÆÀÌµð</th><th>È¸¿ø¸í</th><th>ÀÌ¸ÞÀÏ</th>
+			<th>ì•„ì´ë””</th><th>íšŒì›ëª…</th><th>ì´ë©”ì¼</th>
 		</tr>
 			<tr>
 				<td>1</td>
@@ -51,7 +53,7 @@
 	</table>	
     </div>
     <div align="center">
-    	<button class="btn btn-success">È¸¿ø»èÁ¦</button>
+    	<button class="btn btn-success">íšŒì›ì‚­ì œ</button>
     </div>
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
