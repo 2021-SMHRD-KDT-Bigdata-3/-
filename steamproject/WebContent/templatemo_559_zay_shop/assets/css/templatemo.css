@@ -31,13 +31,13 @@ Table of contents
 /* Typography */
 body, ul, li, p, a, label, input, div {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px !important;
-  font-weight: 300 !important;
+  font-size: 18px;
+  font-weight: 300;
 }
 .h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 48px !important;
-  font-weight: 200 !important;
+  font-size: 48px ;
+  font-weight: 200 ;
 }
 .h2 {
   font-family: 'Roboto', sans-serif;
@@ -46,7 +46,11 @@ body, ul, li, p, a, label, input, div {
 }
 .h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 22px !important;
+  font-size: 30px !important;
+}
+.h35 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px !important;
 }
 /* General */
 .logo { font-weight: 500 !important;}
