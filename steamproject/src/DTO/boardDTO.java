@@ -17,6 +17,13 @@ public class boardDTO {
 		this.img = img;
 		this.board_date = board_date;
 	}
+	public boardDTO(String id, String title, String text, String img) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.text = text;
+		this.img = img;
+	}
 	public int getBoard_num() {
 		return board_num;
 	}
