@@ -67,7 +67,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="popChart.html" style="color:#59ab6e; font-weight: 900;">인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.html" style="color:#59ab6e; font-weight: 900;">게시판</a>
+                            <a class="nav-link" href="board.jsp" style="color:#59ab6e; font-weight: 900;">게시판</a>
                         </li>
                     </ul>
                 </div>
