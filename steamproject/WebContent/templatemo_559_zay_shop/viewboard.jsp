@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="DAO.BoardDAO"%>
+<%@page import="DTO.boardDTO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,28 +21,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
-    <!-- Load map styles -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-<!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
-</head>
+</head> 
 
 <body>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
     	<div class="container text-light">
-            <div class="w-100 d-flex justify-content-between">
                 <div>
                 </div>
                 <div>
-                <button class="btn btn-success">Î°úÍ∑∏ÏïÑÏõÉ</button>
+                	<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">»∏ø¯∞°¿‘</button>
+                	<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">∑Œ±◊¿Œ</button>
                 </div>
-            </div>
         </div>
     </nav>
     
@@ -63,22 +55,26 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp" style="color:#59ab6e; font-weight: 900;">Ï∂îÏ≤ú</a>
+                            <a class="nav-link" href="recom.jsp" >√ﬂ√µ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp" style="color:#59ab6e; font-weight: 900;">Ïπ¥ÌÖåÍ≥†Î¶¨</a>
+                            <a class="nav-link" href="categoryMain.jsp" >ƒ´≈◊∞Ì∏Æ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" style="color:#59ab6e; font-weight: 900;">Ïù∏Í∏∞ÏàúÏúÑ</a>
+                            <a class="nav-link" href="popChart.jsp" >¿Œ±‚º¯¿ß</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.jsp" style="color:#59ab6e; font-weight: 900;">Í≤åÏãúÌåê</a>
+                            <a class="nav-link" href="board.jsp" >∞‘Ω√∆«</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     </div>
+                    <input type= "text" name = "search" placeholder = "∞‘¿” ∞Àªˆ">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
                 </div>
             </div>
 
@@ -103,91 +99,76 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </div>
 
-
-    <!-- Start Content Page -->
-        <div class="col-md-6 m-auto text-center">
-            <br>
-            <h1 class="h1" style="color:#59ab6e; font-weight: 900;">Í∏ÄÏì∞Í∏∞</h1>
-            <br>
-        </div>
-    <!-- Start Contact -->
-    <div id = "board">
-				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file ÎïåÎ¨∏Ïóê application/x-www-form-urlencodedÏùÑ Î∞îÍøîÏ§¨Îã§ -->
+<%
+		int num = Integer.parseInt(request.getParameter("num"));
+	
+		 BoardDAO dao = new BoardDAO();
+		 boardDTO dto = dao.one_select(num);
+	
+	
+	
+	%>
+			
+				
+			<div id = "board">
 				<table id="list">
 					<tr>
-						<td>Ï†úÎ™©</td>
-						<td><input type="text" name="title"> </td>
+						<td>¡¶∏Ò</td>
+						<td><%=dto.getTitle() %></td>
 					</tr>
 					<tr>
-						<td>ÏûëÏÑ±Ïûê</td>
-						<td><input  type="text" name="id"> </td>
+						<td>¿€º∫¿⁄</td>
+						<td><%=dto.getId() %></td>
 					</tr>
 					<tr>
-						<td colspan="2">ÎÇ¥Ïö©</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input name="img" type="file" style="float: right;">
-							<textarea name="text" rows="10" style="resize: none;"></textarea>			
-						</td>
+						<td colspan="2">≥ªøÎ</td>
+						
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="reset" value="Ï¥àÍ∏∞Ìôî">
-							<input type="submit" value="ÏûëÏÑ±ÌïòÍ∏∞">
+							<img src="img/<%=dto.getImg()%>"><br>
+							<%=dto.getText() %>
 						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><a href="templatemo_559_zay_shop/board.jsp"><button>µ⁄∑Œ∞°±‚</button></a></td>
 					</tr>
 				</table>
-				</form>
 			</div>
-    <!-- End Contact -->
-
-    <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
+		<footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
-            <div class="row">
+            <div class="row right" >
 
-                <div class="col-md-4 pt-5">
+                <div class="col-md-4 pt-5" >
                     <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            Í¥ëÏ£ºÍ¥ëÏó≠Ïãú ÎÇ®Íµ¨ ÏÜ°ÏïîÎèô CGIÏÑºÌÑ∞
+                            ±§¡÷±§ø™Ω√ ≥≤±∏ º€æœµø CGIºæ≈Õ
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-6626-8171</a>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-0000-0000</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">ruaql2@naver.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                <!-- <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                        <li><a class="text-decoration-none" href="#">√ﬂ√µ</a></li>
+                        <li><a class="text-decoration-none" href="#">ƒ´≈◊∞Ì∏Æ</a></li>
+                        <li><a class="text-decoration-none" href="#">¿Œ±‚º¯¿ß</a></li>
+                        <li><a class="text-decoration-none" href="#">∞‘Ω√∆«</a></li>
+                       
                     </ul>
-                </div>
+                </div>  -->
 
-                <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
-                    </ul>
-                </div>
+                
 
             </div>
 
@@ -195,16 +176,32 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 mb-3">
                     <div class="w-100 my-3 border-top border-light"></div>
                 </div>
+                 </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                            Suggest Steam Games &copy; 2021 SUGE 
+                            | Designed by <a rel="sponsored" href="#" target="_blank">SUGE</a>
                         </p>
                     </div>
                 </div>
@@ -213,6 +210,7 @@ https://templatemo.com/tm-559-zay-shop
 
     </footer>
     <!-- End Footer -->
+
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -220,5 +218,6 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+
 </body>
 </html>

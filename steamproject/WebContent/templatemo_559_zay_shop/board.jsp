@@ -115,7 +115,7 @@
 	
 		%>
 		
-			<div id="board">
+			<div id="board" align = "center">
 				<table id = "list">
 					<tr>
 						<td>번호</td>
@@ -128,16 +128,17 @@
 						for(int i =0; i<bl.size(); i++){
 						out.print("<tr>");
 						out.print("<td>"+(i+1)+"</td>");
-						out.print("<td><a href='viewBoard.jsp?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
+						out.print("<td><a href='viewboard.jsp?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
 						out.print("<td>"+bl.get(i).getId()+"</td>");
 						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
-						out.print("<td><a href='deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></t/d>");
+						out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");
 						out.print("</tr>");
 				
 			}
 			%>
 				
 				</table>
+			</div>
 				
 	    	<div align = "right">
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>

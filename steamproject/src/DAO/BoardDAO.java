@@ -87,7 +87,7 @@ public class BoardDAO {
 		try {
 			conn();
 
-			String sql = "select * from game_board order by board_date desc";
+			String sql = "select * from game_board order by board_date";
 			pst = conn.prepareStatement(sql);
 
 			rs = pst.executeQuery();
@@ -132,6 +132,41 @@ public class BoardDAO {
 		}
 		return cnt;
 	}
+public boardDTO one_select(int num) {
+		
+		
+		try {
+		
+		conn();
+
+		String sql = "select * from game_board where num = ?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1, num);
+
+		rs = pst.executeQuery();
+
+		if (rs.next()) {
+			int get_num = rs.getInt("board_num"); //이 num은 현재 테이블의 num의 수를 받아주는 애이기때문에 매개변수랑 다르게 해준다.
+			String id = rs.getString("id");
+			String title = rs.getString("title");
+			String text = rs.getString("text");
+			String img = rs.getString("img");
+			String date = rs.getString("board_date");
+			dto = new boardDTO(get_num, id, title,text,img,date);
+			System.out.println("게시물 보기 성공!");
+			
+		} else {
+			System.out.println("게시물 보기 실패!");
+			
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}return dto;
+	}	
+	
 
 	// 사용자가 제목을 입력해서 특정 게시글만 확인해보기..ex) test쳐서 갖고오고, 가데이터 asd같은거 넣어서 안가져오는지 확인.
 	public boardDTO title_select(String title) {
