@@ -18,7 +18,7 @@ public class join extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//main.jsp에서 보낸 email, pw, tel, address 값 받아서 변수에 담기
 				//post방식으로 보낸 값을 한글 인코딩
-			request.setCharacterEncoding("euc-kr");	
+			request.setCharacterEncoding("UTF-8");	
 			
 			String id = request.getParameter("id");
 			String pw = request.getParameter("pw");
@@ -40,7 +40,7 @@ public class join extends HttpServlet {
 				request.setAttribute("tel", tel);
 				// response.sendRedirect("joinSuccess.jsp"); 애는 값을 못보내줌.
 				
-				
+				response.sendRedirect("templatemo_559_zay_shop/mainPage.jsp");
 				
 			}
 	}

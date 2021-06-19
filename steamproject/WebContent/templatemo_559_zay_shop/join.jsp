@@ -55,7 +55,7 @@
     </nav>
     <br>
     <div align="center">
-		<form action = '' >	   
+		<form action = '../join' method = "post" >	   
 		    <h1>회원가입</h1>
 		    <br>
 		    	<h4 class="join_title" >
@@ -79,7 +79,7 @@
 		    		이름
 		    	</h4>
 		    	<div>
-			    	<input type="text" name = "text" style="text-align:center; width:300px; height:30px; ">
+			    	<input type="text" name = "name" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
 		    	
