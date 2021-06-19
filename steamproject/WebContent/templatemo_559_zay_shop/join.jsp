@@ -55,8 +55,13 @@
     </nav>
     <br>
     <div align="center">
+<<<<<<< HEAD
 		<form action = '' >	   
 		    <h1 style="color:#0a58ca; font-weight: 900;">회원가입</h1>
+=======
+		<form action = '../join' method = "post" >	   
+		    <h1>회원가입</h1>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
 		    <br>
 		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		아이디
@@ -88,7 +93,7 @@
 		    		이름
 		    	</h4>
 		    	<div>
-			    	<input type="text" name = "text" style="text-align:center; width:300px; height:30px; ">
+			    	<input type="text" name = "name" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
 		    	
