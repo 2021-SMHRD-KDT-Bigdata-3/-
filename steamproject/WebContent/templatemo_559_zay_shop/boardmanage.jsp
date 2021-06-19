@@ -25,8 +25,8 @@
 	.h3{
 		color:black;
 	}
-	.logo{
-		font-family: 'SEBANG_Gothic_Bold';
+	.text-decoration-none{
+		font-family: 'SEBANG_Gothic_Bold' ;
 	}
 </style>
 
