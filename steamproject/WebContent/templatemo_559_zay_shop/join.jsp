@@ -55,55 +55,66 @@
     </nav>
     <br>
     <div align="center">
-    <h1>회원가입</h1>
-    <br>
-    	<h4 class="join_title" >
-    		아이디
-    	</h4>
-    	<div>
-	    	<input type="text" style="text-align:center; width:300px; height:30px; ">
-    	</div><br>
-    	
-    	<h4 class="join_title">
-    		비밀번호
-    	</h4>
-    	<div>
-	    	<input type="password" style="text-align:center; width:300px; height:30px; ">
-    	</div>
-    	<br>
-    	
-    	<h4 class="join_title">
-    		생년월일
-    	</h4>
-    	<div>
-	    	<input type="date" style="text-align:center; width:300px; height:30px; ">
-    	</div>
-    	<br>
-    	
-    	<h4 class="join_title">
-    		성별
-    	</h4>
-    	<div>
-			<select style="width:300px; height:30px; ">
-				<option>성별</option>
-				<option>남자</option>
-				<option>여자</option>
-			</select>
-    	</div>
-    	<br>
-    	
-    	<h4 class="join_title">
-    		연락처
-    	</h4>
-    	<div>
-	    	<input type="text" style="text-align:center; width:300px; height:30px; ">
-    	</div>
-    	<br>
-    	
-   		<h4 class="join_title">
-   			<input type="submit" value="가입하기" style="text-align:center; width:200px; height:50px;" >
-   		</h4>
-    
+		<form action = '' >	   
+		    <h1>회원가입</h1>
+		    <br>
+		    	<h4 class="join_title" >
+		    		아이디
+		    	</h4>
+		    	<div>
+			    	<input type="text" name = "id" style="text-align:center; width:300px; height:30px; ">
+		    	</div><br>
+		    	
+		    	<h4 class="join_title">
+		    		비밀번호
+		    	</h4>
+		    	<div>
+			    	<input type="password" name = "pw" style="text-align:center; width:300px; height:30px; ">
+		    	</div>
+		    	<br>
+		    	<%
+		    	%>
+		    	
+		    	<h4 class="join_title">
+		    		이름
+		    	</h4>
+		    	<div>
+			    	<input type="text" name = "text" style="text-align:center; width:300px; height:30px; ">
+		    	</div>
+		    	<br>
+		    	
+		    	<h4 class="join_title">
+		    		나이
+		    	</h4>
+		    	<div>
+			    	<input type="text" name = "age" style="text-align:center; width:300px; height:30px; ">
+		    	</div>
+		    	<br>
+		    	
+		    	<h4 class="join_title">
+		    		성별
+		    	</h4>
+		    	<div>
+					<select name = "gender" style="width:300px; height:30px; ">
+						<option>성별</option>
+						<option>남자</option>
+						<option>여자</option>
+					</select>
+		    	</div>
+		    	<br>
+		    	
+		    	<h4 class="join_title">
+		    		연락처
+		    	</h4>
+		    	<div>
+			    	<input type="text" name = "tel" style="text-align:center; width:300px; height:30px; ">
+		    	</div>
+		    	<br>
+		    	
+		   		<h4 class="join_title">
+		   			<input type="submit" value="가입하기" style="text-align:center; width:200px; height:50px;" >
+		   		</h4>
+    	</form>
     </div>
     
 		

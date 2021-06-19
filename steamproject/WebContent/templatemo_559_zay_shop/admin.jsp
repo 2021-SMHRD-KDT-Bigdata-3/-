@@ -31,6 +31,7 @@
             <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
+            
         </div>
     </nav>
     <script src="assets/js/jquery-1.11.0.min.js"></script>
