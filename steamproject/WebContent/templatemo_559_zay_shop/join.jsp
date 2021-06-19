@@ -25,15 +25,15 @@
               		<div>
               		</div>
                 	<div>
-                		<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
-                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+                		<button class="btn btn-primary" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+                		<button class="btn btn-primary" type="button" onclick="location.href='login.jsp' ">로그인</button>
                 	</div>
                 </div>
     </nav>
      <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -55,27 +55,41 @@
     </nav>
     <br>
     <div align="center">
+<<<<<<< HEAD
+		<form action = '' >	   
+		    <h1 style="color:#0a58ca; font-weight: 900;">회원가입</h1>
+=======
 		<form action = '../join' method = "post" >	   
 		    <h1>회원가입</h1>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
 		    <br>
-		    	<h4 class="join_title" >
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		아이디
 		    	</h4>
 		    	<div>
+		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			    	<input type="text" name = "id" style="text-align:center; width:300px; height:30px; ">
+			    	<button class="btn btn-primary active">중복체크</button>
 		    	</div><br>
 		    	
-		    	<h4 class="join_title">
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		비밀번호
 		    	</h4>
 		    	<div>
 			    	<input type="password" name = "pw" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    		비밀번호 확인
+		    	</h4>
+		    	<div>
+			    	<input type="password" name = "pw2" style="text-align:center; width:300px; height:30px; ">
+		    	</div>
+		    	<br>
 		    	<%
 		    	%>
 		    	
-		    	<h4 class="join_title">
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		이름
 		    	</h4>
 		    	<div>
@@ -83,7 +97,7 @@
 		    	</div>
 		    	<br>
 		    	
-		    	<h4 class="join_title">
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		나이
 		    	</h4>
 		    	<div>
@@ -91,7 +105,7 @@
 		    	</div>
 		    	<br>
 		    	
-		    	<h4 class="join_title">
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		성별
 		    	</h4>
 		    	<div>
@@ -103,7 +117,7 @@
 		    	</div>
 		    	<br>
 		    	
-		    	<h4 class="join_title">
+		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
 		    		연락처
 		    	</h4>
 		    	<div>
@@ -112,7 +126,7 @@
 		    	<br>
 		    	
 		   		<h4 class="join_title">
-		   			<input type="submit" value="가입하기" style="text-align:center; width:200px; height:50px;" >
+		   			<input type="submit" value="가입하기" class="btn btn-primary active" style="text-align:center; width:200px; height:50px;" >
 		   		</h4>
     	</form>
     </div>

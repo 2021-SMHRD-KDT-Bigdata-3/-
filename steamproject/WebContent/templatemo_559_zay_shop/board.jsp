@@ -116,7 +116,7 @@
 		%>
 		
 			<div id="board" align = "center">
-				<table id = "list">
+				<table id = "list" class="table table-striped" border="1px">
 					<tr>
 						<td>번호</td>
 						<td>제목</td>
@@ -140,18 +140,11 @@
 				</table>
 			</div>
 				
-	    	<div align = "right">
+	    <div align = "right">
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
-			</div>
-	    	<div align = "center">
-	    			<a href="#">1</a>
-	    			<a href="#">2</a>
-	    			<a href="#">3</a>
-	    			<a href="#">4</a>
-	    			<a href="#">5</a>
-	    	</div>
-    	</div>
-    	</div>
+		</div>
+		<br>
+    </div>
     <!-- End Contact -->
 
 
