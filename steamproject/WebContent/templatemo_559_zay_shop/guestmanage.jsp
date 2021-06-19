@@ -28,6 +28,11 @@
 	.logo{
 		font-family: 'SEBANG_Gothic_Bold';
 	}
+	.nav-link{
+		font-family: 'SEBANG_Gothic_Bold';
+	
+	}
+	
 </style>
 
 </head>
