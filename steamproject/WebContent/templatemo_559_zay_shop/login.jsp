@@ -48,21 +48,23 @@
             <br>
             <br>
             <a class="navbar-brand text-success logo align-self-center" href="mainPage.jsp" style="font-size: 80px !important;">SUGE</a>
-            <div class="login_id">
-                <input type="email" name="" id="" placeholder="ID">
-            </div>
-            <br>
-            <div class="login_pw">
-                <input type="password" name="" id="" placeholder="Password">
-            </div>
-            <br>
-            <div class="submit" id="submit">
-                <input type="submit" value="로그인" style="width: 215px; height: 45px; background:#59ab6e; color: white;">
-            </div>
-            <br>
-            <div>
-            	아이디가 없다면? <a href="join.jsp">회원가입</a>
-            </div>
+	        <form action = "../login">   
+	            <div class="login_id">
+	                <input type="text" name="id"  placeholder="ID">
+	            </div>
+	            <br>
+	            <div class="login_pw">
+	                <input type="password" name="pw"  placeholder="Password">
+	            </div>
+	            <br>
+	            <div class="submit" >
+	                <input type="submit" value="로그인" style="width: 215px; height: 45px; background:#59ab6e; color: white;">
+	            </div>
+	            <br>
+	            <div>
+	            	아이디가 없다면? <a href="join.jsp">회원가입</a>
+	            </div>
+	        </form> 
         </div>
     </div>
 </body>
