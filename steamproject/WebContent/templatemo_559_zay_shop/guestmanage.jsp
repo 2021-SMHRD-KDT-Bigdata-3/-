@@ -113,7 +113,7 @@
 			</form>
 		</div>
 	</div>
-	<br>
+	
 	<div class="container py-5">
 		<div class="row">
 
@@ -173,7 +173,7 @@
 					
 					<div align="center">
 						<button type="button" class="btn btn-success"
-							onclick="location.href='board2.jsp' ">되돌아가기</button>
+							onclick="location.href='mainPage.jsp' ">되돌아가기</button>
 					</div>
 				</div>
 
