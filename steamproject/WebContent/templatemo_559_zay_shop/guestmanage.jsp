@@ -25,13 +25,10 @@
 	.h3{
 		color:black;
 	}
-	.logo{
+	.logo .nav-link .text-decoration-none{
 		font-family: 'SEBANG_Gothic_Bold';
 	}
-	.nav-link{
-		font-family: 'SEBANG_Gothic_Bold';
 	
-	}
 	
 </style>
 
@@ -128,7 +125,7 @@
 
 			<div class="col-lg-3">
 				<a class="collapsed d-flex justify-content-between h3 text-decoration-none"
-					href="guestmanage.jsp">회원 관리</a>
+					href="guestmanage.jsp" >회원 관리</a>
 				<a class="collapsed d-flex justify-content-between h3 text-decoration-none"
 					href="boardmanage.jsp">게시판 관리</a>
 
