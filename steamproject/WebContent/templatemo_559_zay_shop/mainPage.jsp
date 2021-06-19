@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop eCommerce HTML CSS Template</title>
+    <title>SUGE 스팀게임 추천 서비스</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,9 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 <style>
-	
+	h2{
+		color:black;
+	}
 </style>
 </head>
 
@@ -161,7 +163,7 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>스팀게임</b> 추천 서비스</h1>
+                                <h1 class="h1"><b>스팀게임</b> 추천 서비스</h1>
                                 <h3 class="h2">저희 SUGE는 사용자의 성향을 분석해 게임을 추천 해드립니다!</h3>
                                 <p>
                                 상단의 추천 버튼을 눌러 게임을 추천받아 보세요!
@@ -234,7 +236,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 text border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>

@@ -29,9 +29,8 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 <style>
-	.logo{
+	.nav-link , .h1 , td , input , button , li , a , h2{
 		font-family: 'SEBANG_Gothic_Bold';
-		color : 'red';
 	}
 </style>
 </head>
@@ -51,7 +50,6 @@ https://templatemo.com/tm-559-zay-shop
     </nav>
     
     <!-- Close Top Nav -->
-
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
