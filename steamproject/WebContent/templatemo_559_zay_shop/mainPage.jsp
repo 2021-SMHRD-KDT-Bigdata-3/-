@@ -27,9 +27,6 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 <style>
-	.wht{
-		color:white;
-	}
 
 	h2{
 		color:black;
