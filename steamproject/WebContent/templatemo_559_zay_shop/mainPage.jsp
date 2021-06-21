@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="ass5ets/img/favicon.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -84,7 +83,7 @@ https://templatemo.com/tm-559-zay-shop
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="logo h1 align-self-center" href="mainPage.jsp" style="padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;text-decoration:none;white-space:nowrap">
                 SUGE
             </a>
 
@@ -237,7 +236,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 text border-bottom pb-3 border-light logo" >SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>

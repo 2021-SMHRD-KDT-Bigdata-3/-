@@ -138,7 +138,7 @@
     <!-- Start Content Page -->
         <div class="col-md-6 m-auto text-center">
             <br>
-            <h1 class="h1" style="color:#59ab6e; font-weight: 900;"	>자유 게시판</h1>
+            <h1 style="color:black; font-weight: 900;"	>자유 게시판</h1>
             <br>
         </div>
     <!-- Start Contact -->
@@ -197,7 +197,7 @@
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
