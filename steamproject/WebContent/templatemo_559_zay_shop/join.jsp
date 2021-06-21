@@ -1,3 +1,4 @@
+<%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,13 +22,44 @@
     </style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+	<% memberDTO dto = (memberDTO)session.getAttribute("member");
+						
+							%>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
                 <div class="container text-light">
               		<div>
               		</div>
                 	<div>
-                		<button class="btn btn-primary" type="button" onclick="location.href='join.jsp' ">회원가입</button>
-                		<button class="btn btn-primary" type="button" onclick="location.href='login.jsp' ">로그인</button>
+                	<%
+							if(dto != null){
+										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
+							}else{
+								out.print("<h1>로그인이 필요합니다!</h1>");
+							}
+							%>
+                		<%
+								if(dto==null){
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									%>
+									<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+								
+								<% }else{
+									if(dto.getId().equals("admin")){
+										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
+										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+									<%}else{
+									//out.print("<a href='update.jsp'>개인정보수정</a>");
+									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
+									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
+								
+									<% }}
+								%>
+								
+								
+                		
                 	</div>
                 </div>
     </nav>
@@ -56,11 +88,8 @@
     </nav>
     <br>
     <div align="center">
-<<<<<<< HEAD
 		<form action = '../join' method = "post" >	   
-=======
-		<form action = '../join' method = "post" >	   
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
+		 
 		    <h1 style="color:#0a58ca; font-weight: 900;">회원가입</h1>
 		    <br>
 		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">

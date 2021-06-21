@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="ass5ets/img/favicon.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -62,7 +62,7 @@ https://templatemo.com/tm-559-zay-shop
 								<% }else{
 									if(dto.getId().equals("admin")){
 										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+										<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 									<%}else{
 									//out.print("<a href='update.jsp'>개인정보수정</a>");
 									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>

@@ -1,3 +1,4 @@
+<%@page import="DTO.memberDTO"%>
 <%@page import="DTO.boardDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DAO.BoardDAO"%>
@@ -27,15 +28,46 @@
 
 <body>
     <!-- Start Top Nav -->
+   <% memberDTO dto = (memberDTO)session.getAttribute("member");
+						
+							%>
+    <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-    	<div class="container text-light">
-                <div>
+                <div class="container text-light">
+              		<div>
+              		</div>
+                	<div>
+                	<%
+							if(dto != null){
+										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
+							}else{
+								out.print("<h1>로그인이 필요합니다!</h1>");
+							}
+							%>
+                		<%
+								if(dto==null){
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									%>
+									<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+								
+								<% }else{
+									if(dto.getId().equals("admin")){
+										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
+										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+									<%}else{
+									//out.print("<a href='update.jsp'>개인정보수정</a>");
+									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
+									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
+								
+									<% }}
+								%>
+								
+								
+                		
+                	</div>
                 </div>
-                <div>
-                	<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
-                	<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
-                </div>
-        </div>
     </nav>
     
     <!-- Close Top Nav -->
@@ -132,7 +164,8 @@
 						out.print("<td><a href='viewboard.jsp?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
 						out.print("<td>"+bl.get(i).getId()+"</td>");
 						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
-						out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");
+						//out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");- 게시글관리에서 추가
+						out.print("<td>"+bl.get(i).getBoard_num()+"</td>");
 						out.print("</tr>");
 				
 			}
