@@ -163,6 +163,11 @@ https://templatemo.com/tm-559-zay-shop
 						</td>
 					</tr>
 					<tr>
+                  		<td colspan="2" align="right">
+                     		<input type="file" value="이미지추가" name="img" class="btn btn-primary">
+                 		</td>
+             	    </tr>
+					<tr>
 						<td colspan="2" align="right">
 							<input type="reset" value="초기화" class="btn btn-primary">
 							<input type="submit" value="작성하기" class="btn btn-primary">

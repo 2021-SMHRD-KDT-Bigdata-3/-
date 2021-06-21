@@ -44,15 +44,11 @@
 			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
 								
 								<% }else{
-									if(dto.getId().equals("admin")){
-										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
-									<%}else{
-									//out.print("<a href='update.jsp'>개인정보수정</a>");
-									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
+									%>
+									
 									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 								
-									<% }}
+									<% }
 								%>
 								
 								

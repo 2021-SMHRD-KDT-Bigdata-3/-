@@ -5,7 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import DTO.boardDTO;
+import DTO.gameDTO;
 import DTO.memberDTO;
 
 public class MemberDAO {
@@ -14,7 +17,7 @@ public class MemberDAO {
 	ResultSet rs = null;
 	memberDTO dto = null;
 	int cnt = 0;
-
+	ArrayList<memberDTO> al = null;
 	// DB연결
 	public void conn() {
 		// 1. JDBC 드라이버 동적로딩
@@ -179,5 +182,39 @@ public class MemberDAO {
 		}
 
 		return cnt;
+	}
+	public ArrayList<memberDTO> member(){
+		try {
+			conn();
+
+			String sql = "select * from game_board where id = order by board_date";
+			pst = conn.prepareStatement(sql);
+
+			rs = pst.executeQuery();
+
+			while (rs.next()) {
+
+				String id = rs.getNString("id");
+				String pw = rs.getNString("pw");
+				String name = rs.getNString("name");
+				int age = rs.getInt("age");
+				String gender = rs.getNString("gender");
+				String	tel = rs.getNString("tel");
+				
+
+
+				
+				memberDTO ato = new memberDTO(id,pw,name,age,gender,tel);
+				al.add(ato);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return al;
+		
 	}
 }
