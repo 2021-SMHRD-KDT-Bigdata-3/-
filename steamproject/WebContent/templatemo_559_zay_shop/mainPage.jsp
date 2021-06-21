@@ -27,6 +27,10 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 <style>
+	.wht{
+		color:white;
+	}
+
 	h2{
 		color:black;
 	}
@@ -236,7 +240,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text border-bottom pb-3 border-light logo" >SUGE</h2>
+                    <h2 class="h2 text border-bottom pb-3 border-light logo wht" >SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
