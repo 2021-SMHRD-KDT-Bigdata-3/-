@@ -17,7 +17,7 @@ public class MemberDAO {
 	ResultSet rs = null;
 	memberDTO dto = null;
 	int cnt = 0;
-	ArrayList<memberDTO> al = null;
+	ArrayList<memberDTO> al = new ArrayList<memberDTO>();
 	// DB연결
 	public void conn() {
 		// 1. JDBC 드라이버 동적로딩
@@ -154,17 +154,16 @@ public class MemberDAO {
 		return cnt;
 	}
 	// 회원 탈퇴.- 마이페이지에서 탈퇴할때, id와 pw일치한지 알아본뒤, 삭제 되게끔. 새페이지필요.
-	public int delete(String id , String pw) {
+	public int delete(String id) {
 		try {
 			conn();
 
-			String sql = "delete game_member where id = ? and pw = ?";
+			String sql = "delete game_member where id = ?";
 			// 3. sql문 실행객체 (PreparedStatement) 생성
 			pst = conn.prepareStatement(sql);
 
 			// 4. 바인드변수채우기.
 			pst.setString(1, id);
-			pst.setString(1, pw);
 
 			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
 			cnt = pst.executeUpdate();
@@ -183,11 +182,11 @@ public class MemberDAO {
 
 		return cnt;
 	}
-	public ArrayList<memberDTO> member(){
+	public ArrayList<memberDTO> select(){
 		try {
 			conn();
 
-			String sql = "select * from game_board where id = order by board_date";
+			String sql = "select * from game_member order by age";
 			pst = conn.prepareStatement(sql);
 
 			rs = pst.executeQuery();

@@ -1,3 +1,6 @@
+<%@page import="DTO.boardDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="DAO.BoardDAO"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -171,42 +174,37 @@
 						<br>
 					</div>
 					<div class="container">
-						<table class="table table-striped" border="1px">
-							<tr>
-								<th>번호</th>
-								<th>제목</th>
-								<th>작성자</th>
-								<th>날짜</th>
-								<th></th>
-							</tr>
-							<tr>
-								<th>1</th>
-								<th>test</th>
-								<th>test</th>
-								<th>2021-06-18</th>
-								<th><a href="#">삭제</a></th>
-							</tr>
-							<tr>
-								<th>2</th>
-								<th>test</th>
-								<th>test</th>
-								<th>2021-06-18</th>
-								<th><a href="#">삭제</a></th>
-							</tr>
-							<tr>
-								<th>3</th>
-								<th>test</th>
-								<th>test</th>
-								<th>2021-06-18</th>
-								<th><a href="#">삭제</a></th>
-							</tr>
-						</table>
+						<%
+							BoardDAO dao = new BoardDAO();
+							ArrayList<boardDTO> bl = dao.select();
+	
+								%>
+		
+			<div id="board" align = "center">
+				<table id = "list" class="table table-striped" border="1px">
+					<tr>
+						<td>번호</td>
+						<td>제목</td>
+						<td>작성자</td>
+						<td>시간</td>
+						<td>게시글 삭제</td>
+					</tr>
+					<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
+						for(int i =0; i<bl.size(); i++){
+						out.print("<tr>");
+						out.print("<td>"+(i+1)+"</td>");
+						out.print("<td>"+bl.get(i).getTitle()+"</td>");
+						out.print("<td>"+bl.get(i).getId()+"</td>");
+						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
+						out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>"); 
+						out.print("</tr>");
+				
+			}
+			%>
+				
+				</table>
 					</div>
 					
-					<div align="center">
-						<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
-						<a href="#">5</a>
-					</div>
 					<br>
 					<br>
 					

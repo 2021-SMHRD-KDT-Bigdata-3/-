@@ -139,7 +139,6 @@
 		    	</h4>
 		    	<div>
 					<select name = "gender" style="width:300px; height:30px; ">
-						<option>성별</option>
 						<option>남자</option>
 						<option>여자</option>
 					</select>

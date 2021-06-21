@@ -184,7 +184,7 @@
 	    	</form>
 	    	<br>
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
-	    	<button type = "button" value = "삭제" class="btn btn-success" onclick="location.href='board2.jsp' ">글삭제</button>
+	    	<button type = "button" value = "삭제" class="btn btn-success" onclick="location.href='../deleteview' ">글삭제</button>
 		</div>
 		<br>
     </div>
