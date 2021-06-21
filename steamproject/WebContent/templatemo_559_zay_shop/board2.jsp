@@ -149,37 +149,32 @@ https://templatemo.com/tm-559-zay-shop
 				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
 				<table id="list" align="center">
 					<tr>
-						<td style="color:black; font-weight: 900;">제목</td>
-						<td colspan="2"><input type="text" name="title" style="width:415px;"> </td>
-					</tr>
-					<tr>
-						<td style="color:black; font-weight: 900;">작성자</td>
-						<td><input type="text" name="id" style="width:415px;"> </td>
-					</tr>
-					<tr>
-						<td colspan="2" style="color:black; font-weight: 900;">내용</td>
-					</tr>
-					<tr>
-						<td colspan="2" >
-							<textarea name="text" rows="15" cols="50" style="resize: none;"></textarea>			
-						</td>
-					</tr>
-					<tr>
-                  		<td colspan="2" align="right">
-                     		<input type="file" value="이미지추가" name="img" class="btn btn-primary">
-                 		</td>
-             	    </tr>
-					<tr>
-						<td colspan="2" align="right">
-							<input type="file" value="이미지추가" name="img" class="btn btn-primary">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" align="right">
-							<input type="reset" value="초기화" class="btn btn-primary">
-							<input type="submit" value="작성하기" class="btn btn-primary">
-						</td>
-					</tr>
+                  <td style="color:black; font-weight: 900;">제목</td>
+                  <td colspan="2"><input type="text" name="title" style="width:635px;"> </td>
+               </tr>
+               <tr>
+                  <td style="color:black; font-weight: 900;">작성자</td>
+                  <td><input type="text" name="id" style="width:635px;"> </td>
+               </tr>
+               <tr>
+                  <td style="color:black; font-weight: 900;">내용</td>
+                        <td colspan="2" align="right">
+                           <input type="file" value="이미지추가" name="img" class="btn btn-primary">
+                       </td>
+               </tr>
+               <tr>
+                  <td colspan="2" >
+                     <textarea name="text" rows="15" cols="59" style="resize: none;"></textarea>         
+                  </td>
+               </tr>
+               <tr>
+                    </tr>
+               <tr>
+                  <td colspan="2" align="right">
+                     <input type="reset" value="초기화" class="btn btn-primary">
+                     <input type="submit" value="작성하기" class="btn btn-primary">
+                  </td>
+               </tr>
 				</table>
 				</form>
 			</div>
