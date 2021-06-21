@@ -30,8 +30,9 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 <style>
-	.nav-link , .h1 , td , input , button , li , a , h2{
+	body{
 		font-family: 'SEBANG_Gothic_Bold';
+		
 	}
 </style>
 </head>
@@ -96,16 +97,16 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp" style="color:#59ab6e; font-weight: 900;">추천</a>
+                            <a class="nav-link" href="recom.jsp" style="color:black; font-weight: 900;">추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp" style="color:#59ab6e; font-weight: 900;">카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp" style="color:black; font-weight: 900;">카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" style="color:#59ab6e; font-weight: 900;">인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" style="color:black; font-weight: 900;">인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.jsp" style="color:#59ab6e; font-weight: 900;">게시판</a>
+                            <a class="nav-link" href="board.jsp" style="color:black; font-weight: 900;">게시판</a>
                         </li>
                     </ul>
                 </div>
@@ -139,7 +140,7 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Content Page -->
         <div class="col-md-6 m-auto text-center">
             <br>
-            <h1 class="h1" style="color:#59ab6e; font-weight: 900;">글쓰기</h1>
+            <h1 style="color:black; font-weight: 900;">글쓰기</h1>
             <br>
         </div>
     <!-- Start Contact -->
@@ -147,19 +148,24 @@ https://templatemo.com/tm-559-zay-shop
 				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
 				<table id="list" align="center">
 					<tr>
-						<td style="color:#59ab6e; font-weight: 900;">제목</td>
+						<td style="color:black; font-weight: 900;">제목</td>
 						<td colspan="2"><input type="text" name="title" style="width:415px;"> </td>
 					</tr>
 					<tr>
-						<td style="color:#59ab6e; font-weight: 900;">작성자</td>
+						<td style="color:black; font-weight: 900;">작성자</td>
 						<td><input type="text" name="id" style="width:415px;"> </td>
 					</tr>
 					<tr>
-						<td colspan="2" style="color:#59ab6e; font-weight: 900;">내용</td>
+						<td colspan="2" style="color:black; font-weight: 900;">내용</td>
 					</tr>
 					<tr>
 						<td colspan="2" >
 							<textarea name="text" rows="15" cols="50" style="resize: none;"></textarea>			
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right">
+							<input type="file" value="이미지추가" name="img" class="btn btn-primary">
 						</td>
 					</tr>
 					<tr>
@@ -179,12 +185,12 @@ https://templatemo.com/tm-559-zay-shop
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 text-light border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
                             광주광역시 남구 송암동 CGI센터
-                        </li>
+                        </li>	
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
                             <a class="text-decoration-none" href="tel:010-020-0340">010-6626-8171</a>
