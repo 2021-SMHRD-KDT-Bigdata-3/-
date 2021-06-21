@@ -36,7 +36,7 @@
               		<div>
               		</div>
                 	<div>
-                	<%
+                <%
 							if(dto != null){
 										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
 							}else{
@@ -54,7 +54,8 @@
 								<% }else{
 									if(dto.getId().equals("admin")){
 										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+										<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">회원관리</button>
+										<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 									<%}else{
 									//out.print("<a href='update.jsp'>개인정보수정</a>");
 									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
@@ -168,7 +169,7 @@
 						<td colspan="2">
 							<%=dto2.getText() %>
 							<br>
-							<img src="../img/<%=dto2.getImg()%>"><br>
+							<img src="../img/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
 						</td>
 					</tr>
 					<tr>
