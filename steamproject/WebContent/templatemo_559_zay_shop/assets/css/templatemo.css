@@ -30,7 +30,7 @@ Table of contents
 
 /* Typography */
 body, ul, li, p, a, label, input, div {
-  font-family: 'SEBANG_Gothic_Bold' !important;
+  font-family: 'SEBANG_Gothic_Regular';
   font-size: 18px;
   font-weight: 300;
 }
