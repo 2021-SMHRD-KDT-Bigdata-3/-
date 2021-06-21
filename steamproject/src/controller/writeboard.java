@@ -29,6 +29,7 @@ public class writeboard extends HttpServlet {
 
 		MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, encoding,
 				new DefaultFileRenamePolicy());
+		System.out.println(savePath);
 		// 마지막 객체는 동일한 이름의 파일이 있을때 막아주는 객체놈.
 
 		String id = multi.getParameter("id");

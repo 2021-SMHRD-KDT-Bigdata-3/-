@@ -139,7 +139,7 @@ public boardDTO one_select(int num) {
 		
 		conn();
 
-		String sql = "select * from game_board where num = ?";
+		String sql = "select * from game_board where Board_num = ?";
 		pst = conn.prepareStatement(sql);
 		pst.setInt(1, num);
 

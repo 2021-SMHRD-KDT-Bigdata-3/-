@@ -1,3 +1,4 @@
+<%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -35,32 +36,47 @@ https://templatemo.com/tm-559-zay-shop
 
 <body>
 	<!-- Start Top Nav -->
-	<nav
-		class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
-		id="templatemo_nav_top">
-		<div class="container text-light">
-			<div class="w-100 d-flex justify-content-between">
-				<div>
-					<i class="fa fa-envelope mx-2"></i> <a
-						class="navbar-sm-brand text-light text-decoration-none"
-						href="mailto:info@company.com">info@company.com</a> <i
-						class="fa fa-phone mx-2"></i> <a
-						class="navbar-sm-brand text-light text-decoration-none"
-						href="tel:010-020-0340">010-020-0340</a>
-				</div>
-				<div>
-					<a class="text-light" href="https://fb.com/templatemo"
-						target="_blank" rel="sponsored"><i
-						class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a> <a
-						class="text-light" href="https://www.instagram.com/"
-						target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-					<a class="text-light" href="https://twitter.com/" target="_blank"><i
-						class="fab fa-twitter fa-sm fa-fw me-2"></i></a> <a class="text-light"
-						href="https://www.linkedin.com/" target="_blank"><i
-						class="fab fa-linkedin fa-sm fa-fw"></i></a>
-				</div>
-			</div>
-		</div>
+	<% memberDTO dto = (memberDTO)session.getAttribute("member");
+						
+							%>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+                <div class="container text-light">
+              		<div>
+              		</div>
+                	<div>
+                	<%
+							if(dto != null){
+										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
+							}else{
+								out.print("<h1>로그인이 필요합니다!</h1>");
+							}
+							%>
+                		<%
+								if(dto==null){
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									%>
+									<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+								
+								<% }else{
+									if(dto.getId().equals("admin")){
+										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
+										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+									<%}else{
+									//out.print("<a href='update.jsp'>개인정보수정</a>");
+									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
+									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
+								
+									<% }}
+								%>
+								
+								
+                		
+                	</div>
+                </div>
+    </nav>
 	</nav>
 	<!-- Close Top Nav -->
 
