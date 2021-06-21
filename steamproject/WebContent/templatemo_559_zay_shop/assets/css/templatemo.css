@@ -39,6 +39,11 @@ body, ul, li, p, a, label, input, div {
   font-size: 48px ;
   font-weight: 200 ;
   color : black;
+  padding-top:.3125rem;
+  padding-bottom:.3125rem;
+  margin-right:1rem;
+  text-decoration:none;
+  white-space:nowrap;
 }
 .h2 {
   font-family: 'SEBANG_Gothic_Bold';
