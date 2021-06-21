@@ -3,7 +3,6 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>board</title>
     <meta charset="utf-8">
@@ -19,6 +18,7 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/font.css">
 
     <!-- Load map styles -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
@@ -29,6 +29,11 @@ TemplateMo 559 Zay Shop
 https://templatemo.com/tm-559-zay-shop
 
 -->
+<style>
+	.nav-link , .h1 , td , input , button , li , a , h2{
+		font-family: 'SEBANG_Gothic_Bold';
+	}
+</style>
 </head>
 
 <body>
@@ -76,15 +81,13 @@ https://templatemo.com/tm-559-zay-shop
     
     <!-- Close Top Nav -->
 
-
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
-
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -111,7 +114,6 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
             </div>
-
         </div>
     </nav>
     <!-- Close Header -->
@@ -143,28 +145,27 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Contact -->
     <div id = "board">
 				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
-				<table id="list">
+				<table id="list" align="center">
 					<tr>
-						<td>제목</td>
-						<td><input type="text" name="title"> </td>
+						<td style="color:#59ab6e; font-weight: 900;">제목</td>
+						<td colspan="2"><input type="text" name="title" style="width:415px;"> </td>
 					</tr>
 					<tr>
-						<td>작성자</td>
-						<td><input  type="text" name="id"> </td>
+						<td style="color:#59ab6e; font-weight: 900;">작성자</td>
+						<td><input type="text" name="id" style="width:415px;"> </td>
 					</tr>
 					<tr>
-						<td colspan="2">내용</td>
+						<td colspan="2" style="color:#59ab6e; font-weight: 900;">내용</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<input name="img" type="file" style="float: right;">
-							<textarea name="text" rows="10" style="resize: none;"></textarea>			
+						<td colspan="2" >
+							<textarea name="text" rows="15" cols="50" style="resize: none;"></textarea>			
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<input type="reset" value="초기화">
-							<input type="submit" value="작성하기">
+						<td colspan="2" align="right">
+							<input type="reset" value="초기화" class="btn btn-primary">
+							<input type="submit" value="작성하기" class="btn btn-primary">
 						</td>
 					</tr>
 				</table>

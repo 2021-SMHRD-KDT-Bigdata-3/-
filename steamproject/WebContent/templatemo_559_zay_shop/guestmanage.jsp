@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/templatemo.css">
 <link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="assets/css/font.css">
 
 <!-- Load fonts style after rendering the layout styles -->
 <link rel="stylesheet"
@@ -25,6 +26,11 @@
 	.h3{
 		color:black;
 	}
+	.logo .nav-link .text-decoration-none{
+		font-family: 'SEBANG_Gothic_Bold';
+	}
+	
+	
 </style>
 
 </head>
@@ -150,7 +156,7 @@
 
 			<div class="col-lg-3">
 				<a class="collapsed d-flex justify-content-between h3 text-decoration-none"
-					href="guestmanage.jsp">회원 관리</a>
+					href="guestmanage.jsp" >회원 관리</a>
 				<a class="collapsed d-flex justify-content-between h3 text-decoration-none"
 					href="boardmanage.jsp">게시판 관리</a>
 
