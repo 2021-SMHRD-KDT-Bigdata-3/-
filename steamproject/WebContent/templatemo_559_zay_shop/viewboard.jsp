@@ -1,7 +1,8 @@
+<%@page import="DTO.memberDTO"%>
 <%@page import="DAO.BoardDAO"%>
 <%@page import="DTO.boardDTO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,15 +27,46 @@
 
 <body>
     <!-- Start Top Nav -->
+    <% memberDTO dto = (memberDTO)session.getAttribute("member");
+						
+							%>
+    <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-    	<div class="container text-light">
-                <div>
+                <div class="container text-light">
+              		<div>
+              		</div>
+                	<div>
+                	<%
+							if(dto != null){
+										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
+							}else{
+								out.print("<h1>로그인이 필요합니다!</h1>");
+							}
+							%>
+                		<%
+								if(dto==null){
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+									%>
+									<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+								
+								<% }else{
+									if(dto.getId().equals("admin")){
+										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
+										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+									<%}else{
+									//out.print("<a href='update.jsp'>개인정보수정</a>");
+									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
+									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
+								
+									<% }}
+								%>
+								
+								
+                		
+                	</div>
                 </div>
-                <div>
-                	<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">ȸ������</button>
-                	<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">�α���</button>
-                </div>
-        </div>
     </nav>
     
     <!-- Close Top Nav -->
@@ -56,23 +88,23 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp" >��õ</a>
+                            <a class="nav-link" href="recom.jsp" >추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp" >ī�װ���</a>
+                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >�α����</a>
+                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.jsp" >�Խ���</a>
+                            <a class="nav-link" href="board.jsp" >게시판</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     </div>
-                    <input type= "text" name = "search" placeholder = "���� �˻�">
+                    <input type= "text" name = "search" placeholder = "게임 검색">
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
@@ -104,7 +136,7 @@
 		int num = Integer.parseInt(request.getParameter("num"));
 	
 		 BoardDAO dao = new BoardDAO();
-		 boardDTO dto = dao.one_select(num);
+		 boardDTO dto2 = dao.one_select(num);
 	
 	
 	
@@ -114,25 +146,25 @@
 			<div id = "board">
 				<table id="list">
 					<tr>
-						<td>����</td>
-						<td><%=dto.getTitle() %></td>
+						<td>제목</td>
+						<td><%=dto2.getTitle() %></td>
 					</tr>
 					<tr>
-						<td>�ۼ���</td>
-						<td><%=dto.getId() %></td>
+						<td>작성자</td>
+						<td><%=dto2.getId() %></td>
 					</tr>
 					<tr>
-						<td colspan="2">����</td>
+						<td colspan="2">내용</td>
 						
 					</tr>
 					<tr>
 						<td colspan="2">
-							<img src="img/<%=dto.getImg()%>"><br>
-							<%=dto.getText() %>
+							<img src="../img/<%=dto2.getImg()%>"><br>
+							<%=dto2.getText() %>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><a href="templatemo_559_zay_shop/board.jsp"><button>�ڷΰ���</button></a></td>
+						<td colspan="2"><a href="templatemo_559_zay_shop/board.jsp"><button>뒤로가기</button></a></td>
 					</tr>
 				</table>
 			</div>
@@ -145,7 +177,7 @@
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            ���ֱ����� ���� �۾ϵ� CGI����
+                            광주광역시 남구 송암동 CGI센터
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
@@ -161,10 +193,10 @@
                 <!-- <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">��õ</a></li>
-                        <li><a class="text-decoration-none" href="#">ī�װ���</a></li>
-                        <li><a class="text-decoration-none" href="#">�α����</a></li>
-                        <li><a class="text-decoration-none" href="#">�Խ���</a></li>
+                        <li><a class="text-decoration-none" href="#">추천</a></li>
+                        <li><a class="text-decoration-none" href="#">카테고리</a></li>
+                        <li><a class="text-decoration-none" href="#">인기순위</a></li>
+                        <li><a class="text-decoration-none" href="#">게시판</a></li>
                        
                     </ul>
                 </div>  -->
