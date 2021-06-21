@@ -55,7 +55,8 @@
 								<% }else{
 									if(dto.getId().equals("admin")){
 										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+										<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">회원관리</button>
+										<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 									<%}else{
 									//out.print("<a href='update.jsp'>개인정보수정</a>");
 									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
@@ -155,7 +156,8 @@
 						<td>제목</td>
 						<td>작성자</td>
 						<td>시간</td>
-						<td>삭제</td>
+						<td>조회 수</td>
+						<td>추천 수</td>
 					</tr>
 					<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
 						for(int i =0; i<bl.size(); i++){
@@ -165,7 +167,8 @@
 						out.print("<td>"+bl.get(i).getId()+"</td>");
 						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
 						//out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");- 게시글관리에서 추가
-						out.print("<td>"+bl.get(i).getBoard_num()+"</td>");
+						out.print("<td>"+bl.get(i).getCount_num()+"</td>");
+						out.print("<td>"+bl.get(i).getBoard_recom()+"</td>");
 						out.print("</tr>");
 				
 			}
@@ -175,7 +178,13 @@
 			</div>
 				
 	    <div align = "right">
+	    	<form action = ""> 
+	    	<input type = "text" name = "textname">
+	    	<input type = "submit" value = "검색" class="btn btn-success">
+	    	</form>
+	    	<br>
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
+	    	<button type = "button" value = "삭제" class="btn btn-success" onclick="location.href='board2.jsp' ">글삭제</button>
 		</div>
 		<br>
     </div>

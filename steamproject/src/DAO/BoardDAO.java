@@ -56,7 +56,7 @@ public class BoardDAO {
 		try {
 			conn();
 
-			String sql = "insert into game_board values(number_board.nextval,?,?,?,?,sysdate)";
+			String sql = "insert into game_board values(number_board.nextval,?,?,?,?,sysdate,0,0)";
 			// 3. sql문 실행객체 (PreparedStatement) 생성
 			pst = conn.prepareStatement(sql);
 
@@ -81,7 +81,7 @@ public class BoardDAO {
 		return cnt;
 	}
 
-	// 작성된 게시글 확인(날짜순으로)
+	// 작성된 게시글 확인
 	public ArrayList<boardDTO> select() {
 
 		try {
@@ -100,7 +100,13 @@ public class BoardDAO {
 				String text = rs.getString("text");
 				String img = rs.getString("img");
 				String date = rs.getString("board_date");
-				boardDTO dto = new boardDTO(num, id, title, text, img, date);
+				int count_num = rs.getInt("count_num");
+				int board_recom = rs.getInt("board_recom");
+				
+
+
+				
+				boardDTO dto = new boardDTO(num, id, title, text, img, date, count_num, board_recom);
 				bl.add(dto);
 
 			}
@@ -152,8 +158,12 @@ public boardDTO one_select(int num) {
 			String text = rs.getString("text");
 			String img = rs.getString("img");
 			String date = rs.getString("board_date");
-			dto = new boardDTO(get_num, id, title,text,img,date);
+			int count_num = rs.getInt("count_num");
+			int board_recom = rs.getInt("board_recom");
+			count_num++;
+			dto = new boardDTO(get_num, id, title,text,img,date, count_num, board_recom);
 			System.out.println("게시물 보기 성공!");
+			bl.add(dto);
 			
 		} else {
 			System.out.println("게시물 보기 실패!");
@@ -186,7 +196,9 @@ public boardDTO one_select(int num) {
 				String text = rs.getString("text");
 				String img = rs.getString("img");
 				String date = rs.getString("board_date");
-				dto = new boardDTO(num, id, title, text, img, date);
+				int count_num = rs.getInt("count_num");
+				int board_recom = rs.getInt("board_recom");
+				dto = new boardDTO(num, id, title,text,img,date, count_num, board_recom);
 				System.out.println("게시물 보기 성공!");
 
 			} else {
@@ -221,7 +233,9 @@ public boardDTO one_select(int num) {
 				String title = rs.getString("title");
 				String img = rs.getString("img");
 				String date = rs.getString("board_date");
-				dto = new boardDTO(num, id, title, text, img, date);
+				int count_num = rs.getInt("count_num");
+				int board_recom = rs.getInt("board_recom");
+				dto = new boardDTO(num, id, title,text,img,date, count_num, board_recom);
 				System.out.println("게시물 보기 성공!");
 
 			} else {
@@ -254,7 +268,9 @@ public boardDTO one_select(int num) {
 			String text = rs.getString("text");
 			String img = rs.getString("img");
 			String date = rs.getString("board_date");
-			dto = new boardDTO(num, id,title, text, img, date);
+			int count_num = rs.getInt("count_num");
+			int board_recom = rs.getInt("board_recom");
+			dto = new boardDTO(num, id, title,text,img,date, count_num, board_recom);
 			System.out.println("게시물 보기 성공!");
 			
 		} else {
@@ -268,5 +284,7 @@ public boardDTO one_select(int num) {
 		close();
 	}return dto;
 	}
+	
+	
 
 }

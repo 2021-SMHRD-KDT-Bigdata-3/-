@@ -36,7 +36,7 @@
               		<div>
               		</div>
                 	<div>
-                	<%
+                <%
 							if(dto != null){
 										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
 							}else{
@@ -54,7 +54,8 @@
 								<% }else{
 									if(dto.getId().equals("admin")){
 										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원삭제</button>
+										<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">회원관리</button>
+										<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 									<%}else{
 									//out.print("<a href='update.jsp'>개인정보수정</a>");
 									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
@@ -144,14 +145,21 @@
 			
 				
 			<div id = "board">
-				<table id="list">
+				<table align = "center" id="list">
 					<tr>
 						<td>제목</td>
 						<td><%=dto2.getTitle() %></td>
+						<td>조회수</td>
+						<td >
+							<%=dto2.getCount_num() %>
+						</td>
 					</tr>
 					<tr>
 						<td>작성자</td>
 						<td><%=dto2.getId() %></td>
+						<td>추천 수</td>
+						<td>
+						<%=dto2.getBoard_recom() %></td>
 					</tr>
 					<tr>
 						<td colspan="2">내용</td>
@@ -159,12 +167,14 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<img src="../img/<%=dto2.getImg()%>"><br>
 							<%=dto2.getText() %>
+							<br>
+							<img src="../img/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><a href="templatemo_559_zay_shop/board.jsp"><button>뒤로가기</button></a></td>
+						<td><a href = "viewboard.jsp"><button>추천</button></a></td>
+						<td colspan="2"><a href="board.jsp"><button>뒤로가기</button></a></td>
 					</tr>
 				</table>
 			</div>
