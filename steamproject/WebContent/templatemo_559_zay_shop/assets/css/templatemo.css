@@ -38,12 +38,13 @@ body, ul, li, p, a, label, input, div {
   font-family: 'SEBANG_Gothic_Bold' ;
   font-size: 48px ;
   font-weight: 200 ;
-  color : navy;
+  color : black;
 }
 .h2 {
   font-family: 'SEBANG_Gothic_Bold';
   font-size: 30px !important;
   font-weight: 300;
+  color:black;
 }
 .h3 {
   font-family: 'SEBANG_Gothic_Bold';
