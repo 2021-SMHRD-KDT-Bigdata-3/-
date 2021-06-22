@@ -30,7 +30,7 @@
 	td > a:hover { color: #0d6efd; text-decoration: underline;}
 </style>
 </head> 
-
+ 
 <body>
     <!-- Start Top Nav -->
    <% memberDTO dto = (memberDTO)session.getAttribute("member");
