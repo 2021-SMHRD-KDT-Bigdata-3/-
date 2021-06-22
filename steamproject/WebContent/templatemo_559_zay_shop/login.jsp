@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
+    
+    <style>
+    	
+    </style>
 </head>
 <body>
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
@@ -61,74 +65,52 @@
                 	</div>
                 </div>
     </nav>
-    <!-- Close Top Nav -->
-
-
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-
-            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
-                SUGE
+            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp" align="center">
+                suge
             </a>
-
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp" >추천</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="board.jsp" >게시판</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                    </div>
-                    <input type= "text" name = "search" placeholder = "게임 검색">
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
-                </div>
-            </div>
-
         </div>
-    </nav>
-    <!-- header end -->
-        <div class="row text-center pt-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">성향 파악 질문</h1>
-            </div>
         </div>
-        <div align="center">
-        	폭력성이 있는 게임을 좋아합니까 ?
+    </nav> -->
+    <br>
+    <div class="wrap" align="center">
+        <div class="login">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+           
+            <a class="navbar-brand text-success logo align-self-center" href="mainPage.jsp" style="font-family: 'SEBANG_Gothic_Bold'; font-size: 80px !important;">SUGE</a>
+	        <form action = "../login">   
+	            <div class="login_id">
+	                <input type="text" name="id"  placeholder="ID">
+	            </div>
+	            <br>
+	            <div class="login_pw">
+	                <input type="password" name="pw"  placeholder="Password">
+	            </div>
+	            <br>
+	            <div class="submit" >
+	                <input type="submit" value="로그인" style="width: 215px; height: 45px; background:#000080; color: white;">
+	            </div>
+	            <br>
+	            <div>
+	            	아이디가 없다면? <a href="join.jsp">회원가입</a>
+	            </div>
+	        </form> 
         </div>
-        <div class="row">
-        <div align="center">
-        	<button class="btn btn-success" style="width:200px;height:50px" onclick="location.href='survey.jsp' ">설문 완료 ! 게임 추천 받기</button>
-        </div>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-    <!-- Start Footer -->
+    </div>
+    <br><br><br><br><br>
+   
+ <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -141,10 +123,10 @@
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
                             <a class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
-							<br><br><br><br>
                         </li>
                     </ul>
                 </div>
+
                 <!-- <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
                     <ul class="list-unstyled text-light footer-link-list">
@@ -182,7 +164,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">
@@ -198,21 +179,6 @@
         </div>
 
     </footer>
-    <!-- End Footer -->    
-
-    <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- End Script -->
-    
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    
+    <!-- End Footer -->
 </body>
 </html>

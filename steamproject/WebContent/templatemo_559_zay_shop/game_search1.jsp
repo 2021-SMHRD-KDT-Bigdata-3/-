@@ -1,5 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.Random"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -82,8 +80,7 @@
 
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navbar-light shadow">
-		<div
-			class="container d-flex justify-content-between align-items-center">
+		<div class="container d-flex justify-content-between align-items-center">
 
 			<a class="navbar-brand text-primary logo h1 align-self-center"
 				href="mainPage.jsp"> SUGE </a>
@@ -121,41 +118,69 @@
                     </form>
 				</div>
 			</div>
+		</div>
 	</nav>
 	<br>
 	<br>
-	<%
-	String[] question = { "당신은 타격감을 중요시 여깁니까?", "당신은 부대 지휘하는 것을 좋아하십니까?", "당신은 캐릭터의 성장 과정을 좋아하십니까?",
-			"당신은 속도감 있는 스포츠를 좋아하십니까?", "당신은 풍부한 스토리를 좋아하십니까?", "당신은 새로운 것을 체험하길 원하십니까?" };
-	%>
+	
 	<section>
 		<div class="row text-center pt-3">
 			<div class="col-lg-6 m-auto">
 				<h1 class="h1">게임 추천</h1>
 			</div>
 		</div>
-		
 		<div class="row" height="1500px">
-			<%for (int i = 0; i < 6; i++) {%>
-				<div class="col-lg-6 m-auto" align="center" >
-					<h4 align="center">
-						<%=(i+1)+". "%><%=question[i]%>
-					</h4>
-					<br>
-					예<input type="radio" name="genre<%=i %>" value="1">&nbsp;&nbsp;
-					아니오<input type="radio" name="genre<%=i %>" value="0"> 
-					<br>
-					<br>
-				</div>
-				<br>
-				<br>
-			<%}%>
+			<br> <br>
+			<div class="col-lg-6 m-auto" align="center" width="100%">
+				<h4 align="center">
+					1. 게임 이용 시 화면 그래픽 사양에 민감하십니까?
+				</h4>
+				예 <input type="radio" name="graphic" value="3"> &nbsp;
+				&nbsp; 모르겠다 <input type="radio" name="graphic" value="2"> &nbsp;
+				&nbsp; 상관없음 <input type="radio" name="graphic" value="1">
+			</div>
+			<br> <br> <br>
+			
+			<br> <br>
+			<div class="col-lg-6 m-auto" align="center" width="100%">
+				<h4 align="center">
+					2. 당신은 어떤 분위기를 좋아하십니까?
+				</h4>
+				밝은 <input type="radio" name="atmos" value="1"> &nbsp;
+				&nbsp; 서정적인 <input type="radio" name="atmos" value="2"> &nbsp;
+				&nbsp; 복고풍 <input type="radio" name="atmos" value="3"> &nbsp;
+				&nbsp; 어두운 <input type="radio" name="atmos" value="4">
+			</div>
+			<br> <br> <br>
+			
+			<br> <br>
+			<div class="col-lg-6 m-auto" align="center" width="100%">
+				<h4 align="center">
+					3. 게임할 때 주로 혼자서 플레이를 하십니까?
+				</h4>
+				예 <input type="radio" name="multi" value="0"> &nbsp;
+				&nbsp; 아니오 <input type="radio" name="multi" value="1">
+			</div>
+			<br> <br> <br>
+			
+			<br> <br>
+			<div class="col-lg-6 m-auto" align="center" width="100%">
+				<h4 align="center">
+					4. 당신은 게임에 어느정도 투자할 의향이 있으십니까?
+				</h4>
+				전혀없음 <input type="radio" name="price" value="0"> &nbsp;
+				&nbsp; 조금 <input type="radio" name="price" value="1"> &nbsp;
+				&nbsp; 긍정적 <input type="radio" name="price" value="2"> &nbsp;
+				&nbsp; 적극적 <input type="radio" name="price" value="3">
+			</div>
+			<br> <br> <br>
+			
+			
 		</div>
 		<div align="center">
-			<button class="btn btn-success" style="width: 200px; height: 50px">원하는
-				게임 찾기</button>
+			<button class="btn btn-success" style="width: 200px; height: 50px">다음으로</button>
 		</div>
-		<br> <br>
+		<br>
 	</section>
 
 	<!-- Start Footer -->
@@ -176,56 +201,44 @@
 							<br> <br> <br> <br></li>
 					</ul>
 				</div>
-				<!-- <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">추천</a></li>
-                        <li><a class="text-decoration-none" href="#">카테고리</a></li>
-                        <li><a class="text-decoration-none" href="#">인기순위</a></li>
-                        <li><a class="text-decoration-none" href="#">게시판</a></li>
-                       
-                    </ul>
-                </div>  -->
 
 
-
-			</div>
-
-			<div class="row text-light mb-4">
-				<div class="col-12 mb-3">
-					<div class="w-100 my-3 border-top border-light"></div>
+				<div class="row text-light mb-4">
+					<div class="col-12 mb-3">
+						<div class="w-100 my-3 border-top border-light"></div>
+					</div>
+				</div>
+				<div class="col-auto me-auto">
+					<ul class="list-inline text-left footer-icons">
+						<li
+							class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank"
+							href="http://facebook.com/"><i
+								class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+						</li>
+						<li
+							class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank"
+							href="https://www.instagram.com/"><i
+								class="fab fa-instagram fa-lg fa-fw"></i></a>
+						</li>
+						<li
+							class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank"
+							href="https://twitter.com/"><i
+								class="fab fa-twitter fa-lg fa-fw"></i></a>
+						</li>
+						<li
+							class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank"
+							href="https://www.linkedin.com/"><i
+								class="fab fa-linkedin fa-lg fa-fw"></i></a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="col-auto me-auto">
-				<ul class="list-inline text-left footer-icons">
-					<li
-						class="list-inline-item border border-light rounded-circle text-center">
-						<a class="text-light text-decoration-none" target="_blank"
-						href="http://facebook.com/"><i
-							class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-					</li>
-					<li
-						class="list-inline-item border border-light rounded-circle text-center">
-						<a class="text-light text-decoration-none" target="_blank"
-						href="https://www.instagram.com/"><i
-							class="fab fa-instagram fa-lg fa-fw"></i></a>
-					</li>
-					<li
-						class="list-inline-item border border-light rounded-circle text-center">
-						<a class="text-light text-decoration-none" target="_blank"
-						href="https://twitter.com/"><i
-							class="fab fa-twitter fa-lg fa-fw"></i></a>
-					</li>
-					<li
-						class="list-inline-item border border-light rounded-circle text-center">
-						<a class="text-light text-decoration-none" target="_blank"
-						href="https://www.linkedin.com/"><i
-							class="fab fa-linkedin fa-lg fa-fw"></i></a>
-					</li>
-				</ul>
-			</div>
 		</div>
-		</div>
+
 
 		<div class="w-100 bg-black py-3">
 			<div class="container">
@@ -239,27 +252,5 @@
 				</div>
 			</div>
 		</div>
-
 	</footer>
-	<!-- End Footer -->
-
-
-
-
-
-	<!-- Start Script -->
-	<script src="assets/js/jquery-1.11.0.min.js"></script>
-	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/templatemo.js"></script>
-	<script src="assets/js/custom.js"></script>
-	<!-- End Script -->
-
-	<script src="assets/js/jquery-1.11.0.min.js"></script>
-	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/templatemo.js"></script>
-	<script src="assets/js/custom.js"></script>
-
 </body>
-</html>

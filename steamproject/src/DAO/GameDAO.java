@@ -54,32 +54,34 @@ public class GameDAO {
 	public ArrayList<gameDTO> gamelist(String game_name) {
 		try {
 			conn();
-			String sql = "select * from game where game_name like '?%'";
+			String sql = "select * from game where game_name like ?";
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, game_name );
+			pst.setString(1, game_name+"%");
 
 			rs = pst.executeQuery();
 
 			while (rs.next()) {
 				int game_num =rs.getInt("game_num");
+				String get_name = rs.getString("game_name");
 				String genre = rs.getString("genre");
 				int graphic = rs.getInt("graphic");
 				String thema = rs.getString("thema");
 				String atmos = rs.getString("atmos");
 				int multi = rs.getInt("multi");
-				int price = rs.getInt("genre");
+				int price = rs.getInt("price");
 				int lv = rs.getInt("lv");
 				int playtime = rs.getInt("playtime");
 				int score = rs.getInt("score");
+				String image = rs.getString("image");
 				
-				dto = new gameDTO(game_num,game_name,genre,graphic,thema,atmos,multi,price,lv,playtime,score);
+				dto = new gameDTO(game_num,get_name,genre,graphic,thema,atmos,multi,price,lv,playtime,score,image);
 				cl.add(dto);
-				System.out.println("게임 검색 성공!");
+				System.out.println("게임 검색 성공!dao성공");
 				
 			} 
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("게임 검색 실패!");
+			System.out.println("게임 검색 실패!dao실패");
 		} finally {
 			close();
 		}return cl;
@@ -106,8 +108,8 @@ public class GameDAO {
 				int lv = rs.getInt("lv");
 				int playtime = rs.getInt("playtime");
 				int score = rs.getInt("score");
-				
-				dto = new gameDTO(game_num,game_name,genre,graphic,thema,atmos,multi,price,lv,playtime,score);
+				String image = rs.getString("image");
+				dto = new gameDTO(game_num,game_name,genre,graphic,thema,atmos,multi,price,lv,playtime,score,image);
 				System.out.println("게임 검색 성공!");
 				
 			} 

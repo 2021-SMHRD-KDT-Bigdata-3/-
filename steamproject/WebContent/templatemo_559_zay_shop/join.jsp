@@ -20,18 +20,14 @@
     <style>
     	
     </style>
-<script src="js/jquery-3.6.0.js"></script>
-<script type="text/javascript">
-   	$("#id").keyup(function()){
+    <script src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+    $("#id").keyup(function()){
     	var id = $.trim($(this).val());
     	//trim은 공백기능없어주는애.
     	$(this).val(id);
-    	if(id.length < 4)
-    		$("#idInfo").html("<span>아이디는 4글자 이상이어야 합니다.</span>")
-    	else{
-    		//서버에 아이디 중복 체크 하러 갔다온다.->url이 안바뀌게 ajax이용.
-    		$("#idInfo").load("idCheck.jsp?id="+id);
-    	}
+    	if(id.length < 8)
+    		$("#id")
     }
     
     </script>
@@ -111,11 +107,11 @@
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		아이디
 		    	</h4>
-		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		    	<div>
+		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			    	<input type="text" id= "id" name = "id" style="text-align:center; width:300px; height:30px; ">
 		    		<br>
-		    		<span id = "idInfo">아이디는 4글자 이상 입력해주세요.</span>
+		    		<span>아이디는 4글자 이상 입력해주세요.</span>
 		    	</div><br>
 		    	
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
@@ -165,15 +161,39 @@
 			    	<input type="text" name = "tel" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
-		    	<input type = "submit" class="btn btn-success" value = "가입하기">
+		    	<div>
+		    		<input class="btn btn-success" type="submit" value = "가입하기">
+		    	</div>
+		    	
 		   		
     	</form>
     	
     </div>
     
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+<script type="text/javascript">
+
+<!-- 아이디중복체크 -->
+	function winopen(){
+		if(document.fr.id.value =="" || document.fr.id.value.length < 0){
+			alert("아이디를 먼저 입력해주세요")
+			document.fr.id.focus();
+		}else{
+			//2. 회원정보아이디를 가지고 있는 지 체크하려면 DB에 접근해야한다.
+			//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
+			window.open("joinIdCheck.jsp?userid="+document.fr.id.value,"","width=500, height=300");
+		}
+	}
+	    
 		
     	
     
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
     
 </body>
 </html>

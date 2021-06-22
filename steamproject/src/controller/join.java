@@ -20,8 +20,6 @@ public class join extends HttpServlet {
 				//post방식으로 보낸 값을 한글 인코딩
 			request.setCharacterEncoding("UTF-8");	
 			
-			String idcheck = request.getParameter("idcheck");
-			String pwcheck = request.getParameter("pwcheck");
 			
 			String id = request.getParameter("id");
 			String pw = request.getParameter("pw");

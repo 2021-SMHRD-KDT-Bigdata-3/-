@@ -103,13 +103,13 @@ public class MemberDAO {
 				String gender = rs.getString("gender");
 				String tel = rs.getString("tel");
 				dto = new memberDTO(id, pw, name, age, gender, tel);
-			} else {
-				System.out.println("로그인 실패");
-			}
+				System.out.println("로그인 성공");
+			} 
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("회원가입 실패!");
+			System.out.println("로그인 실패!");
 		} finally {
 			close();
 		}

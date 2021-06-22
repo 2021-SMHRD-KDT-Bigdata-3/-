@@ -13,8 +13,9 @@ public class gameDTO {
 	private int lv;
 	private int playtime;
 	private int score;
+	private String image;
 	public gameDTO(int game_num,String game_name, String genre, int graphic, String thema, String atmos, int multi, int price,
-			int lv, int playtime, int score) {
+			int lv, int playtime, int score, String image) {
 		super();
 		this.game_num = game_num;
 		this.game_name = game_name;
@@ -27,6 +28,21 @@ public class gameDTO {
 		this.lv = lv;
 		this.playtime = playtime;
 		this.score = score;
+		this.image = image;
+	}
+	public gameDTO(String game_name2, String genre2, int graphic2, String thema2, String atmos2, int multi2, int price2,
+			int lv2, int playtime2, int score2, String image2) {
+		this.game_name = game_name2;
+		this.genre = genre2;
+		this.graphic = graphic2;
+		this.thema = thema2;
+		this.atmos = atmos2;
+		this.multi = multi2;
+		this.price = price2;
+		this.lv = lv2;
+		this.playtime = playtime2;
+		this.score = score2;
+		this.image = image2;
 	}
 	public int getGame_num() {
 		return game_num;
@@ -60,6 +76,9 @@ public class gameDTO {
 	}
 	public int getScore() {
 		return score;
+	}
+	public String getImage() {
+		return image;
 	}
 	
 }
