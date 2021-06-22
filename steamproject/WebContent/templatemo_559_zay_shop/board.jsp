@@ -24,8 +24,13 @@
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
 
+<style>
+	td > a:link { color: black; text-decoration: none;}
+	td > a:visited { color: black; text-decoration: none;}
+	td > a:hover { color: #0d6efd; text-decoration: underline;}
+</style>
 </head> 
-
+ 
 <body>
     <!-- Start Top Nav -->
    <% memberDTO dto = (memberDTO)session.getAttribute("member");
@@ -78,7 +83,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -150,11 +155,11 @@
 		%>
 		
 			<div id="board" align = "center">
-				<table id = "list" class="table table-striped" border="1px">
-					<tr>
+				<table id = "list" class="table table-striped" style="border:1px solid black">
+					<tr align="center" style="font-family: 'SEBANG_Gothic_Bold'; color:white; background-color : navy">
 						<td>번호</td>
-						<td>제목</td>
 						<td>작성자</td>
+						<td width="50%">제목</td>
 						<td>시간</td>
 						<td>조회 수</td>
 						<td>추천 수</td>
@@ -162,17 +167,26 @@
 					<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
 						for(int i =0; i<bl.size(); i++){
 						out.print("<tr>");
-						out.print("<td>"+(i+1)+"</td>");
-						out.print("<td><a href='viewboard.jsp?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
-						out.print("<td>"+bl.get(i).getId()+"</td>");
-						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
+						out.print("<td align=\"center\">"+(i+1)+"</td>");
+						out.print("<td align=\"center\">"+bl.get(i).getId()+"</td>");
+						out.print("<td align=\"center\"><a href='viewboard.jsp?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
+						out.print("<td align=\"center\">"+bl.get(i).getBoard_date()+"</td>");
 						//out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");- 게시글관리에서 추가
-						out.print("<td>"+bl.get(i).getCount_num()+"</td>");
-						out.print("<td>"+bl.get(i).getBoard_recom()+"</td>");
+						out.print("<td align=\"center\">"+bl.get(i).getCount_num()+"</td>");
+						out.print("<td align=\"center\">"+bl.get(i).getBoard_recom()+"</td>");
 						out.print("</tr>");
 				
 			}
 			%>
+				
+				
+			
+	
+	<!-- a:link { color: black; text-decoration: none;}
+	a:visited { color: black; text-decoration: none;}
+	a:hover { color: #0d6efd; text-decoration: underline;} -->
+				
+				
 				
 				</table>
 			</div>
@@ -251,7 +265,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">
@@ -270,6 +283,7 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
+    
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>

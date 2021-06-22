@@ -29,7 +29,9 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 </head>
-
+<style>
+	
+</style>
 <body>
     <!-- Start Top Nav -->
     <% memberDTO dto = (memberDTO)session.getAttribute("member");
@@ -146,18 +148,18 @@ https://templatemo.com/tm-559-zay-shop
 
             <div class="col-lg-3" >
                 <!--<h1 class="h2 pb-4">카테고리</h1>-->
-                <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="category.jsp">
+                <ul class="list-unstyled ">
+                    <li class="pb-3 textb" >
+                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="category.jsp" style="color:black;">
                             카테고리
                         </a>
-                        <ul class="collapse show list-unstyled pl-3 action" >
-                            <li><a class="text-decoration-none" href="#">액션</a></li>
-                            <li><a class="text-decoration-none" href="#">RPG</a></li>
-                            <li><a class="text-decoration-none" href="#">전략</a></li>
-                            <li><a class="text-decoration-none" href="#">어드벤처 및 캐쥬얼</a></li>
-                            <li><a class="text-decoration-none" href="#">시뮬레이션</a></li>
-                            <li><a class="text-decoration-none" href="#">스포츠 및 레이싱</a></li>
+                        <ul class="collapse show list-unstyled pl-3 action"  >
+                            <li><a class="text-decoration-none" href="#" style="color:black;">액션</a></li>
+                            <li><a class="text-decoration-none" href="#" style="color:black;">RPG</a></li>
+                            <li><a class="text-decoration-none" href="#" style="color:black;">전략</a></li>
+                            <li><a class="text-decoration-none" href="#" style="color:black;">어드벤처 및 캐쥬얼</a></li>
+                            <li><a class="text-decoration-none" href="#" style="color:black;">시뮬레이션</a></li>
+                            <li><a class="text-decoration-none" href="#" style="color:black;">스포츠 및 레이싱</a></li>
                         </ul>
                     </li>
                     
