@@ -2,6 +2,7 @@ package DTO;
 
 public class gameDTO {
 
+	private int game_num;
 	private String game_name;
 	private String genre;
 	private int graphic;
@@ -12,9 +13,10 @@ public class gameDTO {
 	private int lv;
 	private int playtime;
 	private int score;
-	public gameDTO(String game_name, String genre, int graphic, String thema, String atmos, int multi, int price,
+	public gameDTO(int game_num,String game_name, String genre, int graphic, String thema, String atmos, int multi, int price,
 			int lv, int playtime, int score) {
 		super();
+		this.game_num = game_num;
 		this.game_name = game_name;
 		this.genre = genre;
 		this.graphic = graphic;
@@ -25,6 +27,9 @@ public class gameDTO {
 		this.lv = lv;
 		this.playtime = playtime;
 		this.score = score;
+	}
+	public int getGame_num() {
+		return game_num;
 	}
 	public String getGame_name() {
 		return game_name;

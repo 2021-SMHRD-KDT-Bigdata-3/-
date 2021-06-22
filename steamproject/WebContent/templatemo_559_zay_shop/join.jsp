@@ -20,6 +20,21 @@
     <style>
     	
     </style>
+<script src="js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+   	$("#id").keyup(function()){
+    	var id = $.trim($(this).val());
+    	//trim은 공백기능없어주는애.
+    	$(this).val(id);
+    	if(id.length < 4)
+    		$("#idInfo").html("<span>아이디는 4글자 이상이어야 합니다.</span>")
+    	else{
+    		//서버에 아이디 중복 체크 하러 갔다온다.->url이 안바뀌게 ajax이용.
+    		$("#idInfo").load("idCheck.jsp?id="+id);
+    	}
+    }
+    
+    </script>
 </head>
 <body>
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
@@ -96,10 +111,11 @@
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		아이디
 		    	</h4>
-		    	<div>
 		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    	<input type="text" name = "id" style="text-align:center; width:300px; height:30px; ">
-			    	<button class="btn btn-primary active">중복체크</button>
+		    	<div>
+			    	<input type="text" id= "id" name = "id" style="text-align:center; width:300px; height:30px; ">
+		    		<br>
+		    		<span id = "idInfo">아이디는 4글자 이상 입력해주세요.</span>
 		    	</div><br>
 		    	
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
@@ -107,17 +123,14 @@
 		    	</h4>
 		    	<div>
 			    	<input type="password" name = "pw" style="text-align:center; width:300px; height:30px; ">
+		    		<br>
+		    		<span>(비밀번호 확인)</span>
+		    		<br>
+		    		<input type="password" name="pwdCheck"style="text-align:center; width:300px; height:30px; "> 
+		    		<br>
+		    		<span>(영문+숫자 4~12자리)</span>
 		    	</div>
 		    	<br>
-		    	<h4 class="join_title" style="color:black; font-weight: 900;">
-		    		비밀번호 확인
-		    	</h4>
-		    	<div>
-			    	<input type="password" name = "pw2" style="text-align:center; width:300px; height:30px; ">
-		    	</div>
-		    	<br>
-		    	<%
-		    	%>
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		이름
 		    	</h4>
@@ -152,21 +165,15 @@
 			    	<input type="text" name = "tel" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
-		    	
-		   		<h4 class="join_title">
-		   			<input type="submit" value="가입하기" class="btn btn-primary active" style="text-align:center; width:200px; height:50px;" >
-		   		</h4>
+		    	<input type = "submit" class="btn btn-success" value = "가입하기">
+		   		
     	</form>
+    	
     </div>
     
 		
     	
     
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
     
 </body>
 </html>

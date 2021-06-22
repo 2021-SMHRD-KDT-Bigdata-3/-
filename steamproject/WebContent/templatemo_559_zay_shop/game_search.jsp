@@ -135,15 +135,18 @@
 				<h1 class="h1">게임 추천</h1>
 			</div>
 		</div>
+		
 		<div class="row" height="1500px">
 			<%for (int i = 0; i < 6; i++) {%>
-				<div class="col-lg-6 m-auto" align="center" width="100%">
+				<div class="col-lg-6 m-auto" align="center" >
 					<h4 align="center">
 						<%=(i+1)+". "%><%=question[i]%>
 					</h4>
 					<br>
-					예<input type="radio" name="genre1" value="1">
-					아니오<input type="radio" name="genre1" value="0"> 
+					예<input type="radio" name="genre<%=i %>" value="1">&nbsp;&nbsp;
+					아니오<input type="radio" name="genre<%=i %>" value="0"> 
+					<br>
+					<br>
 				</div>
 				<br>
 				<br>
