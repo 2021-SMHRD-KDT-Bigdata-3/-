@@ -16,7 +16,6 @@ public class GameDAO {
 	PreparedStatement pst = null;
 	ResultSet rs = null;
 	gameDTO dto = null;
-	ArrayList<boardDTO> bl = new ArrayList<boardDTO>();
 	int cnt = 0;
 
 	// 데이터베이스 연결
@@ -84,7 +83,7 @@ public class GameDAO {
 			close();
 		}return dto;
 		}
-
+	
 	
 	
 }
