@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -102,81 +103,25 @@
                     </a>
                 </div>
             </div>
+    </nav><br><br>
+	<%
+		String[] question = {"당신은 타격감을 중요시 여깁니까?", "당신은 부대 지휘하는 것을 좋아하십니까?", "당신은 캐릭터의 성장 과정을 좋아하십니까?",
+				"당신은 속도감 있는 스포츠를 좋아하십니까?", "당신은 풍부한 스토리를 좋아하십니까?", "당신은 새로운 것을 체험하길 원하십니까?"};
+		Random ran = new Random();
 
-        </div>
-    </nav>
-    <br><br>
+	%>
+	<section>
+	
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">게임 추천이에용</h1>
-                <p>
-                    20개 골라야함
-                </p>
+                <h1 class="h1">그대를 위한 추천</h1>
             </div>
         </div>
-        <div class="row">
-            
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
+        <div class="row" height="600px">
+        	<div class="col-lg-6 m-auto">
+                <h4 align="center">몇가지 질문을 통해 당신과 알맞은 게임을 찾으세요.</h4> <br>
+                <h4 align="center"></h4>
             </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3" align="center">
-                <img src="./assets/img/3.jpg" class="rounded-circle img-fluid border">
-                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-                <p class="text-center"><button class="btn btn-success">선택</button></p>
-            </div>
-            
         </div>
         <div align="center">
         	<button class="btn btn-success" style="width:200px;height:50px">원하는 게임 찾기</button>
