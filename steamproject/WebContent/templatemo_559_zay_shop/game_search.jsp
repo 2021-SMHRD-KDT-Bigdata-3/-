@@ -82,8 +82,7 @@
 
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navbar-light shadow">
-		<div
-			class="container d-flex justify-content-between align-items-center">
+		<div class="container d-flex justify-content-between align-items-center">
 
 			<a class="navbar-brand text-primary logo h1 align-self-center"
 				href="mainPage.jsp"> SUGE </a>
@@ -137,16 +136,18 @@
 		</div>
 		<div class="row" height="1500px">
 			<%for (int i = 0; i < 6; i++) {%>
+					<br>
+					<br>
 				<div class="col-lg-6 m-auto" align="center" width="100%">
 					<h4 align="center">
 						<%=(i+1)+". "%><%=question[i]%>
 					</h4>
 					<br>
-					예<input type="radio" name="genre1" value="1">
-					아니오<input type="radio" name="genre1" value="0"> 
+					예 <input type="radio" name="genre1" value="1">
+					아니오 <input type="radio" name="genre1" value="0"> 
 				</div>
-				<br>
-				<br>
+					<br>
+					<br>
 			<%}%>
 		</div>
 		<div align="center">
