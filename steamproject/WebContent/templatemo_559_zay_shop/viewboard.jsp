@@ -144,41 +144,42 @@
 	%>
 			
 				
-			
-			<div id = "board" align="center">
+			<br><br>
+			<div id = "board" align="center" class="container" style="padding-right: 150px; padding-left: 150px;">
 				<table id="list" class="table table-striped" style="border:1px solid black">
 					<tr>
-						<td>제목</td>
-						<td><%=dto2.getTitle() %></td>
-						<td>조회수</td>
+						<td width="116px">제목</td>
+						<td width="650px"><%=dto2.getTitle() %></td>
+						<td width="116px">조회수</td>
 						<td >
 							<%=dto2.getCount_num() %>
 						</td>
 					</tr>
 					<tr>
-						<td>작성자</td>
-						<td><%=dto2.getId() %></td>
-						<td>추천 수</td>
+						<td width="116px">작성자</td>
+						<td width="650px"><%=dto2.getId() %></td>
+						<td width="116px">추천 수</td>
 						<td>
 						<%=dto2.getBoard_recom() %></td>
 					</tr>
 					<tr>
-						<td colspan="2">내용</td>
+						<td colspan="4">내용</td>
 						
 					</tr>
 					<tr>
-						<td colspan="2">
+						<td colspan="4">
 							<%=dto2.getText() %>
 							<br>
 							<img src="../img/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
 						</td>
 					</tr>
 					<tr>
-						<td><a href = "viewboard.jsp"><button>추천</button></a></td>
-						<td colspan="2"><a href="board.jsp"><button>뒤로가기</button></a></td>
+						<td><a href = "viewboard.jsp"><button class="btn btn-success">추천</button></a></td>
+						<td colspan="4" align="right"><a href="board.jsp" ><button class="btn btn-success">뒤로가기</button></a></td>
 					</tr>
 				</table>
 			</div>
+				<br><br><br><br>
 		<footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row right" >
