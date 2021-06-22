@@ -1,3 +1,5 @@
+<%@page import="DAO.MemberDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -172,32 +174,39 @@
 						<h1 class="h1" style="font-weight: 900;">회원 관리</h1>
 						<br>
 					</div>
+					<%
+			MemberDAO dao = new MemberDAO();	
+			ArrayList<memberDTO> al = dao.select();
+	
+		%>
 					<div class="container">
 						<table class="table table-striped" border="1px">
 							<tr>
-								<th>아이디</th>
-								<th>이름</th>
-								<th>이메일</th>
-								<th></th>
+								<td>회원번호</td>
+								<td>ID</td>
+								<td>회원이름</td>
+								<td>나이</td>
+								<td>성별</td>
+								<td>전화 번호</td>
+								<td>ban</td>
 							</tr>
-							<tr>
-								<th>1</th>
-								<th>test</th>
-								<th>test</th>
-								<th><a href="#">삭제</a></th>
-							</tr>
-							<tr>
-								<th>1</th>
-								<th>test</th>
-								<th>test</th>
-								<th><a href="#">삭제</a></th>
-							</tr>
-							<tr>
-								<th>1</th>
-								<th>test</th>
-								<th>test</th>
-								<th><a href="#">삭제</a></th>
-							</tr>
+							<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
+							//int p = Integer.parseInt(request.getParameter('p'));
+							//p*15~(p+1)*15
+								for(int i =0; i<al.size(); i++){
+								out.print("<tr>");
+								out.print("<td>"+(i+1)+"</td>");
+								out.print("<td>"+al.get(i).getId()+"</td>");
+								out.print("<td>"+al.get(i).getName()+"</td>");
+								out.print("<td>"+al.get(i).getAge()+"</td>");
+								out.print("<td>"+al.get(i).getGender()+"</td>");
+								out.print("<td>"+al.get(i).getTel()+"</td>");
+								out.print("<td><a href='../deletemember?id="+al.get(i).getId()+"'>ban</a></td>"); 
+								out.print("</tr>");
+						
+					}
+					%>
+				
 							
 						</table>
 					</div>

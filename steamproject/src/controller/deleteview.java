@@ -23,7 +23,7 @@ public class deleteview extends HttpServlet {
 		int cnt = dao.delete1(num);
 
 		if (cnt > 0) {
-			response.sendRedirect("templatemo_559_zay_shop/board.jsp");
+			response.sendRedirect("templatemo_559_zay_shop/boardmanage.jsp");
 		}
 
 	}

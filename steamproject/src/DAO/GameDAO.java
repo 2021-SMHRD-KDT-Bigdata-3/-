@@ -8,14 +8,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import DTO.boardDTO;
+import DTO.gameDTO;
 
 public class GameDAO {
 
 	Connection conn = null;
 	PreparedStatement pst = null;
 	ResultSet rs = null;
-	boardDTO dto = null;
-	ArrayList<boardDTO> bl = new ArrayList<boardDTO>();
+	gameDTO dto = null;
 	int cnt = 0;
 
 	// 데이터베이스 연결
@@ -48,36 +48,42 @@ public class GameDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	public int gamelist() {
+	//게임이름으로 게임찾기
+	public gameDTO gamelist(String game_name) {
 		try {
 			conn();
-
-			String sql = "insert into game_board values(number_board.nextval,?,?,?,?,sysdate)";
-			// 3. sql문 실행객체 (PreparedStatement) 생성
+			String sql = "select * from game where game_name like '?%'";
 			pst = conn.prepareStatement(sql);
+			pst.setString(1, game_name );
 
-			// 4. 바인드변수채우기.
-			pst.setString(1, dto.getId());
-			pst.setString(2, dto.getTitle());
-			pst.setString(3, dto.getText());
-			pst.setString(4, dto.getImg());
+			rs = pst.executeQuery();
 
-			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
-			cnt = pst.executeUpdate();
-			if (cnt != 0) {
-				System.out.println("게시물 등록 성공");
+			if (rs.next()) {
+				String genre = rs.getString("genre");
+				int graphic = rs.getInt("graphic");
+				String thema = rs.getString("thema");
+				String atmos = rs.getString("atmos");
+				int multi = rs.getInt("multi");
+				int price = rs.getInt("genre");
+				int lv = rs.getInt("lv");
+				int playtime = rs.getInt("playtime");
+				int score = rs.getInt("score");
+				
+				gameDTO dto = new gameDTO(game_name,genre,graphic,thema,atmos,multi,price,lv,playtime,score);
+				System.out.println("게임 검색 성공!");
+				
+			} else {
+				System.out.println("게임 검색 실패!");
+				
 			}
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("게시물 등록 실패!");
 		} finally {
 			close();
+		}return dto;
 		}
-		return cnt;
-	}
-
+	
 	
 	
 }
