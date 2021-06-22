@@ -31,6 +31,8 @@ https://templatemo.com/tm-559-zay-shop
 	.row2{
 		justify-content: center;
 	}
+	
+	.img-fluid{max-width:150%;height:auto;}
 </style>
 </head>
 
@@ -155,9 +157,7 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Brands -->
     <section class="bg-light py-5">
         <div class="container my-4">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1" align="center">카테고리</h1>
-                </div>
+                
             <div class="row text-center py-3">
                 <div class="col-lg-9 m-auto tempaltemo-carousel">
                     <div class="row d-flex flex-row">
