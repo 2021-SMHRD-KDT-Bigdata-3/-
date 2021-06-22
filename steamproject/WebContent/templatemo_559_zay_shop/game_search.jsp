@@ -1,15 +1,14 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Random"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <title>Zay Shop - Product Listing Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -20,23 +19,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
-<!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
-<style>
-	.row2{
-		justify-content: center;
-	}
-</style>
 </head>
-
 <body>
-    <!-- Start Top Nav -->
-   <% memberDTO dto = (memberDTO)session.getAttribute("member");
+	<% memberDTO dto = (memberDTO)session.getAttribute("member");
 						
 							%>
     <!-- Start Top Nav -->
@@ -85,7 +70,7 @@ https://templatemo.com/tm-559-zay-shop
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -97,116 +82,63 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp">추천</a>
+                            <a class="nav-link" href="recom.jsp" >추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp">카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp">인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.jsp">게시판</a>
+                            <a class="nav-link" href="board.jsp" >게시판</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
                     </div>
-                    <input type= "text" name = "search" placeholder = "게임 검색"> 
-                    <a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" >
+                    <input type= "text" name = "search" placeholder = "게임 검색">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                   
                 </div>
             </div>
-
-        </div>
-    </nav>
-    <!-- Close Header -->
-
-    <!-- Modal -->
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="w-100 pt-1 mb-5 text-right">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="" method="get" class="modal-content modal-body border-0 p-0">
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                    <button type="submit" class="input-group-text bg-success text-light">
-                        <i class="fa fa-fw fa-search text-white"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-
-	
-
-    <!-- Start Brands -->
-    <section class="bg-light py-5">
-        <div class="container my-4">
-                
-            <div class="row text-center py-3">
-                <div class="col-lg-9 m-auto tempaltemo-carousel">
-                    <div class="row d-flex flex-row">
-	
-                        <!--Carousel Wrapper-->
-                        <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
-
-                                    <div class="carousel-item active">
-                                        <div class="row row2">
-                                            <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/action1.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/rpg1.png" alt="Brand Logo"></a>
-                                            </div>
-										<div class="col-3 p-md-5">
-											<a href="category.jsp"><img class="img-fluid brand-img" src="assets/img/state1.png"
-												alt="Brand Logo"></a>
-										</div>
-									</div>
-                                        <div class="row row2">
-                                            
-                                            <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/adv1.png" alt="Brand Logo"></a>
-                                            </div>
-                                             <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/sim1.png" alt="Brand Logo"></a>
-                                            </div>
-                                             <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/sports1.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  
-
-                                <!--End Slides-->
-                            </div>
-                        </div>
-
-                        
-                        <!--End Controls-->
-                    </div>
-                </div>
+    </nav><br><br>
+	<%
+		String[] question = {"당신은 타격감을 중요시 여깁니까?", "당신은 부대 지휘하는 것을 좋아하십니까?", "당신은 캐릭터의 성장 과정을 좋아하십니까?",
+				"당신은 속도감 있는 스포츠를 좋아하십니까?", "당신은 풍부한 스토리를 좋아하십니까?", "당신은 새로운 것을 체험하길 원하십니까?"};
+		Random ran = new Random();
+		ArrayList<String> question_genre = new ArrayList<String>();
+	%>
+	<section>
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">게임 추천</h1>
             </div>
         </div>
+        <div class="row" height="600px">
+        	<div class="col-lg-6 m-auto">
+                <h4 align="center"> <%
+                	for(int i = 0; i < question.length; i++) {
+                		question_genre.add(question[i]);
+                	}
+                double ran_value = Math.random();
+                int ran = (int)(ran_value * question_genre.size()) -1;
+                String get_question = question_genre.get(ran);
+               	question_genre.remove(ran);
+                System.out.println(get_question);
+                %> <%= get_question %></h4> <br>
+                <h4 align="center"></h4>
+            </div>
+        </div>
+        <div align="center">
+        	<button class="btn btn-success" style="width:200px;height:50px">원하는 게임 찾기</button>
+        </div>
+        <br><br>
     </section>
-    <!--End Brands-->
-
-
-     <!-- Start Footer -->
+    
+    <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row right" >
@@ -282,7 +214,11 @@ https://templatemo.com/tm-559-zay-shop
         </div>
 
     </footer>
-    <!-- End Footer -->
+    <!-- End Footer -->    
+    
+    
+
+
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
@@ -291,6 +227,12 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+    
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
 </body>
-
 </html>
