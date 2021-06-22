@@ -39,7 +39,6 @@
 <body>
 	<!-- Start Top Nav -->
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
-						
 							%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">

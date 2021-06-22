@@ -91,9 +91,9 @@
     <div align="center">
 		<form action = '../join' method = "post" >	   
 		 
-		    <h1 style="color:#0a58ca; font-weight: 900;">회원가입</h1>
+		    <h1 style="color:navy; font-weight: 900;">회원가입</h1>
 		    <br>
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		아이디
 		    	</h4>
 		    	<div>
@@ -102,14 +102,14 @@
 			    	<button class="btn btn-primary active">중복체크</button>
 		    	</div><br>
 		    	
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		비밀번호
 		    	</h4>
 		    	<div>
 			    	<input type="password" name = "pw" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		비밀번호 확인
 		    	</h4>
 		    	<div>
@@ -118,7 +118,7 @@
 		    	<br>
 		    	<%
 		    	%>
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		이름
 		    	</h4>
 		    	<div>
@@ -126,7 +126,7 @@
 		    	</div>
 		    	<br>
 		    	
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		나이
 		    	</h4>
 		    	<div>
@@ -134,7 +134,7 @@
 		    	</div>
 		    	<br>
 		    	
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		성별
 		    	</h4>
 		    	<div>
@@ -145,7 +145,7 @@
 		    	</div>
 		    	<br>
 		    	
-		    	<h4 class="join_title" style="color:#0a58ca; font-weight: 900;">
+		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		연락처
 		    	</h4>
 		    	<div>
