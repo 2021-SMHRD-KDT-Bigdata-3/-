@@ -138,7 +138,8 @@
 	
 		 BoardDAO dao = new BoardDAO();
 		 boardDTO dto2 = dao.one_select(num);
-	
+		
+ 	
 	
 	
 	%>

@@ -284,7 +284,29 @@ public boardDTO one_select(int num) {
 		close();
 	}return dto;
 	}
-	
+	public void count(boardDTO dto) {
+		try {
+		conn();
+		
+		String sql = "UPDATE game_board set count_num = count_num+1 where title = ?";
+		pst =conn.prepareStatement(sql);
+		pst.setInt(1, dto.getCount_num());
+		
+		cnt = pst.executeUpdate();
+		
+		if(cnt != 0) {
+			System.out.println("조회수 상승 성공");
+		}else 	 {
+			System.out.println("조회수 상승 실패");
+		}
+		
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+	}
 	
 
 }
