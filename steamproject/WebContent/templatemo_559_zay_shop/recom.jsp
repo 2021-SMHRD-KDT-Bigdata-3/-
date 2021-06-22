@@ -127,7 +127,7 @@
             </div>
         </div>
         <div align="center">
-        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search.jsp'">게임 찾기</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search1.jsp'">게임 찾기</button>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_before.jsp'">기존 게임 추천</button>
         </div>
         <br><br>

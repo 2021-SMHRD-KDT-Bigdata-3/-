@@ -122,12 +122,13 @@
 					</a>
 				</div>
 			</div>
+		</div>
 	</nav>
 	<br>
 	<br>
 	<%
-	String[] question = { "당신은 타격감을 중요시 여깁니까?", "당신은 부대 지휘하는 것을 좋아하십니까?", "당신은 캐릭터의 성장 과정을 좋아하십니까?",
-			"당신은 속도감 있는 스포츠를 좋아하십니까?", "당신은 풍부한 스토리를 좋아하십니까?", "당신은 새로운 것을 체험하길 원하십니까?" };
+	String[] question = {"게임에서 캐릭터의 성장 과정을 좋아하십니까?", "당신은 속도감 있는 스포츠를 좋아하십니까?", "귀하는 새로운 것을 체험하길 원하십니까?",
+			"당신은 타격감을 중요시 여깁니까?", "주로 게임할 때 풍부한 스토리를 좋아하십니까?", "귀하는 부대 지휘하는 것을 좋아하십니까?"};
 	%>
 	<section>
 		<div class="row text-center pt-3">
@@ -136,24 +137,27 @@
 			</div>
 		</div>
 		<div class="row" height="1500px">
-			<%for (int i = 0; i < 6; i++) {%>
-				<div class="col-lg-6 m-auto" align="center" width="100%">
-					<h4 align="center">
-						<%=(i+1)+". "%><%=question[i]%>
-					</h4>
-					<br>
-					예<input type="radio" name="genre1" value="1">
-					아니오<input type="radio" name="genre1" value="0"> 
-				</div>
-				<br>
-				<br>
-			<%}%>
+			<%
+			for (int i = 0; i < 6; i++) {
+			%>
+			<br> <br>
+			<div class="col-lg-6 m-auto" align="center" width="100%">
+				<h4 align="center">
+					<%=(i + 8) + ". "%><%=question[i]%>
+				</h4>
+
+				예 <input type="radio" name="genre<%=i%>" value="1"> &nbsp;
+				&nbsp; 아니오 <input type="radio" name="genre<%=i%>" value="0">
+			</div>
+			<br> <br> <br>
+			<%
+			}
+			%>
 		</div>
 		<div align="center">
-			<button class="btn btn-success" style="width: 200px; height: 50px">원하는
-				게임 찾기</button>
+			<button class="btn btn-success" style="width: 200px; height: 50px">결과 확인</button>
 		</div>
-		<br> <br>
+		<br>
 	</section>
 
 	<!-- Start Footer -->
@@ -223,7 +227,6 @@
 				</ul>
 			</div>
 		</div>
-		</div>
 
 		<div class="w-100 bg-black py-3">
 			<div class="container">
@@ -258,6 +261,7 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/templatemo.js"></script>
 	<script src="assets/js/custom.js"></script>
+
 
 </body>
 </html>
