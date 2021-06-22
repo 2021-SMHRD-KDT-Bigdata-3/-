@@ -178,7 +178,7 @@
 			
 		</div>
 		<div align="center">
-			<button class="btn btn-success" style="width: 200px; height: 50px">다음으로</button>
+			<button class="btn btn-success" style="width: 200px; height: 50px" onclick="location.href='game_search3.jsp' ">다음으로</button>
 		</div>
 		<br>
 	</section>
