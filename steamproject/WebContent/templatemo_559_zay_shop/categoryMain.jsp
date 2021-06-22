@@ -169,25 +169,26 @@ https://templatemo.com/tm-559-zay-shop
                                     <div class="carousel-item active">
                                         <div class="row row2">
                                             <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/action1.png" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/rpg1.png" alt="Brand Logo"></a>
                                             </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
+										<div class="col-3 p-md-5">
+											<a href="category.jsp"><img class="img-fluid brand-img" src="assets/img/state1.png"
+												alt="Brand Logo"></a>
 										</div>
+									</div>
                                         <div class="row row2">
                                             
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/adv1.png" alt="Brand Logo"></a>
                                             </div>
                                              <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/sim1.png" alt="Brand Logo"></a>
                                             </div>
                                              <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/sports1.png" alt="Brand Logo"></a>
                                             </div>
                                         </div>
                                     </div>
