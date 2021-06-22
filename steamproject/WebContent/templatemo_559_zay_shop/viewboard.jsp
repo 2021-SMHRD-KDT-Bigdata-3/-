@@ -144,8 +144,9 @@
 	%>
 			
 				
-			<div id = "board">
-				<table align = "center" id="list">
+			
+			<div id = "board" align="center">
+				<table id="list" class="table table-striped" style="border:1px solid black">
 					<tr>
 						<td>제목</td>
 						<td><%=dto2.getTitle() %></td>
