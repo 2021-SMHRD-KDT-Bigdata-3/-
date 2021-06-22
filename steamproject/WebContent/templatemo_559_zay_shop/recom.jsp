@@ -120,11 +120,15 @@
         <div class="row" height="600px">
         	<div class="col-lg-6 m-auto">
                 <h4 align="center">몇가지 질문을 통해 당신과 알맞은 게임을 찾으세요.</h4> <br>
-                <h4 align="center"></h4>
+                <h4 align="center">- 처음 이용하는 회원의 경우 '게임 찾기' 버튼을 눌러 시작해주세요.</h4>
+                <h4 align="center">- 이전에 사용하신 회원은 '기존 게임 추천'을 통해 다시 확인하실 수 있습니다. </h4>
+                <h4 align="center">- 새로 추천 받고 싶으시면 '게임 찾기' 버튼을 다시 눌러주세요. </h4>
+                <br><br><br>
             </div>
         </div>
         <div align="center">
-        	<button class="btn btn-success" style="width:200px;height:50px">원하는 게임 찾기</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search.jsp'">게임 찾기</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_before.jsp'">기존 게임 추천</button>
         </div>
         <br><br>
     </section>
@@ -207,8 +211,6 @@
     </footer>
     <!-- End Footer -->    
     
-    
-
 
 
     <!-- Start Script -->

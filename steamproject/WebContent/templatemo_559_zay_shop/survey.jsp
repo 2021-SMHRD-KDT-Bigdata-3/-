@@ -1,17 +1,12 @@
 <%@page import="DTO.memberDTO"%>
-<%@page import="DAO.BoardDAO"%>
-<%@page import="DTO.boardDTO"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <title>board</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -22,12 +17,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
-
-</head> 
-
+</head>
 <body>
-    <!-- Start Top Nav -->
-    <% memberDTO dto = (memberDTO)session.getAttribute("member");
+	<% memberDTO dto = (memberDTO)session.getAttribute("member");
 						
 							%>
     <!-- Start Top Nav -->
@@ -36,7 +28,7 @@
               		<div>
               		</div>
                 	<div>
-                <%
+                	<%
 							if(dto != null){
 										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
 							}else{
@@ -69,7 +61,6 @@
                 	</div>
                 </div>
     </nav>
-    
     <!-- Close Top Nav -->
 
 
@@ -77,7 +68,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -114,74 +105,25 @@
 
         </div>
     </nav>
-    <!-- Close Header -->
-
-    <!-- Modal -->
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="w-100 pt-1 mb-5 text-right">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- header end -->
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">성향 파악 질문</h1>
             </div>
-            <form action="" method="get" class="modal-content modal-body border-0 p-0">
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                    <button type="submit" class="input-group-text bg-success text-light">
-                        <i class="fa fa-fw fa-search text-white"></i>
-                    </button>
-                </div>
-            </form>
         </div>
-    </div>
-
-<%
-		int num = Integer.parseInt(request.getParameter("num"));
-	
-		 BoardDAO dao = new BoardDAO();
-		 boardDTO dto2 = dao.one_select(num);
-		
- 	
-	
-	
-	%>
-			
-				
-			<br><br>
-			<div id = "board" align="center" class="container" style="padding-right: 150px; padding-left: 150px;">
-				<table id="list" class="table table-striped" style="border:1px solid black">
-					<tr>
-						<td width="116px">제목</td>
-						<td width="650px"><%=dto2.getTitle() %></td>
-						<td width="116px">조회수</td>
-						<td >
-							<%=dto2.getCount_num() %>
-						</td>
-					</tr>
-					<tr>
-						<td width="116px">작성자</td>
-						<td width="650px"><%=dto2.getId() %></td>
-						<td width="116px">추천 수</td>
-						<td>
-						<%=dto2.getBoard_recom() %></td>
-					</tr>
-					<tr>
-						<td colspan="4">내용</td>
-						
-					</tr>
-					<tr>
-						<td colspan="4">
-							<%=dto2.getText() %>
-							<br>
-							<img src="../img/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
-						</td>
-					</tr>
-					<tr>
-						<td><a href = "viewboard.jsp"><button class="btn btn-success">추천</button></a></td>
-						<td colspan="4" align="right"><a href="board.jsp" ><button class="btn btn-success">뒤로가기</button></a></td>
-					</tr>
-				</table>
-			</div>
-				<br><br><br><br>
-		<footer class="bg-dark" id="tempaltemo_footer">
+        <div align="center">
+        	폭력성이 있는 게임을 좋아합니까 ?
+        </div>
+        <div class="row">
+        <div align="center">
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick="location.href='survey.jsp' ">설문 완료 ! 게임 추천 받기</button>
+        </div>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row right" >
 
@@ -199,10 +141,10 @@
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
                             <a class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
+							<br><br><br><br>
                         </li>
                     </ul>
                 </div>
-
                 <!-- <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
                     <ul class="list-unstyled text-light footer-link-list">
@@ -240,6 +182,7 @@
                     </ul>
                 </div>
             </div>
+        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">
@@ -255,7 +198,7 @@
         </div>
 
     </footer>
-    <!-- End Footer -->
+    <!-- End Footer -->    
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
@@ -264,6 +207,12 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
-
+    
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
 </body>
 </html>

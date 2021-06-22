@@ -31,6 +31,8 @@ https://templatemo.com/tm-559-zay-shop
 	.row2{
 		justify-content: center;
 	}
+	
+	.img-fluid{max-width:150%;height:auto;}
 </style>
 </head>
 
