@@ -90,6 +90,7 @@ https://templatemo.com/tm-559-zay-shop
             <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
+
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -98,24 +99,29 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="recom.jsp" style="color:black; font-weight: 900;">추천</a>
+                            <a class="nav-link" href="recom.jsp" >추천</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categoryMain.jsp" style="color:black; font-weight: 900;">카테고리</a>
+                            <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" style="color:black; font-weight: 900;">인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="board.jsp" style="color:black; font-weight: 900;">게시판</a>
+                            <a class="nav-link" href="board.jsp" >게시판</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     </div>
+                    <input type= "text" name = "search" placeholder = "게임 검색">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
     </nav>
     <!-- Close Header -->

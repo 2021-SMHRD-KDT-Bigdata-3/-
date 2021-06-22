@@ -68,7 +68,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -76,11 +76,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
             <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                       <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="recom.jsp" >추천</a>
                         </li>
                         <li class="nav-item">
@@ -94,15 +93,19 @@
                         </li>
                     </ul>
                 </div>
-                    <input type= "text" name = "search" placeholder = "게임 검색"> 
-                    	<a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" >
-                        	<i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    	</a>
-
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    </div>
+                    <input type= "text" name = "search" placeholder = "게임 검색">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
                 </div>
             </div>
 
-    </nav><br><br>
+        </div>
+    </nav>
+    <br><br>
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">게임 추천이에용</h1>
