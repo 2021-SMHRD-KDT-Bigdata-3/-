@@ -127,8 +127,8 @@
             </div>
         </div>
         <div align="center">
-        	<button id="start" class="btn btn-success" style="width:200px;height:50px">게임 찾기</button>
-        	<button id="already" class="btn btn-success" style="width:200px;height:50px">기존 게임 추천</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search.jsp'">게임 찾기</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_before.jsp'">기존 게임 추천</button>
         </div>
         <br><br>
     </section>
@@ -211,8 +211,6 @@
     </footer>
     <!-- End Footer -->    
     
-    
-
 
 
     <!-- Start Script -->
@@ -228,13 +226,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-    
-    <script>
-    	//$('#start').on('click',function(){
-    		//'href':'game_search.jsp'
-    	//});
-    	$('#start').attr("href", "game_search.jsp");
-    </script>
     
 </body>
 </html>
