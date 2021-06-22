@@ -103,7 +103,6 @@
                     </a>
                 </div>
             </div>
-<<<<<<< HEAD
     </nav><br><br>
 	<%
 		String[] question = {"당신은 타격감을 중요시 여깁니까?", "당신은 부대 지휘하는 것을 좋아하십니까?", "당신은 캐릭터의 성장 과정을 좋아하십니까?",
@@ -112,12 +111,7 @@
 
 	%>
 	<section>
-=======
-
-        </div>
-    </nav>
-    <br><br>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
+	
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">그대를 위한 추천</h1>
