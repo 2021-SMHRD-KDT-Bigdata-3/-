@@ -75,7 +75,7 @@ body, ul, li, p, a, label, input, div {
 }
 .pagination .page-link:hover {color: #000;}
 .pagination .page-link:hover, .pagination .page-link.active {
-  background-color: #0d6efd;
+  background-color: #000080;
   color: #fff;
 }
 /* Nav */

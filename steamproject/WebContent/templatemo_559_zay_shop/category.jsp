@@ -329,7 +329,7 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                     </div>
                 </div>
-                <div div="row">
+                <div>
                     <ul class="pagination pagination-lg justify-content-end">
                         <li class="page-item disabled">
                             <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
@@ -411,7 +411,6 @@ https://templatemo.com/tm-559-zay-shop
                     </ul>
                 </div>
             </div>
-        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">
