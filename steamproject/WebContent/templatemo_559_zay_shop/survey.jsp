@@ -106,20 +106,17 @@
         </div>
     </nav>
     <!-- header end -->
-    <br><br><br><br>
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">게임 추천 받기</h1>
-                <p>
-                    새로운 게임을 하고싶은 당신 !
-                    저희 SUGE가 몇가지 질문을 통해 당신에게 맞는 게임을 추천해 드립니다!
-                </p>
+                <h1 class="h1">성향 파악 질문</h1>
             </div>
+        </div>
+        <div align="center">
+        	폭력성이 있는 게임을 좋아합니까 ?
         </div>
         <div class="row">
         <div align="center">
-        	<button class="btn btn-success" style="width:200px;height:50px" onclick="location.href='survey.jsp' ">설문 시작</button>
-        	<button class="btn btn-success" style="width:200px;height:50px" onclick="location.href='survey.jsp' ">기존 추천 확인</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick="location.href='survey.jsp' ">설문 완료 ! 게임 추천 받기</button>
         </div>
         <br><br>
         <br><br>
