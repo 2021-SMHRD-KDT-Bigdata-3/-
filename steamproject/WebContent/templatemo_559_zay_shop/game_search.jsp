@@ -1,17 +1,13 @@
-<%@page import="DTO.boardDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="DAO.BoardDAO"%>
+<%@page import="java.util.Random"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-<title>board</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<title>Insert title here</title>
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
 <link rel="shortcut icon" type="image/x-icon"
 	href="assets/img/favicon.ico">
@@ -19,68 +15,68 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/templatemo.css">
 <link rel="stylesheet" href="assets/css/custom.css">
-<link rel="stylesheet" href="assets/css/font.css">
 
 <!-- Load fonts style after rendering the layout styles -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
 <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<style>
-	.h3{
-		color:black;
-	}
-	.text-decoration-none{
-		font-family: 'SEBANG_Gothic_Bold' ;
-	}
-</style>
-
+<link rel="stylesheet" href="assets/css/font.css">
 </head>
-
 <body>
+	<%
+	memberDTO dto = (memberDTO) session.getAttribute("member");
+	%>
 	<!-- Start Top Nav -->
-	<% memberDTO dto = (memberDTO)session.getAttribute("member");
-						
-							%>
-    <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-                <div class="container text-light">
-              		<div>
-              		</div>
-                	<div>
-                	<%
-							if(dto != null){
-										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
-							}else{
-								out.print("<h1>로그인이 필요합니다!</h1>");
-							}
-							%>
-                		<%
-								if(dto==null){
-									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
-									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
-									%>
-									<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
-			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
-								
-								<% }else{
-									if(dto.getId().equals("admin")){
-										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">회원관리</button>
-										<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
-									<%}else{
-									//out.print("<a href='update.jsp'>개인정보수정</a>");
-									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
-									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
-								
-									<% }}
-								%>
-								
-								
-                		
-                	</div>
-                </div>
-    </nav>
+	<nav
+		class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
+		id="templatemo_nav_top">
+		<div class="container text-light">
+			<div></div>
+			<div>
+				<%
+				if (dto != null) {
+					out.print("<h1>" + dto.getName() + "님 환영해요~😉");
+				} else {
+					out.print("<h1>로그인이 필요합니다!</h1>");
+				}
+				%>
+				<%
+				if (dto == null) {
+					//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+					//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+				%>
+				<button class="btn btn-success" type="button"
+					onclick="location.href='join.jsp' ">회원가입</button>
+				<button class="btn btn-success" type="button"
+					onclick="location.href='login.jsp' ">로그인</button>
 
+				<%
+				} else {
+				if (dto.getId().equals("admin")) {
+					//out.print("<a href ='delete.jsp'>회원삭제</a>");
+				%>
+				<button class="btn btn-success" type="button"
+					onclick="location.href='guestmanage.jsp' ">회원관리</button>
+				<button class="btn btn-success" type="button"
+					onclick="location.href='../logout' ">로그아웃</button>
+				<%
+				} else {
+				//out.print("<a href='update.jsp'>개인정보수정</a>");
+				//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");
+				%>
+				<button class="btn btn-success" type="button"
+					onclick="location.href='../logout' ">로그아웃</button>
+
+				<%
+				}
+				}
+				%>
+
+
+
+			</div>
+		</div>
+	</nav>
 	<!-- Close Top Nav -->
 
 
@@ -89,7 +85,7 @@
 		<div
 			class="container d-flex justify-content-between align-items-center">
 
-			<a class="navbar-brand text-success logo h1 align-self-center"
+			<a class="navbar-brand text-primary logo h1 align-self-center"
 				href="mainPage.jsp"> SUGE </a>
 
 			<button class="navbar-toggler border-0" type="button"
@@ -125,103 +121,42 @@
                     </form>
 				</div>
 			</div>
-
-		</div>
 	</nav>
-	<!-- Close Header -->
-
-	<!-- Modal -->
-	<div class="modal fade bg-white" id="templatemo_search" tabindex="-1"
-		role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="w-100 pt-1 mb-5 text-right">
-				<button type="button" class="btn-close" data-bs-dismiss="modal"
-					aria-label="Close"></button>
+	<br>
+	<br>
+	<%
+	String[] question = { "당신은 타격감을 중요시 여깁니까?", "당신은 부대 지휘하는 것을 좋아하십니까?", "당신은 캐릭터의 성장 과정을 좋아하십니까?",
+			"당신은 속도감 있는 스포츠를 좋아하십니까?", "당신은 풍부한 스토리를 좋아하십니까?", "당신은 새로운 것을 체험하길 원하십니까?" };
+	%>
+	<section>
+		<div class="row text-center pt-3">
+			<div class="col-lg-6 m-auto">
+				<h1 class="h1">게임 추천</h1>
 			</div>
-			<form action="" method="get"
-				class="modal-content modal-body border-0 p-0">
-				<div class="input-group mb-2">
-					<input type="text" class="form-control" id="inputModalSearch"
-						name="q" placeholder="Search ...">
-					<button type="submit"
-						class="input-group-text bg-success text-light">
-						<i class="fa fa-fw fa-search text-white"></i>
-					</button>
-				</div>
-			</form>
 		</div>
-	</div>
-
-	<div class="container py-5">
-		<div class="row">
-
-			<div class="col-lg-3">
-				<a class="collapsed d-flex justify-content-between h3 text-decoration-none"
-					href="guestmanage.jsp">회원 관리</a>
-				<a class="collapsed d-flex justify-content-between h3 text-decoration-none"
-					href="boardmanage.jsp">게시판 관리</a>
-
-
-			</div>
-
-			<div class="col-lg-9">
-				<div class="row">
-
-					<div class="col-md-6 m-auto text-center">
-						<br>
-						<h1 class="h1" style="font-weight: 900;">게시판 관리</h1>
-						<br>
-					</div>
-					<div class="container">
-						<%
-							BoardDAO dao = new BoardDAO();
-							ArrayList<boardDTO> bl = dao.select();
-	
-								%>
 		
-			<div id="board" align = "center">
-				<table id = "list" class="table table-striped" border="1px">
-					<tr>
-						<td>번호</td>
-						<td>제목</td>
-						<td>작성자</td>
-						<td>시간</td>
-						<td>게시글 삭제</td>
-					</tr>
-					<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
-						for(int i =0; i<bl.size(); i++){
-						out.print("<tr>");
-						out.print("<td>"+(i+1)+"</td>");
-						out.print("<td>"+bl.get(i).getTitle()+"</td>");
-						out.print("<td>"+bl.get(i).getId()+"</td>");
-						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
-						out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>"); 
-						out.print("</tr>");
-				
-			}
-			%>
-				
-				</table>
-					</div>
-					
-					<div align="center">
-						<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
-						<a href="#">5</a>
-					</div>
+		<div class="row" height="1500px">
+			<%for (int i = 0; i < 6; i++) {%>
+				<div class="col-lg-6 m-auto" align="center" >
+					<h4 align="center">
+						<%=(i+1)+". "%><%=question[i]%>
+					</h4>
+					<br>
+					예<input type="radio" name="genre<%=i %>" value="1">&nbsp;&nbsp;
+					아니오<input type="radio" name="genre<%=i %>" value="0"> 
 					<br>
 					<br>
-					
-					<div align="center">
-						<button type="button" class="btn btn-success"
-							onclick="location.href='mainPage.jsp' ">되돌아가기</button>
-					</div>
 				</div>
-
-			</div>
+				<br>
+				<br>
+			<%}%>
 		</div>
-	</div>
-	<!-- End Contact -->
-
+		<div align="center">
+			<button class="btn btn-success" style="width: 200px; height: 50px">원하는
+				게임 찾기</button>
+		</div>
+		<br> <br>
+	</section>
 
 	<!-- Start Footer -->
 	<footer class="bg-dark" id="tempaltemo_footer">
@@ -238,9 +173,20 @@
 						</li>
 						<li><i class="fa fa-envelope fa-fw"></i> <a
 							class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
-						</li>
+							<br> <br> <br> <br></li>
 					</ul>
 				</div>
+				<!-- <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">추천</a></li>
+                        <li><a class="text-decoration-none" href="#">카테고리</a></li>
+                        <li><a class="text-decoration-none" href="#">인기순위</a></li>
+                        <li><a class="text-decoration-none" href="#">게시판</a></li>
+                       
+                    </ul>
+                </div>  -->
+
 
 
 			</div>
@@ -279,6 +225,7 @@
 				</ul>
 			</div>
 		</div>
+		</div>
 
 		<div class="w-100 bg-black py-3">
 			<div class="container">
@@ -296,6 +243,10 @@
 	</footer>
 	<!-- End Footer -->
 
+
+
+
+
 	<!-- Start Script -->
 	<script src="assets/js/jquery-1.11.0.min.js"></script>
 	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -303,6 +254,12 @@
 	<script src="assets/js/templatemo.js"></script>
 	<script src="assets/js/custom.js"></script>
 	<!-- End Script -->
-</body>
 
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/templatemo.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+</body>
 </html>

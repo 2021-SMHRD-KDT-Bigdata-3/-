@@ -112,10 +112,10 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                    <input type= "text" name = "search" placeholder = "게임 검색"> 
-                    <a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" >
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
+                   <form action = "../select">
+	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
+	                    <input type = "submit" value = "게임 검색">
+                    </form>
                 </div>
             </div>
 
@@ -329,7 +329,7 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                     </div>
                 </div>
-                <div div="row">
+                <div>
                     <ul class="pagination pagination-lg justify-content-end">
                         <li class="page-item disabled">
                             <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
@@ -411,7 +411,6 @@ https://templatemo.com/tm-559-zay-shop
                     </ul>
                 </div>
             </div>
-        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">

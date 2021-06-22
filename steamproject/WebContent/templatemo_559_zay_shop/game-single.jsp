@@ -123,10 +123,10 @@ https://templatemo.com/tm-559-zay-shop
 							</div>
 						</div>
 					</div>
-					<input type="text" name="search" placeholder="게임 검색"> <a
-						class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal">
-						<i class="fa fa-fw fa-search text-dark mr-2"></i>
-					</a>
+					<form action = "../select">
+	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
+	                    <input type = "submit" value = "게임 검색">
+                    </form>
 				</div>
 			</div>
 

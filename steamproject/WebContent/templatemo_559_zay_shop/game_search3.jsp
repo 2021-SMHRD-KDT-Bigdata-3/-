@@ -115,11 +115,10 @@
 					<div
 						class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
 					</div>
-					<input type="text" name="search" placeholder="게임 검색"> <a
-						class="nav-icon d-none d-lg-inline" href="#"
-						data-bs-toggle="modal" data-bs-target="#templatemo_search"> <i
-						class="fa fa-fw fa-search text-dark mr-2"></i>
-					</a>
+					<form action = "../select">
+	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
+	                    <input type = "submit" value = "게임 검색">
+                    </form>
 				</div>
 			</div>
 		</div>

@@ -20,6 +20,17 @@
     <style>
     	
     </style>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+    $("#id").keyup(function()){
+    	var id = $.trim($(this).val());
+    	//trim은 공백기능없어주는애.
+    	$(this).val(id);
+    	if(id.length < 8)
+    		$("#id")
+    }
+    
+    </script>
 </head>
 <body>
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
@@ -98,8 +109,9 @@
 		    	</h4>
 		    	<div>
 		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    	<input type="text" name = "id" style="text-align:center; width:300px; height:30px; ">
-			    	<button class="btn btn-primary active">중복체크</button>
+			    	<input type="text" id= "id" name = "id" style="text-align:center; width:300px; height:30px; ">
+		    		<br>
+		    		<span>아이디는 4글자 이상 입력해주세요.</span>
 		    	</div><br>
 		    	
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
@@ -107,17 +119,14 @@
 		    	</h4>
 		    	<div>
 			    	<input type="password" name = "pw" style="text-align:center; width:300px; height:30px; ">
+		    		<br>
+		    		<span>(비밀번호 확인)</span>
+		    		<br>
+		    		<input type="password" name="pwdCheck"style="text-align:center; width:300px; height:30px; "> 
+		    		<br>
+		    		<span>(영문+숫자 4~12자리)</span>
 		    	</div>
 		    	<br>
-		    	<h4 class="join_title" style="color:black; font-weight: 900;">
-		    		비밀번호 확인
-		    	</h4>
-		    	<div>
-			    	<input type="password" name = "pw2" style="text-align:center; width:300px; height:30px; ">
-		    	</div>
-		    	<br>
-		    	<%
-		    	%>
 		    	<h4 class="join_title" style="color:black; font-weight: 900;">
 		    		이름
 		    	</h4>
@@ -152,13 +161,31 @@
 			    	<input type="text" name = "tel" style="text-align:center; width:300px; height:30px; ">
 		    	</div>
 		    	<br>
+		    	<div>
+		    		<input class="btn btn-success" type="submit" value = "가입하기">
+		    	</div>
 		    	
-		   		<h4 class="join_title">
-		   			<input type="submit" value="가입하기" class="btn btn-primary active" style="text-align:center; width:200px; height:50px;" >
-		   		</h4>
+		   		
     	</form>
+    	
     </div>
     
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+<script type="text/javascript">
+
+<!-- 아이디중복체크 -->
+	function winopen(){
+		if(document.fr.id.value =="" || document.fr.id.value.length < 0){
+			alert("아이디를 먼저 입력해주세요")
+			document.fr.id.focus();
+		}else{
+			//2. 회원정보아이디를 가지고 있는 지 체크하려면 DB에 접근해야한다.
+			//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
+			window.open("joinIdCheck.jsp?userid="+document.fr.id.value,"","width=500, height=300");
+		}
+	}
+	    
 		
     	
     

@@ -103,13 +103,13 @@ public class MemberDAO {
 				String gender = rs.getString("gender");
 				String tel = rs.getString("tel");
 				dto = new memberDTO(id, pw, name, age, gender, tel);
-			} else {
-				System.out.println("로그인 실패");
-			}
+				System.out.println("로그인 성공");
+			} 
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("회원가입 실패!");
+			System.out.println("로그인 실패!");
 		} finally {
 			close();
 		}
@@ -216,4 +216,26 @@ public class MemberDAO {
 		return al;
 		
 	}
+	public int joinIdCheck(String id){
+		int result = -1; 
+		try{
+			  conn();
+			  String sql = "select * from game_member where id=?";
+		   pst = conn.prepareStatement(sql);
+		   pst.setString(1, id);
+		   rs = pst.executeQuery();
+		   if(rs.next()){	
+				result = 0;
+			}else{
+				result = 1;
+			}
+
+			System.out.println("아이디 중복체크결과 : "+result);
+		  }catch(Exception e){
+		   e.printStackTrace();
+		  }finally{
+			  close();
+		  }
+		  return result;
+		 }
 }
