@@ -144,7 +144,7 @@ https://templatemo.com/tm-559-zay-shop
             <h1 style="color:black; font-weight: 900;">글쓰기</h1>
             <br>
         </div>
-    <!-- Start Contact -->
+    <!-- Start Contact --> 
     <div id = "board">
 				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
 				<table id="list" align="center">
