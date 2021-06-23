@@ -100,6 +100,7 @@ public class GameDAO {
 				
 				int game_num =rs.getInt("game_num");
 				String game_name = rs.getString("game_name");
+				String game_genre = rs.getString("genre");
 				int graphic = rs.getInt("graphic");
 				String thema = rs.getString("thema");
 				String atmos = rs.getString("atmos");
@@ -109,7 +110,7 @@ public class GameDAO {
 				int playtime = rs.getInt("playtime");
 				int score = rs.getInt("score");
 				String image = rs.getString("image");
-				dto = new gameDTO(game_num,game_name,genre,graphic,thema,atmos,multi,price,lv,playtime,score,image);
+				dto = new gameDTO(game_num,game_name,game_genre,graphic,thema,atmos,multi,price,lv,playtime,score,image);
 				System.out.println("게임 검색 성공!");
 				
 			} 

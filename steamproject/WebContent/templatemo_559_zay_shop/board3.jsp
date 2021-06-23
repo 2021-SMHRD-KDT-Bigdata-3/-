@@ -1,8 +1,9 @@
 <%@page import="DTO.memberDTO"%>
-<%@page import="DAO.BoardDAO"%>
 <%@page import="DTO.boardDTO"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="DAO.BoardDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +24,16 @@
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/font.css">
 
+<style>
+	td > a:link { color: black; text-decoration: none;}
+	td > a:visited { color: black; text-decoration: none;}
+	td > a:hover { color: #0d6efd; text-decoration: underline;}
+</style>
 </head> 
-
+ 
 <body>
     <!-- Start Top Nav -->
-    <% memberDTO dto = (memberDTO)session.getAttribute("member");
+   <% memberDTO dto = (memberDTO)session.getAttribute("member");
 						
 							%>
     <!-- Start Top Nav -->
@@ -36,7 +42,7 @@
               		<div>
               		</div>
                 	<div>
-                <%
+                	<%
 							if(dto != null){
 										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
 							}else{
@@ -77,7 +83,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="mainPage.jsp">
+            <a class="navbar-brand text-primary logo h1 align-self-center" href="mainPage.jsp">
                 SUGE
             </a>
 
@@ -105,7 +111,7 @@
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     </div>
-                   <form action = "../select">
+                    <form action = "../select">
 	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
 	                    <input type = "submit" value = "게임 검색">
                     </form>
@@ -133,60 +139,80 @@
         </div>
     </div>
 
-<%
-		int num = Integer.parseInt(request.getParameter("num"));
-		request.setCharacterEncoding("UTF-8");	
-		 BoardDAO dao = new BoardDAO();
-		 boardDTO dto2 = dao.one_select(num);
+
+    <!-- Start Content Page -->
+        <div class="col-md-6 m-auto text-center">
+            <br>
+            <h1 style="color:black; font-weight: 900;"	>자유 게시판</h1>
+            <br>
+        </div>
+    <!-- Start Contact -->
+    <div class="container">
+    	<%
+    	request.setCharacterEncoding("UTF-8");	
+    	String title = (String)session.getAttribute("title");
+    	System.out.println("가져옴?"+title);
+			BoardDAO dao = new BoardDAO();	
+			ArrayList<boardDTO> al2 = dao.boardlist(title);
+			System.out.println(al2.size());
+		%>
 		
- 	
-	
-	
-	%>
-			
+			<div id="board" align = "center">
+				<table id = "list" class="table table-striped" style="border:1px solid black">
+					<tr align="center" style="font-family: 'SEBANG_Gothic_Bold'; color:white; background-color : navy">
+						<td>번호</td>
+						<td>작성자</td>
+						<td width="50%">제목</td>
+						<td>시간</td>
+						<td>조회 수</td>
+						<td>추천 수</td>
+					</tr>
+					<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
+						for(int i =0; i<al2.size(); i++){
+						out.print("<tr>");
+						out.print("<td align=\"center\">"+(i+1)+"</td>");
+						out.print("<td align=\"center\">"+al2.get(i).getId()+"</td>");
+						out.print("<td align=\"center\"><a href='viewboard.jsp?num="+al2.get(i).getBoard_num()+"'>"+al2.get(i).getTitle()+"</a></td>");
+						out.print("<td align=\"center\">"+al2.get(i).getBoard_date()+"</td>");
+						out.print("<td align=\"center\">"+al2.get(i).getCount_num()+"</td>");
+						out.print("<td align=\"center\">"+al2.get(i).getBoard_recom()+"</td>");
+						out.print("</tr>");
 				
-			<br><br>
-			<div id = "board" align="center" class="container" style="padding-right: 150px; padding-left: 150px; width: 940px;">
-				<table id="list" class="table table-striped" style="border:1px solid black">
-					<tr>
-						<td width="116px">제목</td>
-						<td width="650px"><%=dto2.getTitle() %></td>
-						<td width="116px">조회수</td>
-						<td >
-							<%=dto2.getCount_num() %>
-						</td>
-					</tr>
-					<tr>
-						<td width="116px">작성자</td>
-						<td width="650px"><%=dto2.getId() %></td>
-						<td width="116px">추천 수</td>
-						<td>
-						<%=dto2.getBoard_recom() %></td>
-					</tr>
-					<tr>
-						<td colspan="4">내용</td>
-						
-					</tr>
-					<tr>
-						<td colspan="4">
-							<%=dto2.getText() %>
-							<br>
-							<img src="../img/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
-						</td>
-					</tr>
-					<tr>
-						<td><a href = "viewboard.jsp"><button class="btn btn-success">추천</button></a></td>
-						<td colspan="4" align="right"><a href="board.jsp" ><button class="btn btn-success">뒤로가기</button></a></td>
-					</tr>
+			}
+			%>
+				
+				
+			
+	
+	<!-- a:link { color: black; text-decoration: none;}
+	a:visited { color: black; text-decoration: none;}
+	a:hover { color: #0d6efd; text-decoration: underline;} -->
+				
+				
+				
 				</table>
 			</div>
-				<br><br><br><br>
-		<footer class="bg-dark" id="tempaltemo_footer">
+				
+	    <div align = "right">
+	    	<form action = "../boardselect"> 
+	    	<input type = "text" name = "title_name">
+	    	<input type = "submit" value = "검색" class="btn btn-success">
+	    	</form>
+	    	<br>
+	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
+		</div>
+		<br>
+    </div>
+    <!-- End Contact -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 border-bottom pb-3 border-light logo">SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -258,12 +284,13 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
+    
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
-
 </body>
+
 </html>

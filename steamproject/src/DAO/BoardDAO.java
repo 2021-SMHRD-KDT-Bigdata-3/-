@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import DTO.boardDTO;
+import DTO.gameDTO;
 
 public class BoardDAO {
 
@@ -16,6 +17,7 @@ public class BoardDAO {
 	ResultSet rs = null;
 	boardDTO dto = null;
 	ArrayList<boardDTO> bl = new ArrayList<boardDTO>();
+	ArrayList<boardDTO> al2 = new ArrayList<boardDTO>();
 	int cnt = 0;
 
 	// 데이터베이스 연결
@@ -119,6 +121,38 @@ public class BoardDAO {
 		return bl;
 
 	}
+	public ArrayList<boardDTO> boardlist(String title) {
+		try {
+			
+			conn();
+			String sql = "select * from game_board where title like ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, title+"%");
+
+			rs = pst.executeQuery();
+
+			while (rs.next()) {
+				int num = rs.getInt("board_num");
+				String id = rs.getString("id");
+				String get_title = rs.getString("title");
+				String text = rs.getString("text");
+				String img = rs.getString("img");
+				String date = rs.getString("board_date");
+				int count_num = rs.getInt("count_num");
+				int board_recom = rs.getInt("board_recom");
+				
+				dto = new boardDTO(num,id,get_title,text,img,date,count_num,board_recom);
+				al2.add(dto);
+				System.out.println("게시글 검색 성공!dao성공");
+				
+			} 
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("게시글 검색 실패!dao실패");
+		} finally {
+			close();
+		}return al2;
+		}
 
 	// 게시글 삭제기능. -(게시글 번호로 지우기)
 	public int delete1(int num) {
@@ -306,6 +340,22 @@ public boardDTO one_select(int num) {
 		}finally {
 			close();
 		}
+	}
+	public void updateBoardCount(int boardNo) throws SQLException {
+	    Connection con = null;
+	    PreparedStatement pstmt = null;
+	    try {
+	        conn();
+	        String sql = "update board set boardCount = boardCount+1 where boardNo=" + boardNo;
+	        System.out.println(sql);
+	        pstmt = con.prepareStatement(sql);
+	        pstmt.executeUpdate();
+	         
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	    	close();
+	    }
 	}
 	
 

@@ -108,7 +108,7 @@
 		    		아이디
 		    	</h4>
 		    	<div>
-		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    		
 			    	<input type="text" id= "id" name = "id" style="text-align:center; width:300px; height:30px; ">
 		    		<br>
 		    		<span>아이디는 4글자 이상 입력해주세요.</span>
@@ -163,6 +163,9 @@
 		    	<br>
 		    	<div>
 		    		<input class="btn btn-success" type="submit" value = "가입하기">
+		    		<br>
+		    		<br>
+		    		<br>
 		    	</div>
 		    	
 		   		
@@ -170,11 +173,19 @@
     	
     </div>
     
-<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
-<script type="text/javascript">
+		
+    	
+    
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+	<script type="text/javascript">
 
 <!-- 아이디중복체크 -->
+	
 	function winopen(){
 		if(document.fr.id.value =="" || document.fr.id.value.length < 0){
 			alert("아이디를 먼저 입력해주세요")
@@ -184,16 +195,9 @@
 			//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
 			window.open("joinIdCheck.jsp?userid="+document.fr.id.value,"","width=500, height=300");
 		}
+		$('');
 	}
-	    
-		
-    	
-    
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+	</script>
     
 </body>
 </html>

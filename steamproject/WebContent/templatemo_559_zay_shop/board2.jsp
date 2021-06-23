@@ -151,6 +151,8 @@ https://templatemo.com/tm-559-zay-shop
             <br>
         </div>
     <!-- Start Contact --> 
+    <%
+    request.setCharacterEncoding("UTF-8");	%>
     <div id = "board">
 				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
 				<table id="list" align="center">
