@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-<title>Zay Shop - Product Listing Page</title>
+<title>SUGE 스팀게임 추천 서비스</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,6 +29,7 @@ TemplateMo 559 Zay Shop
 https://templatemo.com/tm-559-zay-shop
  
 -->
+
 <style>
 .row2 {
 	justify-content: center;
@@ -46,11 +47,11 @@ https://templatemo.com/tm-559-zay-shop
 	cursor: pointer;
 	overflow: hidden;
 }
-.btn1:focus{
-	border: none;
-	outline: none;	
-}
 
+.btn1:focus {
+	border: none;
+	outline: none;
+}
 </style>
 </head>
 
@@ -111,7 +112,6 @@ https://templatemo.com/tm-559-zay-shop
 		</div>
 	</nav>
 	<!-- Close Top Nav -->
-
 
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navbar-light shadow">
@@ -189,82 +189,58 @@ https://templatemo.com/tm-559-zay-shop
 		</div>
 	</div>
 
+	<!-- Start Content -->
+	<div class="container py-5" align="center">
+		<div class="col-lg-9">
+			<h1>이런 게임은 어떠세요??</h1>
+			<br> <br> <br>
+			<div class="row">
+				<div class="col-md-4" style="width: 25%;">
+					<div class="card mb-4 product-wap rounded-0">
+						<div class="card rounded-0">
+							<img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
 
-
-
-
-	<!-- Start Brands -->
-	<section class="bg-light py-5">
-		<div class="container my-4">
-
-			<div class="row text-center py-3">
-				<div class="col-lg-9 m-auto tempaltemo-carousel">
-					<div class="row d-flex flex-row">
-
-						<!--Carousel Wrapper-->
-						<div class="col">
-							<div class="carousel slide carousel-multi-item pt-2 pt-md-0"
-								id="multi-item-example" data-bs-ride="carousel">
-
-								<div class="carousel-item active">
-									<div class="row row2">
-										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
-												<img class="img-fluid brand-img"
-													src="assets/img/action1.png" alt="Brand Logo">
-											</button>
-
-										</div>
-										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
-												<img class="img-fluid brand-img" src="assets/img/rpg1.png"
-													alt="Brand Logo">
-											</button>
-
-										</div>
-										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
-												<img class="img-fluid brand-img" src="assets/img/state1.png"
-													alt="Brand Logo">
-											</button>
-										</div>
-									</div>
-									<div class="row row2">
-
-										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
-												<img class="img-fluid brand-img" src="assets/img/adv1.png"
-													alt="Brand Logo">
-											</button>
-										</div>
-										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
-												<img class="img-fluid brand-img" src="assets/img/sim1.png"
-													alt="Brand Logo">
-											</button>
-										</div>
-										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
-												<img class="img-fluid brand-img"
-													src="assets/img/sports1.png" alt="Brand Logo">
-											</button>
-										</div>
-									</div>
-								</div>
-
-
-								<!--End Slides-->
-							</div>
 						</div>
-
-
-						<!--End Controls-->
+						<div class="card-body">
+							<a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
+							<ul
+								class="w-100 list-unstyled d-flex justify-content-between mb-0">
+								<li>태그</li>
+								<li class="pt-2"><span
+									class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+								</li>
+							</ul>
+							<ul class="list-unstyled d-flex justify-content-center mb-1">
+								<li><i class="text-warning fa fa-star"></i> <i
+									class="text-warning fa fa-star"></i> <i
+									class="text-warning fa fa-star"></i> <i
+									class="text-muted fa fa-star"></i> <i
+									class="text-muted fa fa-star"></i></li>
+							</ul>
+							<p class="text-center mb-0">가격</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!--End Brands-->
+	</div>
+
+	<!-- End Content -->
+
+
+
+
+
+
+
 
 
 	<!-- Start Footer -->
@@ -361,3 +337,6 @@ https://templatemo.com/tm-559-zay-shop
 </body>
 
 </html>
+
+
+

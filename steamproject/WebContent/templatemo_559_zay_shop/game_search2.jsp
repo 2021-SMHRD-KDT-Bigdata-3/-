@@ -301,7 +301,6 @@
 				url : "http://localhost:9000/flask",
 				data : params,
 				success : function(data) {
-					alert("플라스크으로 값넘어감");
 					window.location.href = data;
 				},
 

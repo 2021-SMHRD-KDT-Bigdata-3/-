@@ -115,10 +115,10 @@
 					<div
 						class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
 					</div>
-					<form action = "../select">
-	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
-	                    <input type = "submit" value = "게임 검색">
-                    </form>
+					<form action="../select">
+						<input type="text" name="search" placeholder="게임 검색"> <input
+							type="submit" value="게임 검색">
+					</form>
 				</div>
 			</div>
 		</div>
@@ -136,28 +136,28 @@
 			</div>
 		</div>
 		<form class="row" height="1500px" id="search3">
-		<div class="row" height="1500px">
-			<%
-			for (int i = 0; i < 6; i++) {
-			%>
-			<br> <br>
-			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					<%=(i + 8) + ". "%><%=question[i]%>
-				</h4>
+			<div class="row" height="1500px">
+				<%
+				for (int i = 0; i < 6; i++) {
+				%>
+				<br> <br>
+				<div class="col-lg-6 m-auto" align="center" width="100%">
+					<h4 align="center">
+						<%=(i + 8) + ". "%><%=question[i]%>
+					</h4>
 
-				예 <input type="radio" name="genre<%=i%>" value="1"> &nbsp;
-				&nbsp; 아니오 <input type="radio" name="genre<%=i%>" value="0">
+					예 <input type="radio" name="genre<%=i%>" value="1"> &nbsp;
+					&nbsp; 아니오 <input type="radio" name="genre<%=i%>" value="0">
+				</div>
+				<br> <br> <br>
+				<%
+				}
+				%>
 			</div>
-			<br> <br> <br>
-			<%
-			}
-			%>
-		</div>
-		<div align="center">
-			<button class="btn btn-success" style="width: 200px; height: 50px" onclick = "location.href = 'recommand'">결과 확인</button>
-		</div>
 		</form>
+			<div align="center">
+				<button id="next3" class="btn btn-success" style="width: 200px; height: 50px">결과 확인</button>
+			</div>
 		<br>
 	</section>
 
@@ -262,28 +262,28 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/templatemo.js"></script>
 	<script src="assets/js/custom.js"></script>
-	
+
 	<script>
-	$("#next").click(function (event) {
-        // Get form         
-        var params = $('#search3').serialize();
-        // Create an FormData object  
-        $.ajax({             
-           type: "POST",         
-            url: "http://localhost:9000/flask",        
-            data: params, 
-            success: function (data) { 
-               window.location.href = data;
+		$("#next3").click(function(event) {
+			// Get form         
+			var params = $('#search3').serialize();
+			// Create an FormData object  
+			$.ajax({
+				type : "POST",
+				url : "http://localhost:9000/flask",
+				data : params,
+				success : function(data) {
+					window.location.href = data;
 				},
-                
-            error: function (e) {  
-               console.log("ERROR : ", e);
-               alert("fail");
-             }     
-       });
-       </script>
-        
-    });
+
+				error : function(e) {
+					console.log("ERROR : ", e);
+					alert("fail");
+				}
+			});
+		});
+	</script>
+
 
 
 </body>
