@@ -155,6 +155,7 @@
 			BoardDAO dao = new BoardDAO();	
 			ArrayList<boardDTO> al2 = dao.boardlist(title);
 			System.out.println(al2.size());
+			
 		%>
 		
 			<div id="board" align = "center">

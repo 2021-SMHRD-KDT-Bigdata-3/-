@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,40 +10,34 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.BoardDAO;
-import DAO.GameDAO;
-import DTO.boardDTO;
-import DTO.gameDTO;
 
-@WebServlet("/ganreselect")
-public class genreselect extends HttpServlet {
+@WebServlet("/viewboardcount")
+public class viewboardcount extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		String genre  = request.getParameter("액션");
-		System.out.println(request.getParameter("액션"));
+		int board_num  = Integer.parseInt(request.getParameter("board_num"));
+		System.out.println(request.getParameter("board_num"));
 		
 		
-		GameDAO dao = new GameDAO();
-		ArrayList<gameDTO> dto = dao.gamegenre(genre); 
+		BoardDAO dao = new BoardDAO();
+		int num = dao.count(board_num);
 		HttpSession session = request.getSession();
-		session.setAttribute("genre", genre);
+		session.setAttribute("count", num);
 		
 		
-		if(dto!=null) {
-			System.out.println("태그검색 성공!");
+		if(num!=0) {
+			System.out.println("조회수 증가 성공!");
 			response.setCharacterEncoding("UTF-8");
 			request.setCharacterEncoding("UTF-8");
-			response.sendRedirect("templatemo_559_zay_shop/category.jsp");
+			response.sendRedirect("templatemo_559_zay_shop/viewboard.jsp");
 			
 		}else {
-			System.out.println("태그검색 실패");
+			System.out.println("조회수 증가 실패");
 		}
-}
-	
-	
-	
+	}
 	
 	
 

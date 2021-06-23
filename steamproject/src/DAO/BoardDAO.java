@@ -318,44 +318,83 @@ public boardDTO one_select(int num) {
 		close();
 	}return dto;
 	}
-	public void count(boardDTO dto) {
+	public int count(int board_num) {
+		int num = 0;
 		try {
 		conn();
 		
-		String sql = "UPDATE game_board set count_num = count_num+1 where title = ?";
+		String sql = "UPDATE game_board set count_num = count_num+1 where board_num = ?";
 		pst =conn.prepareStatement(sql);
-		pst.setInt(1, dto.getCount_num());
+		pst.setInt(1, board_num);
 		
 		cnt = pst.executeUpdate();
 		
 		if(cnt != 0) {
-			System.out.println("조회수 상승 성공");
-		}else 	 {
-			System.out.println("조회수 상승 실패");
+			System.out.println("조회수 상승 성공 dao");
+			num = 1;
+			System.out.println(num);
 		}
+		
 		
 		
 		}catch(Exception e) {
+			System.out.println("조회수 상승 실패 dao");
 			e.printStackTrace();
 		}finally {
 			close();
-		}
+		}return num;
 	}
-	public void updateBoardCount(int boardNo) throws SQLException {
-	    Connection con = null;
-	    PreparedStatement pstmt = null;
-	    try {
-	        conn();
-	        String sql = "update board set boardCount = boardCount+1 where boardNo=" + boardNo;
-	        System.out.println(sql);
-	        pstmt = con.prepareStatement(sql);
-	        pstmt.executeUpdate();
-	         
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    } finally {
-	    	close();
-	    }
+	public int like(int board_num) {
+		int num = 0;
+		try {
+		conn();
+		
+		String sql = "UPDATE game_board set board_recom = board_recom+1 where board_num = ?";
+		pst =conn.prepareStatement(sql);
+		pst.setInt(1, board_num);
+		
+		cnt = pst.executeUpdate();
+		
+		if(cnt != 0) {
+			System.out.println("조회수 상승 성공 dao");
+			num = 1;
+			System.out.println(num);
+		}
+		
+		
+		
+		}catch(Exception e) {
+			System.out.println("조회수 상승 실패 dao");
+			e.printStackTrace();
+		}finally {
+			close();
+		}return num;
+	}
+	public int bad(int board_num) {
+		int num = 0;
+		try {
+			conn();
+			
+			String sql = "UPDATE game_board set board_recom = board_recom-1 where board_num = ?";
+			pst =conn.prepareStatement(sql);
+			pst.setInt(1, board_num);
+			
+			cnt = pst.executeUpdate();
+			
+			if(cnt != 0) {
+				System.out.println("조회수 상승 성공 dao");
+				num = 1;
+				System.out.println(num);
+			}
+			
+			
+			
+		}catch(Exception e) {
+			System.out.println("조회수 상승 실패 dao");
+			e.printStackTrace();
+		}finally {
+			close();
+		}return num;
 	}
 	
 

@@ -209,21 +209,21 @@ https://templatemo.com/tm-559-zay-shop
 								<div class="carousel-item active">
 									<div class="row row2">
 										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
+											<button name = "액션" class="btn1" onclick="location.href='category.jsp?genre=액션'">
 												<img class="img-fluid brand-img"
 													src="assets/img/action1.png" alt="Brand Logo">
 											</button>
 
 										</div>
 										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
+											<button name = "rpg" class="btn1" onclick="location.href='category.jsp?genre=rpg'">
 												<img class="img-fluid brand-img" src="assets/img/rpg1.png"
 													alt="Brand Logo">
 											</button>
 
 										</div>
 										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
+											<button name = "전략" class="btn1" onclick="location.href='category.jsp?genre=전략'">
 												<img class="img-fluid brand-img" src="assets/img/state1.png"
 													alt="Brand Logo">
 											</button>
@@ -232,19 +232,19 @@ https://templatemo.com/tm-559-zay-shop
 									<div class="row row2">
 
 										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
+											<button name = "어드벤쳐" class="btn1" onclick="location.href='category.jsp?genre=어드벤쳐'">
 												<img class="img-fluid brand-img" src="assets/img/adv1.png"
 													alt="Brand Logo">
 											</button>
 										</div>
 										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
+											<button name = "시뮬레이션" class="btn1" onclick="location.href='category.jsp?genre=시뮬레이션'">
 												<img class="img-fluid brand-img" src="assets/img/sim1.png"
 													alt="Brand Logo">
 											</button>
 										</div>
 										<div class="col-3 p-md-5" style="width: 33%;">
-											<button class="btn1" onclick="location.href='category.jsp'">
+											<button name = "스포츠 및 레이싱" class="btn1" onclick="location.href='category.jsp?genre=스포츠 및 레이싱'">
 												<img class="img-fluid brand-img"
 													src="assets/img/sports1.png" alt="Brand Logo">
 											</button>

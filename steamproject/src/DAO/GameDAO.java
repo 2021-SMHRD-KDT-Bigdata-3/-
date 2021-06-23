@@ -90,9 +90,9 @@ public class GameDAO {
 	public ArrayList<gameDTO> gamegenre(String genre) {
 		try {
 			conn();
-			String sql = "select * from game where genre = ?";
+			String sql = "select * from game where genre=?";
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, genre );
+			pst.setString(1, genre);
 
 			rs = pst.executeQuery();
 
@@ -105,12 +105,13 @@ public class GameDAO {
 				String thema = rs.getString("thema");
 				String atmos = rs.getString("atmos");
 				int multi = rs.getInt("multi");
-				int price = rs.getInt("genre");
+				int price = rs.getInt("price");
 				int lv = rs.getInt("lv");
 				int playtime = rs.getInt("playtime");
 				int score = rs.getInt("score");
 				String image = rs.getString("image");
 				dto = new gameDTO(game_num,game_name,game_genre,graphic,thema,atmos,multi,price,lv,playtime,score,image);
+				dl.add(dto);
 				System.out.println("게임 검색 성공!");
 				
 			} 
