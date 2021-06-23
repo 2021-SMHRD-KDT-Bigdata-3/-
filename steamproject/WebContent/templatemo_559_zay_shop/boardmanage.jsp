@@ -39,6 +39,7 @@
 <body>
 	<!-- Start Top Nav -->
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
+						
 							%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -118,11 +119,10 @@
 					<div
 						class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
 					</div>
-					<input type="text" name="search" placeholder="게임 검색"> <a
-						class="nav-icon d-none d-lg-inline" href="#"
-						data-bs-toggle="modal" data-bs-target="#templatemo_search"> <i
-						class="fa fa-fw fa-search text-dark mr-2"></i>
-					</a>
+					<form action = "../select">
+	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
+	                    <input type = "submit" value = "게임 검색">
+                    </form>
 				</div>
 			</div>
 
@@ -204,6 +204,10 @@
 				</table>
 					</div>
 					
+					<div align="center">
+						<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
+						<a href="#">5</a>
+					</div>
 					<br>
 					<br>
 					
