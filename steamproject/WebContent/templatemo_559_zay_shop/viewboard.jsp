@@ -146,7 +146,7 @@
 			
 				
 			<br><br>
-			<div id = "board" align="center" class="container" style="padding-right: 150px; padding-left: 150px;">
+			<div id = "board" align="center" class="container" style="padding-right: 150px; padding-left: 150px; width: 940px;">
 				<table id="list" class="table table-striped" style="border:1px solid black">
 					<tr>
 						<td width="116px">제목</td>

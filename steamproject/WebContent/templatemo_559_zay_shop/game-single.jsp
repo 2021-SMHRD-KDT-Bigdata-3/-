@@ -36,7 +36,7 @@ https://templatemo.com/tm-559-zay-shop
 
 <body>
 	<!-- Start Top Nav -->
-<<<<<<< HEAD
+
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
 						
 							%>

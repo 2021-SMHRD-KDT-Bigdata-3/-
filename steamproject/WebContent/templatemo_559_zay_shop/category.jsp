@@ -157,7 +157,7 @@ https://templatemo.com/tm-559-zay-shop
                             카테고리
                         </a>
                         <ul class="collapse show list-unstyled pl-3 action"  >
-                            <li><a class="text-decoration-none" href= style="color:black;">액션</a></li>
+                            <li><a class="text-decoration-none" href= "#"style="color:black;">액션</a></li>
                             <li><a class="text-decoration-none" href="#" style="color:black;">RPG</a></li>
                             <li><a class="text-decoration-none" href="#" style="color:black;">전략</a></li>
                             <li><a class="text-decoration-none" href="#" style="color:black;">어드벤처 및 캐쥬얼</a></li>
