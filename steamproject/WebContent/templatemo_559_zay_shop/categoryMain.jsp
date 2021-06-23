@@ -204,7 +204,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <div class="col-3 p-md-5">
                                                 <button class="btn1" >
                                                 <img   class="img-fluid brand-img" src="assets/img/adv1.png" alt="Brand Logo">
-                                                </button>>
+                                                </button>
                                             </div>
                                              <div class="col-3 p-md-5">
                                                 <button class="btn1" >
