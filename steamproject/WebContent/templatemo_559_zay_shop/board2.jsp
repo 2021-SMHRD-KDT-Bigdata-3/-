@@ -162,7 +162,7 @@ https://templatemo.com/tm-559-zay-shop
                </tr>
                <tr>
                   <td style="color:black; font-weight: 900;">작성자</td>
-                  <td><input type="text" name="id" style="width:630px;"> </td>
+                  <td><input disabled="disabled" type="text" name="id" value=<%=dto.getName() %> style="width:630px;"> </td>
                	</tr>
                	<tr>
                   	<td style="color:black; font-weight: 900;">내용</td>
