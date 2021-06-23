@@ -151,7 +151,7 @@
     	<%
 			BoardDAO dao = new BoardDAO();	
 			ArrayList<boardDTO> bl = dao.select();
-	
+			request.setCharacterEncoding("UTF-8");	
 		%>
 		
 			<div id="board" align = "center">
@@ -192,8 +192,8 @@
 			</div>
 				
 	    <div align = "right">
-	    	<form action = ""> 
-	    	<input type = "text" name = "textname">
+	    	<form action = "../boardselect"> 
+	    	<input type = "text" name = "title_name">
 	    	<input type = "submit" value = "검색" class="btn btn-success">
 	    	</form>
 	    	<br>

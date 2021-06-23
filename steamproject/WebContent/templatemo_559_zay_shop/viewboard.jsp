@@ -135,7 +135,7 @@
 
 <%
 		int num = Integer.parseInt(request.getParameter("num"));
-	
+		request.setCharacterEncoding("UTF-8");	
 		 BoardDAO dao = new BoardDAO();
 		 boardDTO dto2 = dao.one_select(num);
 		
