@@ -159,7 +159,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="col-lg-9">
                 
                 <div class="row">
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -190,7 +190,7 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -223,7 +223,7 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                     
                     
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -254,7 +254,7 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -285,9 +285,9 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
+                            <div class="card rounded-0" >
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
                                 
                             </div>

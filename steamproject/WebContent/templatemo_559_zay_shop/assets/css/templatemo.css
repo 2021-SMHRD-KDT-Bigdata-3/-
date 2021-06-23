@@ -34,6 +34,8 @@ body, ul, li, p, a, label, input, div {
   font-size: 18px;
   font-weight: 300;
 }
+input[type=submit]:hover { background-color: #0d6efd;border-color:#0d6efd; }
+input[type=submit]{color:white; background-color:navy; border-color:navy;  border-radius:5px;}
 .h1 {
   font-family: 'SEBANG_Gothic_Bold' ;
   font-size: 48px ;

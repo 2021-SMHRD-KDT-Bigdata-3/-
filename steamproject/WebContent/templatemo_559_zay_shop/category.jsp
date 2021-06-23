@@ -32,9 +32,7 @@ https://templatemo.com/tm-559-zay-shop
 
 -->
 </head>
-<style>
-	
-</style>
+
 <body>
     <!-- Start Top Nav -->
     <% memberDTO dto = (memberDTO)session.getAttribute("member");
@@ -118,7 +116,6 @@ https://templatemo.com/tm-559-zay-shop
                    <form action = "../select">
 	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
 	                    <input type = "submit" value = "게임 검색">
-                    </form>
                 </div>
             </div>
 
