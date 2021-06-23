@@ -108,7 +108,7 @@
 		    		아이디
 		    	</h4>
 		    	<div>
-		    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    		
 			    	<input type="text" id= "id" name = "id" style="text-align:center; width:300px; height:30px; ">
 		    		<br>
 		    		<span>아이디는 4글자 이상 입력해주세요.</span>
@@ -163,6 +163,9 @@
 		    	<br>
 		    	<div>
 		    		<input class="btn btn-success" type="submit" value = "가입하기">
+		    		<br>
+		    		<br>
+		    		<br>
 		    	</div>
 		    	
 		   		
