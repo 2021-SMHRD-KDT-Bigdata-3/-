@@ -159,7 +159,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="col-lg-9">
                 
                 <div class="row">
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -190,7 +190,7 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -223,7 +223,7 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                     
                     
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -254,7 +254,7 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
@@ -285,9 +285,9 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                     <div class="col-md-4" style="width: 33.3%;">
                         <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
+                            <div class="card rounded-0" >
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
                                 
                             </div>
@@ -322,26 +322,6 @@ https://templatemo.com/tm-559-zay-shop
                     
                     
                 </div>
-                </div>
-                <div >
-                    <ul class="pagination pagination-lg justify-content-end">
-                        <li class="page-item disabled">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">4</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">5</a>
-                        </li>
-                       
-                    </ul>
                 </div>
             </div>
 

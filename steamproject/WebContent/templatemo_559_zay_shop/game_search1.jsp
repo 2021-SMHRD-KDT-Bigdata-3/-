@@ -22,6 +22,7 @@
 </head>
 <body>
 	<%
+	response.addHeader("Access-Control-Allow-Origin", "*");
 	memberDTO dto = (memberDTO) session.getAttribute("member");
 	%>
 	<!-- Start Top Nav -->
@@ -165,14 +166,10 @@
 
 		</form>
 		<div align="center">
-<<<<<<< HEAD
 			<!-- <button id="next" class="btn btn-success"
 				style="width: 200px; height: 50px"
 				onclick="location.href = 'game_search2.jsp'">다음으로</button> -->
 				<button id="next" class="btn btn-success" style="width: 200px; height: 50px">다음으로</button>
-=======
-			<button class="btn btn-success" style="width: 200px; height: 50px" onclick="location.href='game_search2.jsp' ">다음으로</button>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
 		</div>
 		<br>
 	</section>
@@ -271,21 +268,13 @@
            type: "POST",         
             url: "http://localhost:9000/flask",        
             data: params, 
-            success: function () { 
-               alert("플라스크으로 값넘어감");
-               $.ajax({
-            	   type:"POST",
-            	   url : "game_search2.jsp",
-            	   success : function () {
-					alter("JSP 로 값 넘어간다아");
-					window.location.href="game_search2.jsp";
-				}
-            	   
-               });
-            },          
+            success: function (data) { 
+               window.location.href = data;
+				},
+                
             error: function (e) {  
                console.log("ERROR : ", e);
-                alert("fail");      
+               alert("fail");
              }     
        });
         

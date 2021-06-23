@@ -135,6 +135,7 @@
 				<h1 class="h1">게임 추천</h1>
 			</div>
 		</div>
+		<form class="row" height="1500px" id="search3">
 		<div class="row" height="1500px">
 			<%
 			for (int i = 0; i < 6; i++) {
@@ -156,6 +157,7 @@
 		<div align="center">
 			<button class="btn btn-success" style="width: 200px; height: 50px" onclick = "location.href = 'recommand'">결과 확인</button>
 		</div>
+		</form>
 		<br>
 	</section>
 
@@ -260,6 +262,28 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/templatemo.js"></script>
 	<script src="assets/js/custom.js"></script>
+	
+	<script>
+	$("#next").click(function (event) {
+        // Get form         
+        var params = $('#search3').serialize();
+        // Create an FormData object  
+        $.ajax({             
+           type: "POST",         
+            url: "http://localhost:9000/flask",        
+            data: params, 
+            success: function (data) { 
+               window.location.href = data;
+				},
+                
+            error: function (e) {  
+               console.log("ERROR : ", e);
+               alert("fail");
+             }     
+       });
+       </script>
+        
+    });
 
 
 </body>
