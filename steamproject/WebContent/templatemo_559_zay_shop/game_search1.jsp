@@ -80,7 +80,8 @@
 
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navbar-light shadow">
-		<div class="container d-flex justify-content-between align-items-center">
+		<div
+			class="container d-flex justify-content-between align-items-center">
 
 			<a class="navbar-brand text-primary logo h1 align-self-center"
 				href="mainPage.jsp"> SUGE </a>
@@ -123,63 +124,52 @@
 	</nav>
 	<br>
 	<br>
-	
+
 	<section>
 		<div class="row text-center pt-3">
 			<div class="col-lg-6 m-auto">
 				<h1 class="h1">게임 추천</h1>
 			</div>
 		</div>
-		<div class="row" height="1500px">
+		<form class="row" height="1500px" id="search1">
 			<br> <br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					1. 게임 이용 시 화면 그래픽 사양에 민감하십니까?
-				</h4>
+				<h4 align="center">1. 게임 이용 시 화면 그래픽 사양에 민감하십니까?</h4>
 				예 <input type="radio" name="graphic" value="3"> &nbsp;
-				&nbsp; 모르겠다 <input type="radio" name="graphic" value="2"> &nbsp;
-				&nbsp; 상관없음 <input type="radio" name="graphic" value="1">
+				&nbsp; 모르겠다 <input type="radio" name="graphic" value="2">
+				&nbsp; &nbsp; 상관없음 <input type="radio" name="graphic" value="1">
 			</div>
-			<br> <br> <br>
-			
-			<br> <br>
+			<br> <br> <br> <br> <br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					2. 당신은 어떤 분위기를 좋아하십니까?
-				</h4>
-				밝은 <input type="radio" name="atmos" value="1"> &nbsp;
-				&nbsp; 서정적인 <input type="radio" name="atmos" value="2"> &nbsp;
-				&nbsp; 복고풍 <input type="radio" name="atmos" value="3"> &nbsp;
-				&nbsp; 어두운 <input type="radio" name="atmos" value="4">
+				<h4 align="center">2. 당신은 어떤 분위기를 좋아하십니까?</h4>
+				밝은 <input type="radio" name="atmos" value="1"> &nbsp; &nbsp;
+				서정적인 <input type="radio" name="atmos" value="2"> &nbsp;
+				&nbsp; 복고풍 <input type="radio" name="atmos" value="3">
+				&nbsp; &nbsp; 어두운 <input type="radio" name="atmos" value="4">
 			</div>
-			<br> <br> <br>
-			
-			<br> <br>
+			<br> <br> <br> <br> <br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					3. 게임할 때 주로 혼자서 플레이를 하십니까?
-				</h4>
-				예 <input type="radio" name="multi" value="0"> &nbsp;
-				&nbsp; 아니오 <input type="radio" name="multi" value="1">
+				<h4 align="center">3. 게임할 때 주로 혼자서 플레이를 하십니까?</h4>
+				예 <input type="radio" name="multi" value="0"> &nbsp; &nbsp;
+				아니오 <input type="radio" name="multi" value="1">
 			</div>
-			<br> <br> <br>
-			
-			<br> <br>
+			<br> <br> <br> <br> <br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					4. 당신은 게임에 어느정도 투자할 의향이 있으십니까?
-				</h4>
+				<h4 align="center">4. 당신은 게임에 어느정도 투자할 의향이 있으십니까?</h4>
 				전혀없음 <input type="radio" name="price" value="0"> &nbsp;
 				&nbsp; 조금 <input type="radio" name="price" value="1"> &nbsp;
-				&nbsp; 긍정적 <input type="radio" name="price" value="2"> &nbsp;
-				&nbsp; 적극적 <input type="radio" name="price" value="3">
+				&nbsp; 긍정적 <input type="radio" name="price" value="2">
+				&nbsp; &nbsp; 적극적 <input type="radio" name="price" value="3">
 			</div>
 			<br> <br> <br>
-			
-			
-		</div>
+
+
+		</form>
 		<div align="center">
-			<button class="btn btn-success" style="width: 200px; height: 50px">다음으로</button>
+			<!-- <button id="next" class="btn btn-success"
+				style="width: 200px; height: 50px"
+				onclick="location.href = 'game_search2.jsp'">다음으로</button> -->
+				<button id="next" class="btn btn-success" style="width: 200px; height: 50px">다음으로</button>
 		</div>
 		<br>
 	</section>
@@ -254,4 +244,50 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<!-- Start Script -->
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/templatemo.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<!-- End Script -->
+
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/templatemo.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script type="text/javascript">
+	$("#next").click(function (event) {
+        // Get form         
+        var params = $('#search1').serialize();
+        // Create an FormData object  
+        $.ajax({             
+           type: "POST",         
+            url: "http://localhost:9000/flask",        
+            data: params, 
+            success: function () { 
+               alert("플라스크으로 값넘어감");
+               $.ajax({
+            	   type:"POST",
+            	   url : "game_search2.jsp",
+            	   success : function () {
+					alter("JSP 로 값 넘어간다아");
+					window.location.href="game_search2.jsp";
+				}
+            	   
+               });
+            },          
+            error: function (e) {  
+               console.log("ERROR : ", e);
+                alert("fail");      
+             }     
+       });
+        
+    });
+		
+	</script>
+
 </body>

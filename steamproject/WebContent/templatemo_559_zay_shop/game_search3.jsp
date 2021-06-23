@@ -155,7 +155,7 @@
 			%>
 		</div>
 		<div align="center">
-			<button class="btn btn-success" style="width: 200px; height: 50px">결과 확인</button>
+			<button class="btn btn-success" style="width: 200px; height: 50px" onclick = "location.href = 'recommand'">결과 확인</button>
 		</div>
 		<br>
 	</section>
