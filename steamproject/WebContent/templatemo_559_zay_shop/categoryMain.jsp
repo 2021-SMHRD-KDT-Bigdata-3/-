@@ -32,7 +32,20 @@ https://templatemo.com/tm-559-zay-shop
 		justify-content: center;
 	}
 	
-	.img-fluid{max-width:150%;height:auto;}
+	.img-fluid{max-width:100%;height:auto;}
+	
+	.btn1{
+		background-color: Transparent;
+		background-repeat:no-repeat;
+		border: none;
+		cursor:pointer;
+		overflow: hidden;
+		
+	
+	}
+	
+	
+	
 </style>
 </head>
 
@@ -168,27 +181,40 @@ https://templatemo.com/tm-559-zay-shop
 
                                     <div class="carousel-item active">
                                         <div class="row row2">
-                                            <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/action1.png" alt="Brand Logo"></a>
+                                            <div class="col-3 p-md-5" >
+												<button class="btn1" >
+													<img class="img-fluid brand-img" src="assets/img/action1.png" alt="Brand Logo">
+												</button>
+												
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/rpg1.png" alt="Brand Logo"></a>
+                                            	<button class="btn1" >
+                                                	<img class="img-fluid brand-img" src="assets/img/rpg1.png" alt="Brand Logo">
+												</button>
+                                            
                                             </div>
 										<div class="col-3 p-md-5">
-											<a href="category.jsp"><img class="img-fluid brand-img" src="assets/img/state1.png"
-												alt="Brand Logo"></a>
+											<button class="btn1" >
+											<img class="img-fluid brand-img" src="assets/img/state1.png" alt="Brand Logo">
+											</button>
 										</div>
 									</div>
                                         <div class="row row2">
                                             
                                             <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/adv1.png" alt="Brand Logo"></a>
+                                                <button class="btn1" >
+                                                <img   class="img-fluid brand-img" src="assets/img/adv1.png" alt="Brand Logo">
+                                                </button>>
                                             </div>
                                              <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/sim1.png" alt="Brand Logo"></a>
+                                                <button class="btn1" >
+                                                <img   class="img-fluid brand-img" src="assets/img/sim1.png" alt="Brand Logo">
+                                                </button>
                                             </div>
                                              <div class="col-3 p-md-5">
-                                                <a href="category.jsp"><img   class="img-fluid brand-img" src="assets/img/sports1.png" alt="Brand Logo"></a>
+                                                <button class="btn1" >
+                                                <img   class="img-fluid brand-img" src="assets/img/sports1.png" alt="Brand Logo">
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
