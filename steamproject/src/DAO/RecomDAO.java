@@ -49,7 +49,7 @@ public class RecomDAO {
 	}
 	
 	//군집 불러오는 기능
-	public void group(int num) {
+	public ArrayList<gameDTO> group(int num) {
 		try {
 			conn();
 
@@ -77,7 +77,8 @@ public class RecomDAO {
 				int score = rs.getInt("score");
 				String image = rs.getString("image");
 				int group_num = rs.getInt("group_num");
-				game_dto = new gameDTO(game_name, genre, graphic, thema, thema, multi, price, lv, playtime, score, image);
+				game_dto = new gameDTO(game_num, game_name, genre, graphic, thema, atmos, multi, price, lv, playtime, score, image, group_num);
+				al.add(game_dto);
 			} 
 			
 
@@ -87,6 +88,7 @@ public class RecomDAO {
 		} finally {
 			close();
 		}
+		return al;
 
 	}
 	
