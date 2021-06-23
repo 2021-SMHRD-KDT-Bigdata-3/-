@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 <link rel="stylesheet" href="assets/css/font.css">
 <!--
-    
+     
 TemplateMo 559 Zay Shop
 
 https://templatemo.com/tm-559-zay-shop
