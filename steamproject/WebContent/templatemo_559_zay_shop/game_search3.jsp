@@ -138,7 +138,7 @@
 		<form class="row" height="1500px" id="search3">
 			<div class="row" height="1500px">
 				<%
-				for (int i = 0; i < 6; i++) {
+				for (int i = 0; i < question.length; i++) {
 				%>
 				<br> <br>
 				<div class="col-lg-6 m-auto" align="center" width="100%">

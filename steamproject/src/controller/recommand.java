@@ -18,7 +18,7 @@ public class recommand extends HttpServlet {
 		Random ran = new Random();
 		request.setCharacterEncoding("utf-8");
 						
-		String group = request.getParameter("group");
+		int group = Integer.parseInt(request.getParameter("group"));
 		
 		System.out.println(group);
 	
