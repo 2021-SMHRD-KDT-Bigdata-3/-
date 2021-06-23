@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.Random;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +15,12 @@ public class recommand extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		Random ran = new Random();
 		request.setCharacterEncoding("utf-8");
 						
-		String graphic = request.getParameter("graphic");
-		String genre1 = request.getParameter("genre1");
+		String group = request.getParameter("group");
 		
-		System.out.println(genre1);
+		System.out.println(group);
 	
 	
 	}
