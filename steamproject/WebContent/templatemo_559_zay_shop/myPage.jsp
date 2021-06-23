@@ -100,6 +100,7 @@
     </nav>
     <br>
     <div align="center">
+    		<br>
 		    <h1 style="color:navy; font-weight: 900;"><%out.print(dto.getName());%>님의 마이페이지</h1>
 		    <br>
 		    	<h4 class="join_title"  style="color:black; font-weight: 900;">
@@ -133,11 +134,11 @@
 		    	<div>
            	 	<input type="button" class="btn btn-success" value="비밀번호변경" onClick="location.href='pwChange.jsp'" style="margin: auto; left:210px;">
 		    	<input type="button" class="btn btn-success" value="게시글 관리" onClick="location.href='boardAdmin.jsp'" style="margin: auto; left:210px;">
-		    		<br>
+		    	<br>
 		    	</div>
-           	 	<input type="button" class="btn btn-success" value="회원 탈퇴" style="margin: auto; left:210px;" onClick="location.href='mainPage.jsp'">
 		    	<div>
-		    	
+           	 	<br>
+           	 	<input type="button" class="btn btn-success" value="회원 탈퇴" style="margin: auto; left:210px;" onClick="location.href='mainPage.jsp'">
 		    	</div>
     </div>
     
