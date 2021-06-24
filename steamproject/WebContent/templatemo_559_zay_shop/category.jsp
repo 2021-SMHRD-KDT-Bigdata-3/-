@@ -107,14 +107,7 @@ https://templatemo.com/tm-559-zay-shop
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
+                    
                    <form action = "../select">
 	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
 	                    <input type = "submit" value = "게임 검색">
@@ -148,14 +141,13 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
-
             <div class="col-lg-3" >
                 <!--<h1 class="h2 pb-4">카테고리</h1>-->
                 <ul class="list-unstyled ">
                     <li class="pb-3 textb" >
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="category.jsp" style="color:black;">
+                        <p class="collapsed d-flex justify-content-between h3 text-decoration-none" style="color:black;">
                             카테고리
-                        </a>
+                        </p>
                         <ul class="collapse show list-unstyled pl-3 action"  >
                             <li><a class="text-decoration-none" href= "category.jsp?genre=액션"style="color:black;">액션</a></li>
                             <li><a class="text-decoration-none" href="category.jsp?genre=rpg" style="color:black;">RPG</a></li>
@@ -177,45 +169,58 @@ https://templatemo.com/tm-559-zay-shop
 			ArrayList<gameDTO> dl = dao.gamegenre(genre);
 			System.out.println(dl.size());
 		%>
-            <div class="col-lg-9">
-                <div class="row">
-                	<%out.print("<h2>"+genre+"</h2>"); %>
-                    <div class="col-md-6">
-                        <ul class="list-inline shop-top-menu pb-3 pt-1">
-                            <li class="list-inline-item">
-                                
-                            </li>
-                            <li class="list-inline-item">
-                                
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    
-                </div>
-               <%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
-						
-               for(int i =0; i<dl.size(); i++){
-						out.print("<div class='col-md-4'>");
-						out.print("<div class='card mb-4 product-wap rounded-0'>");
-						out.print("<div class='card rounded-0'>");
-						out.print("<img class='card-img rounded-0 img-fluid' src='../templatemo_559_zay_shop/image/"+dl.get(i).getImage()+"'>");
-						out.print("</div>");
-						out.print("<div class='card-body'>");
-						out.print("<a href='game-single.jsp' class='h3 text-decoration-none'>"+dl.get(i).getGame_name()+"</a>");
-						out.print("<div class='list-unstyled d-flex justify-content-center mb-1'>");
-						out.print("<i>"+dl.get(i).getGenre()+"</i>");
-						out.print("</div>");
-						out.print("<p class='text-center mb-0'>"+dl.get(i).getPrice()+"</p>");
-						out.print("</div>");
-						out.print("</div>");
-						out.print("</div>");
+           <div class="col-lg-9">
+           <div class="row">
+						<h1 align="left" ><%=genre %></h1>
 				
-			}%>
+					<br>
+					<br>
+					<br>
+					<table style="color: black; text-align: center; s">
+						<tr>
+							<th width="25%">이미지</th>
+							<th width="25%">게임이름</th>
+							<th width="25%">평점</th>
+							<th width="25%">가격</th>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<div class="w-100 my-3 border-top"></div>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<!-- 여기서 반복문 쓰면댈듯? -->
+						<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
+							//int p = Integer.parseInt(request.getParameter('p'));
+							//p*15~(p+1)*15
+								for(int i =0; i<dl.size(); i++){
+								out.print("<tr>");
+								out.print("<td><img src='../templatemo_559_zay_shop/image/"+dl.get(i).getImage()+"'></td>");
+								out.print("<td>"+dl.get(i).getGame_name()+"</td>");
+								out.print("<td><ul class=\"list-unstyled d-flex justify-content-center mb-1\">");
+								out.print("<li style=\"width:150px\">");
+								for(int j=0; j<dl.get(i).getScore();j++){
+									out.print("<i class=\"text-warning fa fa-star\"></i>");
+								}
+								for(int z=0; z<5-dl.get(i).getScore(); z++){
+									out.print("<i class=\"text-muted fa fa-star\"></i>");
+								
+								}
+								out.print("<li>");
+								out.print("<ul></td>");
+								out.print("<td>"+dl.get(i).getPrice()+"</td>");
+								out.print("</tr>");
+						
+					}
+					%>
+						<!-- 여기까지 -->
+					</table>
+				</div>
                
                     </div>
                 </div>
-            </div>
 
         
     <!-- End Content -->

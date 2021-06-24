@@ -169,7 +169,7 @@
 						out.print("<tr>");
 						out.print("<td align=\"center\">"+(i+1)+"</td>");
 						out.print("<td align=\"center\">"+bl.get(i).getId()+"</td>");
-						out.print("<td align=\"center\"><a href='viewboard.jsp?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
+						out.print("<td align=\"center\"><a href='../viewboardcount3?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
 						out.print("<td align=\"center\">"+bl.get(i).getBoard_date()+"</td>");
 						//out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");- 게시글관리에서 추가
 						out.print("<td align=\"center\">"+bl.get(i).getCount_num()+"</td>");
@@ -291,7 +291,9 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    
     <!-- End Script -->
+    
 </body>
 
 </html>
