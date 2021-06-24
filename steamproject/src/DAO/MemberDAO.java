@@ -238,4 +238,18 @@ public class MemberDAO {
 		  }
 		  return result;
 		 }
+	public int pwchange(String pw) {
+		try {
+		conn();
+		String sql = "update game_member set pw = ? where pw = ?";
+		
+		
+		
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}return ;
+	}
 }
