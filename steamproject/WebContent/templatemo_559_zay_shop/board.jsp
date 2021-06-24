@@ -198,9 +198,13 @@
 	    	<input type = "submit" value = "검색" class="btn btn-success" >
 	    	</form>
 	    	<br>
+<<<<<<< HEAD
+	    	<button id="writebtn" type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
+=======
 	    	<% if(dto != null){ %>
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
 	    	 <%}%>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
 		</div>
 		<br>
     </div>
@@ -291,7 +295,9 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    
     <!-- End Script -->
+    
 </body>
 
 </html>
