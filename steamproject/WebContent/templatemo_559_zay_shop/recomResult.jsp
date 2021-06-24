@@ -1,4 +1,3 @@
-<%@page import="jdk.internal.misc.FileSystemOption"%>
 <%@page import="com.sun.jdi.request.InvalidRequestStateException"%>
 <%@page import="DTO.gameDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -204,7 +203,6 @@ https://templatemo.com/tm-559-zay-shop
 			<h1>이런 게임은 어떠세요??</h1>
 			<br> <br> <br>
 			<div class="row">
-				<%for(int i=0; ) %>
 				<div class="col-md-4" style="width: 25%;">
 					<div class="card mb-4 product-wap rounded-0">
 						<div class="card rounded-0">
