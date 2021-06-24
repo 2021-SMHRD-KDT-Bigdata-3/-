@@ -214,17 +214,16 @@ public class RecomDAO {
 	}
 	
 	//랜덤 숫자를 넣어 군집화에서 정렬하여 나열
-	public ArrayList<gameDTO> poppular(int num) {
-		String result = "";
+	public ArrayList<gameDTO> popular(String game_genre) {
 		try {
 			conn();
 
-			String sql = "select * from game where group_num=? and playtime < 200 order by (playtime*0.1*score) desc";
+			String sql = "select * from game where genre=? and playtime < 200 order by (playtime*0.1*score) desc";
 			// 3. sql문 실행객체 (PreparedStatement) 생성
 			pst = conn.prepareStatement(sql);
 
 			// 4. 바인드변수채우기.
-			pst.setInt(1, num);
+			pst.setString(1, game_genre);
 
 			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
 			rs = pst.executeQuery();
