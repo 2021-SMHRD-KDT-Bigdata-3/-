@@ -59,7 +59,10 @@ public class recommand extends HttpServlet {
 			new_dto.add(dto.get(array[i]));
 		}
 		
-		request.setAttribute("new_dto", new_dto);
+		//String game_list = dao.recomGame(member.getId());
+		
+		session.setAttribute("new_dto", new_dto);
+		//request.setAttribute("game_list", game_list);
 		response.sendRedirect("http://localhost:8087/steamproject/templatemo_559_zay_shop/recomResult.jsp");
 
 		
