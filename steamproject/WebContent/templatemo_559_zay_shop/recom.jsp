@@ -130,8 +130,13 @@
             </div>
         </div>
         <div align="center">
+        	<%if(dto==null){ %>
+        	<button class="btn btn-success warning" style="width:200px;height:50px">게임 찾기</button>
+        	<button class="btn btn-success warning" style="width:200px;height:50px">기존 게임 추천</button>
+        	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search1.jsp'">게임 찾기</button>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8087/steamproject/recombefore'">기존 게임 추천</button>
+        	<%} %>
         </div>
         <br><br>
     </section>
@@ -230,6 +235,11 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+    	$(".warning").on("click",function(){
+    		alert("로그인하시길 바랍니다.")
+    	})
+    </script>
     
 </body>
 </html>
