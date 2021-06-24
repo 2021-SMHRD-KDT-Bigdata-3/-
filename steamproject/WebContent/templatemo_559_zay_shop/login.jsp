@@ -179,6 +179,7 @@
         </div>
     </footer>
     <!-- End Footer -->
+
     
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
@@ -189,6 +190,9 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     
-<script type="text/javascript"></script>
+<script src="assets/js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+	console.log("test");
+</script>
 </body>
 </html>

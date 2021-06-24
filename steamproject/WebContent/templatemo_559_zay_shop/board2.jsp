@@ -152,9 +152,10 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     <!-- Start Contact --> 
     <%
-    request.setCharacterEncoding("UTF-8");	%>
+    request.setCharacterEncoding("UTF-8");
+   %>
     <div id = "board">
-				<form action="../writeboard" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
+				<form action="../writeboard?id=<%=dto.getId()%>" method="post" enctype="multipart/form-data"><!-- file 때문에 application/x-www-form-urlencoded을 바꿔줬다 -->
 				<table id="list" align="center">
 					<tr>
                   <td style="color:black; font-weight: 900;">제목</td>
@@ -162,7 +163,7 @@ https://templatemo.com/tm-559-zay-shop
                </tr>
                <tr>
                   <td style="color:black; font-weight: 900;">작성자</td>
-                  <td><input disabled="disabled" type="text" name="id" value=<%=dto.getName() %> style="width:630px;"> </td>
+                  <td><input disabled="disabled" type="text" name="id" value="<%=dto.getId()%>" style="width:630px;"> </td>
                	</tr>
                	<tr>
                   	<td style="color:black; font-weight: 900;">내용</td>

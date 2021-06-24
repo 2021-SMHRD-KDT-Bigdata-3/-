@@ -31,7 +31,9 @@ public class writeboard extends HttpServlet {
 				new DefaultFileRenamePolicy());
 		// 마지막 객체는 동일한 이름의 파일이 있을때 막아주는 객체놈.
 
-		String id = multi.getParameter("id");
+		
+		
+		String id = request.getParameter("id");
 		String title = multi.getParameter("title");
 		String text = multi.getParameter("text");
 		String img = URLEncoder.encode(multi.getFilesystemName("img"), "utf-8"); // 파일 이름은 URL ENCODE로 안꺠지게 한글인코딩
