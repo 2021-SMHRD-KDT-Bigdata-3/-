@@ -190,6 +190,7 @@
 				
 				</table>
 			</div>
+			
 				
 	    <div align = "right">
 	    	<form action = "../boardselect"> 
