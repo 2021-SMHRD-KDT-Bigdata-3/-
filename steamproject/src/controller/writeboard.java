@@ -21,8 +21,8 @@ public class writeboard extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// 저장경로(상대(WriterBoard)경로), 파일의 최대크기, 파일이름 인코딩
-//		System.out.println(request.getServletContext().getRealPath("img")); //이미지 저장경로 알아오는 방법. 서버에 저장을 해야하니까
+		 //저장경로(상대(WriterBoard)경로), 파일의 최대크기, 파일이름 인코딩
+		System.out.println(request.getServletContext().getRealPath("img")); //이미지 저장경로 알아오는 방법. 서버에 저장을 해야하니까
 		String savePath = request.getServletContext().getRealPath("img");
 		int maxSize = 5 * 1024 * 1024; // 5Mb;(1024mb == 1MB)
 		String encoding = "UTF-8";
