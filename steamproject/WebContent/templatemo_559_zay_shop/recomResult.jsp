@@ -58,7 +58,7 @@ https://templatemo.com/tm-559-zay-shop
 }
 
 .card-body{
-	height: 220px !important;
+	height: 225px !important;
 }
 
 </style>
