@@ -93,7 +93,7 @@
 	            </div>
 	            <br>
 	            <div class="submit" >
-	                <input type="submit" value="로그인" style="width: 215px; height: 45px; background:#000080; color: white;">
+	                <input type="submit" value="로그인" id = "login" style="width: 215px; height: 45px; background:#000080; color: white;">
 	            </div>
 	            <br>
 	            <div>
@@ -177,9 +177,19 @@
                 </div>
             </div>
         </div>
-
     </footer>
     <!-- End Footer -->
+
+    
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
 <script src="assets/js/jquery-3.6.0.js" type="text/javascript"></script>
 <script>
 	console.log("test");

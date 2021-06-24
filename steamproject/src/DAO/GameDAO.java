@@ -110,6 +110,7 @@ public class GameDAO {
 				int playtime = rs.getInt("playtime");
 				int score = rs.getInt("score");
 				String image = rs.getString("image");
+				
 				dto = new gameDTO(game_num,game_name,game_genre,graphic,thema,atmos,multi,price,lv,playtime,score,image);
 				dl.add(dto);
 				System.out.println("게임 검색 성공!");

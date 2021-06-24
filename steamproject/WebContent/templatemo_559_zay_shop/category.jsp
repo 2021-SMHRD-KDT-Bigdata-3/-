@@ -1,3 +1,5 @@
+<%@page import="DTO.realPriceDTO"%>
+<%@page import="DAO.realPriceDAO"%>
 <%@page import="DTO.gameDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DAO.GameDAO"%>
@@ -164,10 +166,14 @@ https://templatemo.com/tm-559-zay-shop
 <%
     	request.setCharacterEncoding("UTF-8");	
     	String genre = request.getParameter("genre");
-    	System.out.println("가져옴?"+genre);
+    	
 			GameDAO dao = new GameDAO();	
+			realPriceDAO rpdao = new realPriceDAO();	
 			ArrayList<gameDTO> dl = dao.gamegenre(genre);
+			ArrayList<realPriceDTO> pl = rpdao.real(genre);
 			System.out.println(dl.size());
+			
+			System.out.println(pl.size());
 		%>
            <div class="col-lg-9">
            <div class="row">
@@ -210,7 +216,7 @@ https://templatemo.com/tm-559-zay-shop
 								}
 								out.print("<li>");
 								out.print("<ul></td>");
-								out.print("<td>"+dl.get(i).getPrice()+"</td>");
+								out.print("<td>"+pl.get(i).getReal_price()+"</td>");
 								out.print("</tr>");
 						
 					}
@@ -220,6 +226,7 @@ https://templatemo.com/tm-559-zay-shop
 				</div>
                
                     </div>
+                </div>
                 </div>
 
         

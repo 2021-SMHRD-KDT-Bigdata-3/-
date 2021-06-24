@@ -33,9 +33,6 @@ public class login extends HttpServlet {
 			response.sendRedirect("templatemo_559_zay_shop/mainPage.jsp");
 		}else {
 			response.sendRedirect("templatemo_559_zay_shop/login.jsp");
-			
 		}
-		
 	}
-
 }
