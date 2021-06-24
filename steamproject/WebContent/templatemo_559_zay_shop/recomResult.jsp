@@ -1,4 +1,3 @@
-<%@page import="jdk.internal.misc.FileSystemOption"%>
 <%@page import="com.sun.jdi.request.InvalidRequestStateException"%>
 <%@page import="DTO.gameDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -57,6 +56,11 @@ https://templatemo.com/tm-559-zay-shop
 	border: none;
 	outline: none;
 }
+
+.card-body{
+	height: 220px !important;
+}
+
 </style>
 </head>
 
@@ -64,11 +68,11 @@ https://templatemo.com/tm-559-zay-shop
 	<!-- Start Top Nav -->
 	<%
 	memberDTO dto = (memberDTO) session.getAttribute("member");
-	ArrayList<gameDTO> game_recom = (ArrayList<gameDTO>)session.getAttribute("new_dto");
+	ArrayList<gameDTO> game_recom = (ArrayList<gameDTO>) session.getAttribute("new_dto");
 	//String game_list = (String)request.getAttribute("game_list");
 	//String[] array = game_list.split(",");
 	%>
-	
+
 	<!-- Start Top Nav -->
 	<nav
 		class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
@@ -204,18 +208,21 @@ https://templatemo.com/tm-559-zay-shop
 			<h1>이런 게임은 어떠세요??</h1>
 			<br> <br> <br>
 			<div class="row">
-				<%for(int i=0; ) %>
-				<div class="col-md-4" style="width: 25%;">
+				<%
+				for (int i = 0; i < 12; i++) {
+				%>
+				<div class="col-md-4" style="width: 33.3%;" align="center">
 					<div class="card mb-4 product-wap rounded-0">
 						<div class="card rounded-0">
-							<img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
+							<img class="card-img rounded-0 img-fluid" src="image/<%=game_recom.get(i).getImage() %>">
 
 						</div>
 						<div class="card-body">
-							<a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
+							<a href="game-single.jsp" class="h3 text-decoration-none"><%=game_recom.get(i).getGame_name() %></a>
+							<p></p>
 							<ul
-								class="w-100 list-unstyled d-flex justify-content-between mb-0">
-								<li>태그</li>
+								class="list-unstyled d-flex justify-content-center mb-1">
+								<li><%=game_recom.get(i).getGenre() %></li>
 								<li class="pt-2"><span
 									class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
 									<span
@@ -229,16 +236,26 @@ https://templatemo.com/tm-559-zay-shop
 								</li>
 							</ul>
 							<ul class="list-unstyled d-flex justify-content-center mb-1">
-								<li><i class="text-warning fa fa-star"></i> <i
-									class="text-warning fa fa-star"></i> <i
-									class="text-warning fa fa-star"></i> <i
-									class="text-muted fa fa-star"></i> <i
-									class="text-muted fa fa-star"></i></li>
+								<li>
+								<%for(int j=0; j<game_recom.get(i).getScore(); j++) {%>
+								<i class="text-warning fa fa-star"></i> 
+								<%} %>
+								<%for(int j=0; j<5-game_recom.get(i).getScore(); j++) {%>
+								<i class="text-muted fa fa-star"></i> 
+								<%} %>
+								</li>
 							</ul>
-							<p class="text-center mb-0">가격</p>
+							<%if(game_recom.get(i).getPrice()==0){ %>
+							<p class="text-center mb-0">무료</p>
+							<%}else{ %>
+							<p class="text-center mb-0">유료</p>
+							<%} %>
 						</div>
 					</div>
 				</div>
+				<%
+				}
+				%>
 			</div>
 		</div>
 	</div>
