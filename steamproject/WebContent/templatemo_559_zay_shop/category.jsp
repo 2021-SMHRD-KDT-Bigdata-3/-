@@ -166,14 +166,17 @@ https://templatemo.com/tm-559-zay-shop
 <%
     	request.setCharacterEncoding("UTF-8");	
     	String genre = request.getParameter("genre");
-    	
 			GameDAO dao = new GameDAO();	
 			ArrayList<gameDTO> dl = dao.gamegenre(genre);
+<<<<<<< HEAD
 			System.out.println(dl.size());
 			
 			realPriceDAO rpdao = new realPriceDAO();	
 			ArrayList<realPriceDTO> pl = rpdao.real(genre);
 			System.out.println(pl.size());
+=======
+			ArrayList<realPriceDTO> pl = rpdao.real(genre);
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
 		%>
            <div class="col-lg-9">
            <div class="row">
@@ -182,52 +185,55 @@ https://templatemo.com/tm-559-zay-shop
 					<br>
 					<br>
 					<br>
-					<table style="color: black; text-align: center; s">
-						<tr>
-							<th width="25%">이미지</th>
-							<th width="25%">게임이름</th>
-							<th width="25%">평점</th>
-							<th width="25%">가격</th>
-						</tr>
-						<tr>
-							<td colspan="4">
-								<div class="w-100 my-3 border-top"></div>
-							</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<!-- 여기서 반복문 쓰면댈듯? -->
-						<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
-							//int p = Integer.parseInt(request.getParameter('p'));
-							//p*15~(p+1)*15
-								for(int i =0; i<dl.size(); i++){
-								out.print("<tr>");
-								out.print("<td><img src='../templatemo_559_zay_shop/image/"+dl.get(i).getImage()+"'></td>");
-								out.print("<td>"+dl.get(i).getGame_name()+"</td>");
-								out.print("<td><ul class=\"list-unstyled d-flex justify-content-center mb-1\">");
-								out.print("<li style=\"width:150px\">");
-								for(int j=0; j<dl.get(i).getScore();j++){
-									out.print("<i class=\"text-warning fa fa-star\"></i>");
-								}
-								for(int z=0; z<5-dl.get(i).getScore(); z++){
-									out.print("<i class=\"text-muted fa fa-star\"></i>");
-								
-								}
-								out.print("<li>");
-								out.print("<ul></td>");
-								out.print("<td>"+pl.get(i).getReal_price()+"</td>");
-								out.print("</tr>");
 						
-					}
-					%>
-						<!-- 여기까지 -->
-					</table>
+							<table style="color: black; text-align: center; s">
+							<tr>
+								<th width="25%">이미지</th>
+								<th width="25%">게임이름</th>
+								<th width="25%">평점</th>
+								<th width="25%">가격</th>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<div class="w-100 my-3 border-top"></div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- 여기서 반복문 쓰면댈듯? -->
+							<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
+								//int p = Integer.parseInt(request.getParameter('p'));
+								//p*15~(p+1)*15
+									out.print("<form class='row' id='category'>");
+									for(int i =0; i<dl.size(); i++){
+									out.print("<tr>");
+									out.print("<td><img src='../templatemo_559_zay_shop/image/"+dl.get(i).getImage()+"'></td>");
+									out.print("<td><a href='../game_single?game_name="+dl.get(i).getGame_name()+"&genre="+dl.get(i).getGenre()+"' id='next1'>"+dl.get(i).getGame_name()+"</a></td>");
+									out.print("<td><ul class=\"list-unstyled d-flex justify-content-center mb-1\">");
+									out.print("<li style=\"width:150px\">");
+									for(int j=0; j<dl.get(i).getScore();j++){
+										out.print("<i class=\"text-warning fa fa-star\"></i>");
+									}
+									for(int z=0; z<5-dl.get(i).getScore(); z++){
+										out.print("<i class=\"text-muted fa fa-star\"></i>");
+									
+									}
+									out.print("<li>");
+									out.print("<ul></td>");
+									out.print("<td>"+pl.get(i).getReal_price()+"</td>");
+									out.print("</tr>");
+									out.print("</form>");
+								}
+								%>
+							<!-- 여기까지 -->
+							</table>
+					
 				</div>
-               
-                    </div>
-                </div>
-                </div>
+            	</div>
+        	</div>
+		</div>
+             	
 
         
     <!-- End Content -->
@@ -319,6 +325,7 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+
 </body>
 
 </html>
