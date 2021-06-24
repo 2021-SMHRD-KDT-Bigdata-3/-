@@ -103,7 +103,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기게임</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="board.jsp" >게시판</a>
@@ -157,7 +157,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="col-lg-3">
                 <!--<h1 class="h2 pb-4">카테고리</h1>-->
                         <p class="collapsed d-flex justify-content-between h3 text-decoration-none" >
-                            인기순위
+                            인기게임
                         </p>
             </div>
 
