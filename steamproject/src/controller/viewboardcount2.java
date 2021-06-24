@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import DAO.BoardDAO;
 
-@WebServlet("/viewboardcount")
-public class viewboardcount extends HttpServlet {
+@WebServlet("/viewboardcount2")
+public class viewboardcount2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,7 +23,7 @@ public class viewboardcount extends HttpServlet {
 		
 		
 		BoardDAO dao = new BoardDAO();
-		int num = dao.like(board_num);
+		int num = dao.bad(board_num);
 		System.out.println(num);
 		
 		if(num!=0) {

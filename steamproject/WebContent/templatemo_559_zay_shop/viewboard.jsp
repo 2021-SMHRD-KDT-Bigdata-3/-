@@ -139,9 +139,7 @@
 		 BoardDAO dao = new BoardDAO();
 		 boardDTO dto2 = dao.one_select(num);
 		 int num1 = dao.count(num);
- 	
-	
-	
+				
 	%>
 			
 				
@@ -175,7 +173,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td><a href = "viewboard.jsp"><button id = "btn20"class="btn btn-success" >추천</button></a></td>
+						<td><button name = "recom" class="btn1" onclick="location.href='../viewboardcount?num=<%=dto2.getBoard_num()%>'">좋아요!😋😋</button></td>
+						<td><button name = "recom" class="btn1" onclick="location.href='../viewboardcount2?num=<%=dto2.getBoard_num()%>'">싫어요!👿👿</button></td>
 						<td colspan="4" align="right"><a href="board.jsp" ><button class="btn btn-success">뒤로가기</button></a></td>
 					</tr>
 				</table>

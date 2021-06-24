@@ -22,6 +22,7 @@
 </head>
 <body>
 	<%
+	response.addHeader("Access-Control-Allow-Origin", "*");
 	memberDTO dto = (memberDTO) session.getAttribute("member");
 	%>
 	<!-- Start Top Nav -->
@@ -80,7 +81,8 @@
 
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navbar-light shadow">
-		<div class="container d-flex justify-content-between align-items-center">
+		<div
+			class="container d-flex justify-content-between align-items-center">
 
 			<a class="navbar-brand text-primary logo h1 align-self-center"
 				href="mainPage.jsp"> SUGE </a>
@@ -112,17 +114,17 @@
 					<div
 						class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
 					</div>
-					<form action = "../select">
-	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
-	                    <input type = "submit" value = "게임 검색">
-                    </form>
+					<form action="../select">
+						<input type="text" name="search" placeholder="게임 검색"> <input
+							type="submit" value="게임 검색">
+					</form>
 				</div>
 			</div>
 		</div>
 	</nav>
 	<br>
 	<br>
-	
+
 	<section>
 		<div class="row text-center pt-3">
 			<div class="col-lg-6 m-auto">
@@ -130,58 +132,45 @@
 			</div>
 		</div>
 		<div class="row" height="1500px">
+		<form class="row" height="1500px" id="search2">
 			<br> <br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					5. 당신은 복잡한 게임을 어떻게 생각하십니까?
-				</h4>
-				부정적 <input type="radio" name="lv" value="1"> &nbsp;
-				&nbsp; 그저그렇다 <input type="radio" name="lv" value="2"> &nbsp;
-				&nbsp; 긍정적 <input type="radio" name="lv" value="3">
+				<h4 align="center">5. 당신은 복잡한 게임을 어떻게 생각하십니까?</h4>
+				부정적 <input type="radio" name="lv" value="1"> &nbsp; &nbsp;
+				그저그렇다 <input type="radio" name="lv" value="2"> &nbsp; &nbsp;
+				긍정적 <input type="radio" name="lv" value="3">
 			</div>
-			<br> <br> <br>
-			<br> <br> <br>
-			
-			<br> <br>
+			<br> <br> <br> <br> <br> <br> <br>
+			<br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					6. 게임 선택할 때 후기에 많은 영향을 받습니까?
-				</h4>
+				<h4 align="center">6. 게임 선택할 때 후기에 많은 영향을 받습니까?</h4>
 				매우아니다 <input type="radio" name="score" value="1"> &nbsp;
-				&nbsp; 아니다 <input type="radio" name="score" value="2"> &nbsp;
-				&nbsp; 보통 <input type="radio" name="score" value="3"> &nbsp;
-				&nbsp; 그렇다 <input type="radio" name="score" value="4"> &nbsp;
-				&nbsp; 매우그렇다 <input type="radio" name="score" value="5">
+				&nbsp; 아니다 <input type="radio" name="score" value="2">
+				&nbsp; &nbsp; 보통 <input type="radio" name="score" value="3">
+				&nbsp; &nbsp; 그렇다 <input type="radio" name="score" value="4">
+				&nbsp; &nbsp; 매우그렇다 <input type="radio" name="score" value="5">
 			</div>
-			<br> <br> <br>
-			<br> <br> <br>
-			
-			<br> <br>
+			<br> <br> <br> <br> <br> <br> <br>
+			<br>
 			<div class="col-lg-6 m-auto" align="center" width="100%">
-				<h4 align="center">
-					7. 당신은 어떤 테마를 선호하십니까?
-				</h4>
-				19금 <input type="checkbox" name="graphic" value="19"> &nbsp;
-				&nbsp; SF <input type="checkbox" name="graphic" value="sf"> &nbsp;
-				&nbsp; 공포 <input type="checkbox" name="graphic" value="공포"> &nbsp;
-				&nbsp; 미스터리 <input type="checkbox" name="graphic" value="미스터리"> &nbsp;
-				&nbsp; 생존 <input type="checkbox" name="graphic" value="생존"> &nbsp;
-				&nbsp; 스포츠 <input type="checkbox" name="graphic" value="스포츠"> &nbsp;
-				&nbsp; 애니 <input type="checkbox" name="graphic" value="애니"> &nbsp;
-				&nbsp; 오픈월드 <input type="checkbox" name="graphic" value="오픈월드"> &nbsp;
-				&nbsp; 음악 <input type="checkbox" name="graphic" value="음악"> 
+				<h4 align="center">7. 당신은 어떤 테마를 선호하십니까?</h4>
+				19금 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				SF <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				공포 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				미스터리 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				생존 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				스포츠 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp;
+				애니 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				오픈월드 <input type="checkbox" name="thema" value="1"> &nbsp; &nbsp; 
+				음악 <input type="checkbox" name="thema" value="1">
 				<!-- 나중에 중간통록에서 묶어준다. -->
 			</div>
-			<br> <br> <br>
-			<br> <br> <br>
-			
+			<br> <br> <br> <br> <br> <br>
+
+	</form>
 		</div>
 		<div align="center">
-<<<<<<< HEAD
-			<button class="btn btn-success" style="width: 200px; height: 50px" onclick = "location.href = 'game_search3.jsp'">다음으로</button>
-=======
-			<button class="btn btn-success" style="width: 200px; height: 50px" onclick="location.href='game_search3.jsp' ">다음으로</button>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
+			<button id="next2" class="btn btn-success" style="width: 200px; height: 50px">다음으로</button>
 		</div>
 		<br>
 	</section>
@@ -256,9 +245,9 @@
 			</div>
 		</div>
 	</footer>
-	
-	
-	
+
+
+
 	<!-- Start Script -->
 	<script src="assets/js/jquery-1.11.0.min.js"></script>
 	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -271,7 +260,8 @@
 	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/templatemo.js"></script>
-	<script src="assets/js/custom.js"></script><!-- Start Script -->
+	<script src="assets/js/custom.js"></script>
+	<!-- Start Script -->
 	<script src="assets/js/jquery-1.11.0.min.js"></script>
 	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -284,8 +274,46 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/templatemo.js"></script>
 	<script src="assets/js/custom.js"></script>
-	
-	
-	
-	
+
+	<script>
+		$("#next2").click(function(event) {
+			// Get form         
+			var params = [];
+			for(var i=0; i<2; i++){
+				params.push($('#search2').serializeArray()[i])
+			}
+			var ckb = $('input:checkbox[name=thema]');
+			var arr = [];
+			for(var i=0; i <ckb.length; i++){
+				if($(ckb[i]).is(':checked')){
+					arr.push($(ckb[i]).val());
+				}else{
+					//params.push($(ckb[i]).val('0'));
+					arr.push('0');
+				}
+			}
+			for(var i=0; i<arr.length; i++){
+				params.push({'name':'thema'+i, 'value':arr[i]});
+			}
+			// Create an FormData object  
+			$.ajax({
+				type : "POST",
+				url : "http://localhost:9000/flask",
+				data : params,
+				success : function(data) {
+					window.location.href = data;
+				},
+
+				error : function(e) {
+					console.log("ERROR : ", e);
+					alert("fail");
+				}
+			});
+		});
+	</script>
+
+
+
+
+
 </body>

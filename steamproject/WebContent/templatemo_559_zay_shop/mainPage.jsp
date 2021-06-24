@@ -1,4 +1,4 @@
-<%@page import="DTO.memberDTO"%>
+	<%@  page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ https://templatemo.com/tm-559-zay-shop
 									<%}else{
 									//out.print("<a href='update.jsp'>개인정보수정</a>");
 									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
-									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">마이페이지</button>
+									<button class="btn btn-success" type="button" onclick="location.href='myPage.jsp' ">마이페이지</button>
 									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 								
 									<% }}

@@ -194,8 +194,8 @@
 				
 	    <div align = "right">
 	    	<form action = "../boardselect"> 
-	    	<input type = "text" name = "title_name">
-	    	<input type = "submit" value = "검색" class="btn btn-success">
+	    	<input type = "text" name = "title_name" placeholder = "게시글 검색">
+	    	<input type = "submit" value = "검색" class="btn btn-success" >
 	    	</form>
 	    	<br>
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
