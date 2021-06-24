@@ -138,10 +138,8 @@
 		request.setCharacterEncoding("UTF-8");	
 		 BoardDAO dao = new BoardDAO();
 		 boardDTO dto2 = dao.one_select(num);
-		
- 	
-	
-	
+		 int num1 = dao.count(num);
+				
 	%>
 			
 				
@@ -175,7 +173,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td><a href = "viewboard.jsp"><button class="btn btn-success">추천</button></a></td>
+						<td><button name = "recom" class="btn1" onclick="location.href='../viewboardcount?num=<%=dto2.getBoard_num()%>'">좋아요!😋😋</button></td>
+						<td><button name = "recom" class="btn1" onclick="location.href='../viewboardcount2?num=<%=dto2.getBoard_num()%>'">싫어요!👿👿</button></td>
 						<td colspan="4" align="right"><a href="board.jsp" ><button class="btn btn-success">뒤로가기</button></a></td>
 					</tr>
 				</table>
@@ -264,6 +263,30 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+    <script type="text/javascript">
+    	$('btn20').on('click',function(){
+    		$.ajax({
+    			// 같은 프로젝트 폴더 내부에 있기 때문에 servlet이 가지고 있는 mapping 값 사용 가능.
+    			url : 'viewboard',
+    			// 서버로부터 전송받은 데이터의 형식을 지정해주는 방법
+    			// POST 방식으로 json 구조를 전송할 때 에러가 뜨는 순간이 있을거다!
+    			// Json.tostringify(내가 전송할 json구조 데이터)
+    			
+    			dataType : 'json', //중요!!!
+    			success : function(res){
+    				alert('요청성공!');
+    			//res -> JSON Array형태로 구성이 되어 있다.for문 쓰면 object로 들어가기때문에 . 찍고 name부르면 이름나옴.
+    			// for-each문 역할을 하는 함수
+    			
+    			
+    			
+    			}
+    		});
+    		
+    		
+    		});
+    
+    </script>
 
 </body>
 </html>
