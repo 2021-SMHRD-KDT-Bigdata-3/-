@@ -43,9 +43,14 @@ public class writeboard extends HttpServlet {
 		// dao객체생성 후 , int cnt에 dao가 가진 기능중 write()안에 위에 만들어준 dto라는 생성자를 넣어줌.
 		BoardDAO dao = new BoardDAO();
 		int cnt = dao.write(dto);
-
+		
+		String afterPath = "C:\\Users\\smhrd\\git\\suge\\steamproject\\WebContent\\templatemo_559_zay_shop\\boardimage\\";
+		
 		if (cnt > 0) {
 			System.out.println("파일 업로드 성공");
+			System.out.println(savePath+"\\"+img);
+			System.out.println(afterPath+img);
+			dao.copyFilename(savePath+"\\"+img, afterPath+img);
 			response.sendRedirect("templatemo_559_zay_shop/board.jsp");
 		} else {
 			System.out.println("파일 업로드 실패");

@@ -1,5 +1,8 @@
 package DAO;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -396,6 +399,27 @@ public boardDTO one_select(int num) {
 			close();
 		}return num;
 	}
+	
+	//사진 저장하기
+	public void copyFilename(String beforePath, String afterPath) {
+        
+        File oriFile = new File(beforePath);
+        File copyfile = new File(afterPath);
+        
+        try {
+           FileInputStream fis = new FileInputStream(oriFile);
+           FileOutputStream fos = new FileOutputStream(copyfile);
+           
+           int fileByte = 0;
+           while((fileByte = fis.read()) != -1) {
+              fos.write(fileByte);
+           }
+           fis.close();
+           fos.close();
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+     }
 	
 
 }

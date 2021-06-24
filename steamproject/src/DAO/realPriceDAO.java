@@ -83,9 +83,9 @@ public class realPriceDAO {
 	public ArrayList<realPriceDTO> realname(String game_name) {
 		try {
 			conn();
-			String sql = "select d.real_price from game e ,game_price d where e.game_num = d.game_num and game_name like ? order by d.game_num ;";
+			String sql = "select e.game_num, d.real_price from game e ,game_price d where game_name like ? and e.game_num = d.game_num";
 			pst = conn.prepareStatement(sql);
-			pst.setString(1, game_name);
+			pst.setString(1, game_name+"%");
 			
 			rs = pst.executeQuery();
 			
