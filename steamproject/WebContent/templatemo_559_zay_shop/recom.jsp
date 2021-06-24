@@ -118,24 +118,32 @@
                 <h1 class="h1">그대를 위한 추천</h1>
             </div>
         </div>
+        <p></p><br>
         <div class="row" height="600px">
         	<div class="col-lg-6 m-auto">
                 <h4 align="center">몇가지 질문을 통해 당신과 알맞은 게임을 찾으세요.</h4> <br>
                 <h4 align="center">- 처음 이용하는 회원의 경우 '게임 찾기' 버튼을 눌러 시작해주세요.</h4>
                 <h4 align="center">- 이전에 사용하신 회원은 '기존 게임 추천'을 통해 다시 확인하실 수 있습니다. </h4>
-                <h4 align="center">- 새로 추천 받고 싶으시면 '게임 찾기' 버튼을 다시 눌러주세요. </h4>
-                <br><br><br>
+                <h4 align="center">- 새로 추천 받고 싶으시면 '게임 찾기' 버튼을 다시 눌러주세요. </h4><br>
+                <h4 align="center">(본 서비스는 로그인 후 이용하시길 바랍니다)</h4>
+                <br><br>
             </div>
         </div>
         <div align="center">
+        	<%if(dto==null){ %>
+        	<button class="btn btn-success warning" style="width:200px;height:50px">게임 찾기</button>
+        	<button class="btn btn-success warning" style="width:200px;height:50px">기존 게임 추천</button>
+        	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search1.jsp'">게임 찾기</button>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8087/steamproject/recombefore'">기존 게임 추천</button>
+        	<%} %>
         </div>
         <br><br>
     </section>
     
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
+    <div>
         <div class="container">
             <div class="row right" >
 
@@ -227,6 +235,11 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+    	$(".warning").on("click",function(){
+    		alert("로그인하시길 바랍니다.")
+    	})
+    </script>
     
 </body>
 </html>
