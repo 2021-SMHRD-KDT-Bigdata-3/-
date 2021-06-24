@@ -95,7 +95,7 @@
                             <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기게임</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="board.jsp" >게시판</a>
@@ -155,7 +155,7 @@
 					</tr>
 					<tr>
 						<td width="116px">작성자</td>
-						<td width="650px"><%=dto.getName() %></td>
+						<td width="650px"><%=dto2.getId() %></td>
 						<td width="116px">추천 수</td>
 						<td>
 						<%=dto2.getBoard_recom() %></td>
@@ -172,8 +172,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td><button name = "recom" class="btn1" onclick="location.href='../viewboardcount?num=<%=dto2.getBoard_num()%>'">좋아요!<br>😋😋</button></td>
-						<td><button name = "recom" class="btn1" onclick="location.href='../viewboardcount2?num=<%=dto2.getBoard_num()%>'">싫어요!<br>👿👿</button></td>
+						<td><button name = "recom" class="btn btn-outline-secondary" onclick="location.href='../viewboardcount?num=<%=dto2.getBoard_num()%>'">좋아요!<br>😋😋</button></td>
+						<td><button name = "recom" class="btn btn-outline-secondary" onclick="location.href='../viewboardcount2?num=<%=dto2.getBoard_num()%>'">싫어요!<br>👿👿</button></td>
 						<td colspan="4" align="right"><a href="board.jsp" ><button class="btn btn-success">뒤로가기</button></a></td>
 					</tr>
 				</table>

@@ -101,7 +101,7 @@
                             <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기게임</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="board.jsp" >게시판</a>
@@ -151,7 +151,7 @@
     	<%
 			BoardDAO dao = new BoardDAO();	
 			ArrayList<boardDTO> bl = dao.select();
-			request.setCharacterEncoding("UTF-8");	
+			request.setCharacterEncoding("UTF-8");
 		%>
 		
 			<div id="board" align = "center">
@@ -172,7 +172,7 @@
 						out.print("<td align=\"center\"><a href='../viewboardcount3?num="+bl.get(i).getBoard_num()+"'>"+bl.get(i).getTitle()+"</a></td>");
 						out.print("<td align=\"center\">"+bl.get(i).getBoard_date()+"</td>");
 						//out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>");- 게시글관리에서 추가
-						out.print("<td align=\"center\">"+bl.get(i).getCount_num()+"</td>");
+						out.print("<td align=\"center\">"+(bl.get(i).getCount_num()+1)+"</td>");
 						out.print("<td align=\"center\">"+bl.get(i).getBoard_recom()+"</td>");
 						out.print("</tr>");
 				

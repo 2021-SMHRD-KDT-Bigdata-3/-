@@ -24,10 +24,27 @@
 <link rel="stylesheet" href="assets/css/font.css">
 
 <style>
-	td > a:link { color: black; text-decoration: none;}
-	td > a:visited { color: black; text-decoration: none;}
-	td > a:hover { color: #0d6efd; text-decoration: underline;}
+td>a:link {
+	color: black;
+	text-decoration: none;
+}
+
+td>a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+td>a:hover {
+	color: #0d6efd;
+	text-decoration: underline;
+}
+
+input.pas {
+	border-color: white;
+}
 </style>
+
+
 </head>
 <body>
 	<%
@@ -106,7 +123,7 @@
 						</li>
 						<li class="nav-item"><a class="nav-link"
 							href="categoryMain.jsp">카테고리</a></li>
-						<li class="nav-item"><a class="nav-link" href="popChart.jsp">인기순위</a>
+						<li class="nav-item"><a class="nav-link" href="popChart.jsp">인기게임</a>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="board.jsp">게시판</a>
 						</li>
@@ -123,25 +140,23 @@
 							</div>
 						</div>
 					</div>
-					<form action = "../select">
-	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
-	                    <input type = "submit" value = "게임 검색">
-                    </form>
+					<form action="../select">
+						<input type="text" name="search" placeholder="게임 검색"> <input
+							type="submit" value="게임 검색">
+					</form>
 				</div>
 			</div>
 		</div>
 	</nav>
 
 	<!-- Start Content -->
-		
+
 	<%
-	
 	request.setCharacterEncoding("UTF-8");
 	String game_name = request.getParameter("game_name");
 	GameDAO dao = new GameDAO();
 	ArrayList<gameDTO> cl = dao.gamelist(game_name);
-			
-		%>
+	%>
 	<div class="container py-5">
 		<div class="row">
 
@@ -158,18 +173,18 @@
 
 				</div>
 			</div>
-			
-			
-			
+
+
+
 			<div class="col-lg-9">
-				<div class="row">
+				<div class="row table-responsive">
 					<div class="col-md-6 m-auto text-center">
-						<p style="font-size:20px;"><%=game_name %>에 대한 검색 결과</p>
+						<p style="font-size: 20px;"><%=game_name%>에 대한 검색 결과
+						</p>
 					</div>
-					<br>
-					<br>
-					<br>
-					<table style="color: black; text-align: center;">
+					<br> <br> <br>
+					<table
+						style="color: black; text-align: center; border: 0px !important;">
 						<tr>
 							<th width="25%">이미지</th>
 							<th width="25%">게임이름</th>
@@ -180,36 +195,45 @@
 							<td colspan="4">
 								<div class="w-100 my-3 border-top"></div>
 							</td>
-							<td></td>
-							<td></td>
-							<td></td>
 						</tr>
-						<!-- 여기서 반복문 쓰면댈듯? -->
-						<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
-							//int p = Integer.parseInt(request.getParameter('p'));
-							//p*15~(p+1)*15
-								for(int i =0; i<cl.size(); i++){
-								out.print("<tr>");
-								out.print("<td><img src='../templatemo_559_zay_shop/image/"+cl.get(i).getImage()+"'></td>");
-								out.print("<td>"+cl.get(i).getGame_name()+"</td>");
-								out.print("<td>"+cl.get(i).getGenre()+"</td>");
-								out.print("<td>"+cl.get(i).getPrice()+"</td>");
-								out.print("</tr>");
-						
-					}
-					%>
-						<!-- 여기까지 -->
 					</table>
 				</div>
-				<br>
+				<div class="row table-responsive">
+					<table class="table table-bordered table-hover paginated"
+						style="color: black; text-align: center;">
+						<tbody style="border-color: white;">
+							<!-- 여기서 반복문 쓰면댈듯? -->
+							<%
+							// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
+							//int p = Integer.parseInt(request.getParameter('p'));
+							//p*15~(p+1)*15
+							for (int i = 0; i < cl.size(); i++) {
+								out.print("<tr>");
+								out.print(
+								"<td style=\"width:25%;\"><img src='../templatemo_559_zay_shop/image/" + cl.get(i).getImage() + "'></td>");
+								out.print("<td style=\"width:25%;\">" + cl.get(i).getGame_name() + "</td>");
+								out.print("<td style=\"width:25%;\">" + cl.get(i).getGenre() + "</td>");
+								out.print("<td style=\"width:25%;\">" + cl.get(i).getPrice() + "</td>");
+								out.print("</tr>");
+
+							}
+							%>
+							<!-- 여기까지 -->
+						</tbody>
+					</table>
+
+				</div>
+			
+				<div class="pagination" id="pagination" align="right" style="display: block;">페이지 영역</div>
+				<br> <br>
 			</div>
 		</div>
 	</div>
 
 
 	<!-- Start Footer -->
-	<footer class="bg-dark" id="tempaltemo_footer">
-		<div class="container">
+	<footer class="bg-dark" id="tempaltemo_footer" style="width: 100%">
+		<div class="container" style="width: 100%">
 			<div class="row right">
 
 				<div class="col-md-4 pt-5">
@@ -222,7 +246,10 @@
 						</li>
 						<li><i class="fa fa-envelope fa-fw"></i> <a
 							class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
-							<br> <br> <br> <br></li>
+							<br>
+						<br>
+						<br>
+						<br></li>
 					</ul>
 				</div>
 				<!-- <div class="col-md-4 pt-5">
@@ -289,19 +316,6 @@
 		</div>
 
 	</footer>
-	<!-- End Footer -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -310,6 +324,10 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/templatemo.js"></script>
 	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/pasing.js"></script>
+
+
+
 
 </body>
 </html>

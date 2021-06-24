@@ -1,3 +1,5 @@
+<%@page import="DTO.gameDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -28,13 +30,19 @@ TemplateMo 559 Zay Shop
 https://templatemo.com/tm-559-zay-shop
 
 -->
+<style>
+.card-body{
+	height: 225px !important;
+}
+</style>
 </head>
 
 <body>
     <!-- Start Top Nav -->
-    <% memberDTO dto = (memberDTO)session.getAttribute("member");
-						
-							%>
+    <% 
+    memberDTO dto = (memberDTO)session.getAttribute("member");
+	ArrayList<gameDTO> game_list = (ArrayList<gameDTO>)session.getAttribute("dto");		
+	%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
                 <div class="container text-light">
@@ -95,7 +103,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기게임</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="board.jsp" >게시판</a>
@@ -149,174 +157,61 @@ https://templatemo.com/tm-559-zay-shop
             <div class="col-lg-3">
                 <!--<h1 class="h2 pb-4">카테고리</h1>-->
                         <p class="collapsed d-flex justify-content-between h3 text-decoration-none" >
-                            인기순위
+                            인기게임
                         </p>
             </div>
 
             <div class="col-lg-9">
                 
                 <div class="row">
-                     <div class="col-md-4" style="width: 33.3%;">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
-                                
-                            </div>
-                            <div class="card-body">
-                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>태그</li>
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">가격</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-md-4" style="width: 33.3%;">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
-                                
-                            </div>
-                            <div class="card-body">
-                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>태그</li>
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">가격</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                     <div class="col-md-4" style="width: 33.3%;">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
-                                
-                            </div>
-                            <div class="card-body">
-                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>태그</li>
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">가격</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-md-4" style="width: 33.3%;">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
-                                
-                            </div>
-                            <div class="card-body">
-                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>태그</li>
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">가격</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-md-4" style="width: 33.3%;">
-                        <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0" >
-                                <img class="card-img rounded-0 img-fluid" src="assets/img/1.jpg">
-                                
-                            </div>
-                            <div class="card-body">
-                                <a href="game-single.jsp" class="h3 text-decoration-none">게임이름</a>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>태그</li>
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">가격</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    
+                     <%
+				for (int i = 0; i < 15; i++) {
+				%>
+				<div class="col-md-4" style="width: 33.3%;" align="center">
+					<div class="card mb-4 product-wap rounded-0">
+						<div class="card rounded-0">
+							<img class="card-img rounded-0 img-fluid" src="image/<%=game_list.get(i).getImage() %>">
+
+						</div>
+						<div class="card-body">
+							<a href="game-single.jsp" class="h3 text-decoration-none"><%=game_list.get(i).getGame_name() %></a>
+							<p></p>
+							<ul
+								class="list-unstyled d-flex justify-content-center mb-1">
+								<li><%=game_list.get(i).getGenre() %></li>
+								<li class="pt-2"><span
+									class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+									<span
+									class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+								</li>
+							</ul>
+							<ul class="list-unstyled d-flex justify-content-center mb-1">
+								<li>
+								<%for(int j=0; j<game_list.get(i).getScore(); j++) {%>
+								<i class="text-warning fa fa-star"></i> 
+								<%} %>
+								<%for(int j=0; j<5-game_list.get(i).getScore(); j++) {%>
+								<i class="text-muted fa fa-star"></i> 
+								<%} %>
+								</li>
+							</ul>
+							<%if(game_list.get(i).getPrice()==0){ %>
+							<p class="text-center mb-0">무료</p>
+							<%}else{ %>
+							<p class="text-center mb-0">유료</p>
+							<%} %>
+						</div>
+					</div>
+				</div>
+				<%
+				}
+				%>
                     
                 </div>
                 </div>

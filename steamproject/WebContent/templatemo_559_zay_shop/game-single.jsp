@@ -116,7 +116,7 @@ https://templatemo.com/tm-559-zay-shop
 						</li>
 						<li class="nav-item"><a class="nav-link"
 							href="categoryMain.jsp">카테고리</a></li>
-						<li class="nav-item"><a class="nav-link" href="popChart.jsp">인기순위</a>
+						<li class="nav-item"><a class="nav-link" href="popChart.jsp">인기게임</a>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="board.jsp">게시판</a>
 						</li>

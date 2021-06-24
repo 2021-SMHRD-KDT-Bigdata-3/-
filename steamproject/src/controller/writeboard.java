@@ -31,7 +31,9 @@ public class writeboard extends HttpServlet {
 				new DefaultFileRenamePolicy());
 		// 마지막 객체는 동일한 이름의 파일이 있을때 막아주는 객체놈.
 
-		String id = multi.getParameter("id");
+		
+		
+		String id = request.getParameter("id");
 		String title = multi.getParameter("title");
 		String text = multi.getParameter("text");
 		String img = URLEncoder.encode(multi.getFilesystemName("img"), "utf-8"); // 파일 이름은 URL ENCODE로 안꺠지게 한글인코딩
@@ -41,9 +43,14 @@ public class writeboard extends HttpServlet {
 		// dao객체생성 후 , int cnt에 dao가 가진 기능중 write()안에 위에 만들어준 dto라는 생성자를 넣어줌.
 		BoardDAO dao = new BoardDAO();
 		int cnt = dao.write(dto);
-
+		
+		String afterPath = "C:\\Users\\smhrd\\git\\suge\\steamproject\\WebContent\\templatemo_559_zay_shop\\boardimage\\";
+		
 		if (cnt > 0) {
 			System.out.println("파일 업로드 성공");
+			System.out.println(savePath+"\\"+img);
+			System.out.println(afterPath+img);
+			dao.copyFilename(savePath+"\\"+img, afterPath+img);
 			response.sendRedirect("templatemo_559_zay_shop/board.jsp");
 		} else {
 			System.out.println("파일 업로드 실패");

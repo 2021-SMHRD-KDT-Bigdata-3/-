@@ -1,3 +1,5 @@
+<%@page import="DTO.gameDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Random"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -20,9 +22,11 @@
     <link rel="stylesheet" href="assets/css/font.css">
 </head>
 <body>
-	<% memberDTO dto = (memberDTO)session.getAttribute("member");
+	<% 
+	memberDTO dto = (memberDTO)session.getAttribute("member");
+	ArrayList<gameDTO> game_list = (ArrayList<gameDTO>)session.getAttribute("new_dto");
 						
-							%>
+	%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
                 <div class="container text-light">
@@ -87,7 +91,7 @@
                             <a class="nav-link" href="categoryMain.jsp" >카테고리</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popChart.jsp" >인기순위</a>
+                            <a class="nav-link" href="popChart.jsp" >인기게임</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="board.jsp" >게시판</a>
@@ -95,12 +99,10 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                    </div>
-                    <input type= "text" name = "search" placeholder = "게임 검색">
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
+                    <form action = "../select">
+	                    <input type= "text" name = "search" placeholder = "게임 검색"> 
+	                    <input type = "submit" value = "게임 검색">
+                    </form>
                 </div>
             </div>
             </div>
@@ -118,24 +120,36 @@
                 <h1 class="h1">그대를 위한 추천</h1>
             </div>
         </div>
+        <p></p><br>
         <div class="row" height="600px">
         	<div class="col-lg-6 m-auto">
                 <h4 align="center">몇가지 질문을 통해 당신과 알맞은 게임을 찾으세요.</h4> <br>
                 <h4 align="center">- 처음 이용하는 회원의 경우 '게임 찾기' 버튼을 눌러 시작해주세요.</h4>
                 <h4 align="center">- 이전에 사용하신 회원은 '기존 게임 추천'을 통해 다시 확인하실 수 있습니다. </h4>
-                <h4 align="center">- 새로 추천 받고 싶으시면 '게임 찾기' 버튼을 다시 눌러주세요. </h4>
-                <br><br><br>
+                <h4 align="center">- 새로 추천 받고 싶으시면 '게임 찾기' 버튼을 다시 눌러주세요. </h4><br>
+                <h4 align="center">(본 서비스는 로그인 후 이용하시길 바랍니다)</h4>
+                <br><br>
             </div>
         </div>
         <div align="center">
+        	<%if(dto==null){ %>
+        	<button class="btn btn-success warning" style="width:200px;height:50px">게임 찾기</button>
+        	<button class="btn btn-success warning" style="width:200px;height:50px">기존 게임 추천</button>
+        	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search1.jsp'">게임 찾기</button>
+        	<%if(game_list==null){ %>
+        	<button class="btn btn-success before" style="width:200px;height:50px">기존 게임 추천</button>
+        	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8087/steamproject/recombefore'">기존 게임 추천</button>
+        	<%} %>
+        	<%} %>
         </div>
         <br><br>
     </section>
     
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
+    <div>
         <div class="container">
             <div class="row right" >
 
@@ -227,6 +241,14 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+    	$(".warning").on("click",function(){
+    		alert("로그인하시길 바랍니다.")
+    	})
+    	$(".before").on("click",function(){
+    		alert("먼저 '게임 찾기'를 이용하시길 바랍니다.")
+    	})
+    </script>
     
 </body>
 </html>
