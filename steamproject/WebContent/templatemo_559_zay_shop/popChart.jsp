@@ -42,34 +42,31 @@ https://templatemo.com/tm-559-zay-shop
               		</div>
                 	<div>
                 	<%
-							if(dto != null){
-										out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
-							}else{
-								out.print("<h1>로그인이 필요합니다!</h1>");
-							}
-							%>
-                		<%
-								if(dto==null){
-									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
-									//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
-									%>
-									<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
-			                		<button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
+					if(dto != null){
+						out.print("<h1>"+dto.getName()+  "님 환영해요~😉");
+					}else{
+						out.print("<h1>로그인이 필요합니다!</h1>");
+					}
+					%>
+                	<%
+					if(dto==null){
+							//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+							//out.print("<button class='btn btn-success' type='button' onclick='location.href='join.jsp' '>회원가입</button>");
+					%>
+							<button class="btn btn-success" type="button" onclick="location.href='join.jsp' ">회원가입</button>
+			                <button class="btn btn-success" type="button" onclick="location.href='login.jsp' ">로그인</button>
 								
-								<% }else{
-									if(dto.getId().equals("admin")){
-										//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
-										<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">회원관리</button>
-										<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
-									<%}else{
-									//out.print("<a href='update.jsp'>개인정보수정</a>");
-									//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
-									<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
+					<% }else{
+							if(dto.getId().equals("admin")){
+								//out.print("<a href ='delete.jsp'>회원삭제</a>");%>
+								<button class="btn btn-success" type="button" onclick="location.href='guestmanage.jsp' ">회원관리</button>
+								<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
+							<%}else{
+								//out.print("<a href='update.jsp'>개인정보수정</a>");
+								//out.print("<a href='LogoutServiceCon.do'>로그아웃</a>");%>
+								<button class="btn btn-success" type="button" onclick="location.href='../logout' ">로그아웃</button>
 								
-									<% }}
-								%>
-								
-                		
+							<% }}%>
                 	</div>
                 </div>
     </nav>

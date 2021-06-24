@@ -16,7 +16,7 @@ public class logout extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		//"member"키를 가진 세션을 삭제
-		session.removeAttribute("member");
+		session.invalidate();
 		//session.invalidate();
 		
 		//main.jsp 로 이동
