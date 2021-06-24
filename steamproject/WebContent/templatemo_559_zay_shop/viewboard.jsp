@@ -155,7 +155,7 @@
 					</tr>
 					<tr>
 						<td width="116px">작성자</td>
-						<td width="650px"><%=dto2.getId() %></td>
+						<td width="650px"><%=dto.getName() %></td>
 						<td width="116px">추천 수</td>
 						<td>
 						<%=dto2.getBoard_recom() %></td>

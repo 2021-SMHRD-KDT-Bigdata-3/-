@@ -17,7 +17,6 @@ public class gameDTO {
 	private int group_num;
 	
 	
-	
 	public gameDTO(int game_num, String game_name, String genre, int graphic, String thema, int atmos, int multi,
 			int price, int lv, int playtime, int score, String image) {
 		super();
@@ -156,6 +155,7 @@ public class gameDTO {
 	public void setGroup_num(int group_num) {
 		this.group_num = group_num;
 	}
+	
 	
 	
 	

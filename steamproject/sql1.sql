@@ -1,1 +1,1 @@
-select * from GAME;
+select * from 
