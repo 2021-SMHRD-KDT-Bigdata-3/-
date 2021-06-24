@@ -168,15 +168,13 @@ https://templatemo.com/tm-559-zay-shop
     	String genre = request.getParameter("genre");
 			GameDAO dao = new GameDAO();	
 			ArrayList<gameDTO> dl = dao.gamegenre(genre);
-<<<<<<< HEAD
+
 			System.out.println(dl.size());
 			
 			realPriceDAO rpdao = new realPriceDAO();	
 			ArrayList<realPriceDTO> pl = rpdao.real(genre);
 			System.out.println(pl.size());
-=======
-			ArrayList<realPriceDTO> pl = rpdao.real(genre);
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-3/suge.git
+
 		%>
            <div class="col-lg-9">
            <div class="row">
