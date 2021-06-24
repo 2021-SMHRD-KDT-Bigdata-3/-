@@ -170,9 +170,9 @@ https://templatemo.com/tm-559-zay-shop
 			GameDAO dao = new GameDAO();	
 			realPriceDAO rpdao = new realPriceDAO();	
 			ArrayList<gameDTO> dl = dao.gamegenre(genre);
-			ArrayList<realPriceDTO> pl = rpdao.real(genre);
 			System.out.println(dl.size());
 			
+			ArrayList<realPriceDTO> pl = rpdao.real(genre);
 			System.out.println(pl.size());
 		%>
            <div class="col-lg-9">

@@ -1,3 +1,5 @@
+<%@page import="DTO.realPriceDTO"%>
+<%@page import="DAO.realPriceDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DAO.GameDAO"%>
 <%@page import="DTO.gameDTO"%>
@@ -140,6 +142,8 @@
 	String game_name = request.getParameter("game_name");
 	GameDAO dao = new GameDAO();
 	ArrayList<gameDTO> cl = dao.gamelist(game_name);
+	realPriceDAO rpdao = new realPriceDAO();
+	
 			
 		%>
 	<div class="container py-5">
@@ -193,6 +197,7 @@
 								out.print("<td><img src='../templatemo_559_zay_shop/image/"+cl.get(i).getImage()+"'></td>");
 								out.print("<td>"+cl.get(i).getGame_name()+"</td>");
 								out.print("<td>"+cl.get(i).getGenre()+"</td>");
+								
 								out.print("<td>"+cl.get(i).getPrice()+"</td>");
 								out.print("</tr>");
 						

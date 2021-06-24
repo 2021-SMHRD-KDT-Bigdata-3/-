@@ -250,6 +250,6 @@ public class MemberDAO {
 			e.printStackTrace();
 		}finally {
 			close();
-		}return ;
+		}return 1;
 	}
 }
