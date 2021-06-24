@@ -169,6 +169,7 @@ public class RecomDAO {
 				int playtime = rs.getInt("playtime");
 				int score = rs.getInt("score");
 				String image = rs.getString("image");
+				
 				game_dto = new gameDTO(game_num, game_name, genre, graphic, thema, atmos, multi, price, lv, playtime, score, image);
 				al.add(game_dto);
 			} 
