@@ -197,7 +197,9 @@
 	    	<input type = "submit" value = "검색" class="btn btn-success" >
 	    	</form>
 	    	<br>
+	    	<% if(dto != null){ %>
 	    	<button type = "button" class="btn btn-success" onclick="location.href='board2.jsp' ">글쓰기</button>
+	    	 <%}%>
 		</div>
 		<br>
     </div>
