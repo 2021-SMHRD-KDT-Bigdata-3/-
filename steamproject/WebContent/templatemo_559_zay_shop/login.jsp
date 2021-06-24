@@ -180,5 +180,9 @@
 
     </footer>
     <!-- End Footer -->
+<script src="assets/js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+	console.log("test");
+</script>
 </body>
 </html>
