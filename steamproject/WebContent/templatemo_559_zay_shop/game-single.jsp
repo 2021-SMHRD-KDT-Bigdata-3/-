@@ -1,3 +1,8 @@
+<%@page import="DTO.realPriceDTO"%>
+<%@page import="DAO.realPriceDAO"%>
+<%@page import="DTO.gameDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="DAO.GameDAO"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -38,8 +43,13 @@ https://templatemo.com/tm-559-zay-shop
 	<!-- Start Top Nav -->
 
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
-						
-							%>
+		ArrayList<gameDTO> game_dto = (ArrayList<gameDTO>)session.getAttribute("dto");
+		GameDAO dao = new GameDAO();	
+		realPriceDAO rpdao = new realPriceDAO();
+		String genre = (String)session.getAttribute("genre");
+		ArrayList<realPriceDTO> rp_dto = rpdao.real(genre);
+		
+	%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
                 <div class="container text-light">
@@ -157,7 +167,6 @@ https://templatemo.com/tm-559-zay-shop
 		</div>
 	</div>
 
-
 	<!-- Open Content -->
 	<section class="bg-light">
 		<div class="container pb-5">
@@ -165,8 +174,10 @@ https://templatemo.com/tm-559-zay-shop
 				<div class="col-lg-5 mt-5">
 					<div class="card mb-3">
 						<img class="card-img img-fluid"
-							src="assets/img/product_single_10.jpg" alt="Card image cap"
+						<%for(int i = 0; i < 1; i++) {%>
+							src="image/<%=game_dto.get(i).getImage() %>" alt="Card image cap"
 							id="product-detail">
+							<%} %>
 					</div>
 					
 				</div>
@@ -174,14 +185,18 @@ https://templatemo.com/tm-559-zay-shop
 				<div class="col-lg-7 mt-5">
 					<div class="card">
 						<div class="card-body">
-							<h1 class="h2">게임이름</h1>
-							<p class="h3 py-2">가격</p>
+						<%for(int i = 0; i < 1; i++) {%>
+							<h1 class="h2"><%=game_dto.get(i).getGame_name() %></h1>
+							<%} %>
+							
 							<p class="py-2">
-								<i class="fa fa-star text-warning"></i> <i
-									class="fa fa-star text-warning"></i> <i
-									class="fa fa-star text-warning"></i> <i
-									class="fa fa-star text-warning"></i> <i
-									class="fa fa-star text-secondary"></i> 
+							<%for(int i = 0; i < 1; i++) {
+								for(int j = 0; j < game_dto.get(i).getScore(); j++) {%>
+								<i class="text-warning fa fa-star"></i> 
+								<%} %>
+								<%for(int j = 0; j < 5-game_dto.get(i).getScore(); j++) {%>
+								<i class="text-muted fa fa-star"></i> 
+								<%}} %> 
 							</p>
 							<ul class="list-inline">
 								<li class="list-inline-item">
@@ -189,7 +204,9 @@ https://templatemo.com/tm-559-zay-shop
 								</li>
 								<li class="list-inline-item">
 									<p class="text-muted">
-										<strong>장르명</strong>
+									<%for(int i = 0; i < game_dto.size(); i++) {%>
+										<strong><%=game_dto.get(i).getGenre() %></strong>
+										<%} %>
 									</p>
 								</li>
 							</ul>
@@ -199,7 +216,9 @@ https://templatemo.com/tm-559-zay-shop
 								</li>
 								<li class="list-inline-item">
 									<p class="text-muted">
-										<strong>테마명</strong>
+									<%for(int i = 0; i < game_dto.size(); i++) {%>
+										<strong><%=game_dto.get(i).getThema() %></strong>
+										<%} %>
 									</p>
 								</li>
 							</ul>
@@ -209,7 +228,22 @@ https://templatemo.com/tm-559-zay-shop
 								</li>
 								<li class="list-inline-item">
 									<p class="text-muted">
-										<strong>?d</strong>
+									<%for(int i = 0; i < 1; i++) {
+										if(game_dto.get(i).getGraphic() == 1) {
+											out.print("<strong>");
+											out.print("저사양");
+											out.print("</strong>");
+										} else if(game_dto.get(i).getGraphic() == 2) {
+											out.print("<strong>");
+											out.print("중사양");
+											out.print("</strong>");
+										}  else {
+											out.print("<strong>");
+											out.print("고사양");
+											out.print("</strong>");
+										}
+									}
+									%>
 									</p>
 								</li>
 							</ul>
@@ -222,8 +256,10 @@ https://templatemo.com/tm-559-zay-shop
 							<form action="" method="GET" >
 								<div class="row pb-3" >
 									<div class="col d-grid" >
-										<button type="submit" class="btn btn-success btn-lg"
-											name="submit" value="buy" >사러가기</button>
+									<%for(int i = 0; i < 1; i++) {%>
+										<button type="button" class="btn btn-success btn-lg"
+										 onclick="location.href='https://store.steampowered.com/search/?term=<%=game_dto.get(i).getGame_name() %>'" >사러가기</button>
+									<%} %>
 									</div>
 								</div>
 							</form>

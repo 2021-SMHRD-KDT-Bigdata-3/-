@@ -63,6 +63,7 @@ public class recommand extends HttpServlet {
 		
 		session.setAttribute("new_dto", new_dto);
 		//request.setAttribute("game_list", game_list);
+
 		response.sendRedirect("templatemo_559_zay_shop/recomResult.jsp");
 
 		
