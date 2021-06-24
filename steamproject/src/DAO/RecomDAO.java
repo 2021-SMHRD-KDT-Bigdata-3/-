@@ -142,7 +142,7 @@ public class RecomDAO {
 	}
 	
 	//게임 불러오기
-	public ArrayList<gameDTO> game(int num) {
+	public gameDTO game(int num) {
 		try {
 			conn();
 
@@ -156,7 +156,7 @@ public class RecomDAO {
 			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
 			rs = pst.executeQuery();
 
-			while (rs.next()) {
+			if (rs.next()) {
 				int game_num = rs.getInt("game_num");
 				String game_name = rs.getString("game_name");
 				String genre = rs.getString("genre");
@@ -170,7 +170,6 @@ public class RecomDAO {
 				int score = rs.getInt("score");
 				String image = rs.getString("image");
 				game_dto = new gameDTO(game_num, game_name, genre, graphic, thema, atmos, multi, price, lv, playtime, score, image);
-				al.add(game_dto);
 			} 
 			
 
@@ -180,7 +179,7 @@ public class RecomDAO {
 		} finally {
 			close();
 		}
-		return al;
+		return game_dto;
 	}
 	
 	//추천게임 목록 가져오기
@@ -189,7 +188,7 @@ public class RecomDAO {
 		try {
 			conn();
 
-			String sql = "select * from game_recom where game_list=?";
+			String sql = "select * from game_recom where id=?";
 			// 3. sql문 실행객체 (PreparedStatement) 생성
 			pst = conn.prepareStatement(sql);
 
@@ -199,7 +198,7 @@ public class RecomDAO {
 			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
 			rs = pst.executeQuery();
 
-			while (rs.next()) {
+			if (rs.next()) {
 				result = rs.getString("game_list");
 			} 
 			
