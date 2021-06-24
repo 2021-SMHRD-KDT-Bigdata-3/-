@@ -1,3 +1,5 @@
+<%@page import="DTO.gameDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Random"%>
 <%@page import="DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -20,9 +22,11 @@
     <link rel="stylesheet" href="assets/css/font.css">
 </head>
 <body>
-	<% memberDTO dto = (memberDTO)session.getAttribute("member");
+	<% 
+	memberDTO dto = (memberDTO)session.getAttribute("member");
+	ArrayList<gameDTO> game_list = (ArrayList<gameDTO>)session.getAttribute("new_dto");
 						
-							%>
+	%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
                 <div class="container text-light">
@@ -135,7 +139,11 @@
         	<button class="btn btn-success warning" style="width:200px;height:50px">기존 게임 추천</button>
         	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search1.jsp'">게임 찾기</button>
+        	<%if(game_list==null){ %>
+        	<button class="btn btn-success before" style="width:200px;height:50px">기존 게임 추천</button>
+        	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8087/steamproject/recombefore'">기존 게임 추천</button>
+        	<%} %>
         	<%} %>
         </div>
         <br><br>
@@ -238,6 +246,9 @@
     <script>
     	$(".warning").on("click",function(){
     		alert("로그인하시길 바랍니다.")
+    	})
+    	$(".before").on("click",function(){
+    		alert("먼저 '게임 찾기'를 이용하시길 바랍니다.")
     	})
     </script>
     
