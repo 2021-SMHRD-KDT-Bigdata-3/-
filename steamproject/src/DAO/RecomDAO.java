@@ -212,6 +212,49 @@ public class RecomDAO {
 		return result;
 	}
 	
+	//랜덤 숫자를 넣어 군집화에서 정렬하여 나열
+	public ArrayList<gameDTO> poppular(int num) {
+		String result = "";
+		try {
+			conn();
+
+			String sql = "select * from game where group_num=? and playtime < 200 order by (playtime*0.1*score) desc";
+			// 3. sql문 실행객체 (PreparedStatement) 생성
+			pst = conn.prepareStatement(sql);
+
+			// 4. 바인드변수채우기.
+			pst.setInt(1, num);
+
+			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
+			rs = pst.executeQuery();
+
+			while (rs.next()) {
+				int game_num = rs.getInt("game_num");
+				String game_name = rs.getString("game_name");
+				String genre = rs.getString("genre");
+				int graphic = rs.getInt("graphic");
+				String thema = rs.getString("thema");
+				int atmos = rs.getInt("atmos");
+				int multi = rs.getInt("multi");
+				int price = rs.getInt("price");
+				int lv = rs.getInt("lv");
+				int playtime = rs.getInt("playtime");
+				int score = rs.getInt("score");
+				String image = rs.getString("image");
+				game_dto = new gameDTO(game_num, game_name, genre, graphic, thema, atmos, multi, price, lv, playtime, score, image);
+				al.add(game_dto);
+			} 
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("불러오기 실패");
+		} finally {
+			close();
+		}
+		return al;
+	}
+	
 	
 	
 	
