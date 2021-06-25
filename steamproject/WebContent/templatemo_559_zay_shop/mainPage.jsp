@@ -152,18 +152,8 @@ https://templatemo.com/tm-559-zay-shop
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/bg1.png" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center">
-                                <h1 class="h1"><b>스팀게임</b> 추천 서비스</h1>
-                                <h3 class="h2">저희 SUGE는 사용자의 성향을 분석해 게임을 추천 해드립니다!</h3>
-                                <p>
-                                상단의 추천 버튼을 눌러 게임을 추천받아 보세요!
-                                </p>
-                            </div>
-                        </div>
+                            <img class="img-fluid" src="./assets/img/mainP1.jpg" alt="">
+                       
                     </div>
                 </div>
             </div>
