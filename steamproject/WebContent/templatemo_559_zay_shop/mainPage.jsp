@@ -238,7 +238,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-0000-0000</a>
+                            <a class="text-decoration-none" href="tel:010-020-0340">062-610-2400</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>

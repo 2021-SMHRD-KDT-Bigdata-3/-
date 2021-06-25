@@ -172,7 +172,7 @@
 						<li><i class="fas fa-map-marker-alt fa-fw"></i> 광주광역시 남구 송암동
 							CGI센터</li>
 						<li><i class="fa fa-phone fa-fw"></i> <a
-							class="text-decoration-none" href="tel:010-020-0340">010-0000-0000</a>
+							class="text-decoration-none" href="tel:010-020-0340">062-610-2400</a>
 						</li>
 						<li><i class="fa fa-envelope fa-fw"></i> <a
 							class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
