@@ -166,14 +166,10 @@ https://templatemo.com/tm-559-zay-shop
 <%
     	request.setCharacterEncoding("UTF-8");	
     	String genre = request.getParameter("genre");
-			GameDAO dao = new GameDAO();	
-			ArrayList<gameDTO> dl = dao.gamegenre(genre);
-
-			System.out.println(dl.size());
-			
-			realPriceDAO rpdao = new realPriceDAO();	
-			ArrayList<realPriceDTO> pl = rpdao.real(genre);
-			System.out.println(pl.size());
+		GameDAO dao = new GameDAO();	
+		ArrayList<gameDTO> dl = dao.gamegenre(genre);
+		realPriceDAO rpdao = new realPriceDAO();	
+		ArrayList<realPriceDTO> pl = rpdao.real(genre);
 
 		%>
            <div class="col-lg-9">
