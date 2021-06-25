@@ -138,8 +138,10 @@
 		    	</div>
 		    	<div>
            	 	<br>
-           	 	<input type="button" class="btn btn-success" value="추천게임 목록" style="margin: auto; left:210px;" onClick="location.href = 'http://localhost:8089/steamproject/recombefore'">
-           	 	<input type="button" class="btn btn-success" value="회원 탈퇴" style="margin: auto; left:210px;" onClick="location.href='../Withdrawal?id=<%=dto.getId()%>'">
+
+           	 	<input type="button" class="btn btn-success" value="추천게임 목록" style="margin: auto; left:210px;" onClick="location.href='mainPage.jsp'">
+           	 	<input id="bans" type="button" class="btn btn-success" value="회원 탈퇴" style="margin: auto; left:210px;">
+
 		    	</div>
     </div>
     
@@ -152,6 +154,16 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    
+    <script>
+    	$('#bans').on('click',function(){
+    		if(!confirm("정말 탈퇴하시겠습니까?")){
+    			
+    		}else{
+    			window.location.href='../Withdrawal';
+    		}
+    	})
+    </script>
     
 </body>
 </html>

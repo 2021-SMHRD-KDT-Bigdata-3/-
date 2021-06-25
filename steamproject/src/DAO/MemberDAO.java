@@ -161,14 +161,15 @@ public class MemberDAO {
 			String sql = "delete game_member where id = ?";
 			// 3. sql문 실행객체 (PreparedStatement) 생성
 			pst = conn.prepareStatement(sql);
-
 			// 4. 바인드변수채우기.
 			pst.setString(1, id);
-
+			
 			// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
 			cnt = pst.executeUpdate();
-
 			if (cnt != 0) {
+				sql = "delete from game_board where id = ?";
+				pst.setString(1, id);
+				cnt = pst.executeUpdate();
 				System.out.println("회원탈퇴 성공");
 			}
 			
