@@ -37,7 +37,7 @@ public class recombefore extends HttpServlet {
 		}
 		
 		session.setAttribute("new_dto", al);
-		response.sendRedirect("http://localhost:8087/steamproject/templatemo_559_zay_shop/recomResult.jsp");
+		response.sendRedirect("http://localhost:8282/steamproject/templatemo_559_zay_shop/recomResult.jsp");
 	
 	}
 
