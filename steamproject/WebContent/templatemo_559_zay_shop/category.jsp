@@ -203,7 +203,7 @@ https://templatemo.com/tm-559-zay-shop
 									for(int i =0; i<dl.size(); i++){
 									out.print("<tr>");
 									out.print("<td><img src='../templatemo_559_zay_shop/image/"+dl.get(i).getImage()+"'></td>");
-									out.print("<td><a style=\"color:black;\" href='../game_single?game_name="+dl.get(i).getGame_name()+"&genre="+dl.get(i).getGenre()+"' id='next1'>"+dl.get(i).getGame_name()+"</a></td>");
+									out.print("<td><a style=\"color:black;\" href='../game_single?game_name="+dl.get(i).getGame_name()+"&genre="+dl.get(i).getGenre()+"'>"+dl.get(i).getGame_name()+"</a></td>");
 									out.print("<td><ul class=\"list-unstyled d-flex justify-content-center mb-1\">");
 									out.print("<li style=\"width:150px\">");
 									for(int j=0; j<dl.get(i).getScore();j++){

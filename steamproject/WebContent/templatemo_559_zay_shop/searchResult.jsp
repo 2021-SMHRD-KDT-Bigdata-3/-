@@ -221,7 +221,7 @@ input.pas {
 								out.print("<tr>");
 								out.print(
 								"<td style=\"width:25%;\"><img src='../templatemo_559_zay_shop/image/" + cl.get(i).getImage() + "'></td>");
-								out.print("<td style=\"width:25%;\">" + cl.get(i).getGame_name() + "</td>");
+								out.print("<td style=\"width:25%;\"><a href='../searchResult_game_single?game_name="+cl.get(i).getGame_name()+"'>" + cl.get(i).getGame_name() + "</a></td>");
 								out.print("<td style=\"width:25%;\">" + cl.get(i).getGenre() + "</td>");
 								out.print("<td style=\"width:25%;\">" + pl.get(i).getReal_price() + "</td>");
 								out.print("</tr>");
