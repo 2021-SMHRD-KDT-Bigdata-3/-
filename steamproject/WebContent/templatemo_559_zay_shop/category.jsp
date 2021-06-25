@@ -35,7 +35,9 @@ https://templatemo.com/tm-559-zay-shop
 -->
 </head>
 <style>
-	
+	input.pas {
+	border-color: white;
+}
 </style>
 <body>
     <!-- Start Top Nav -->
@@ -180,7 +182,8 @@ https://templatemo.com/tm-559-zay-shop
 					<br>
 					<br>
 						
-							<table class="table table-bordered table-hover paginated" style="color: black; text-align: center; s">
+							<table class="table table-bordered table-hover paginated" style="color: black; text-align: center;">
+							<tbody style="border-color: white;">
 							<tr>
 								<th width="25%">이미지</th>
 								<th width="25%">게임이름</th>
@@ -191,9 +194,6 @@ https://templatemo.com/tm-559-zay-shop
 								<td colspan="4">
 									<div class="w-100 my-3 border-top"></div>
 								</td>
-								<td></td>
-								<td></td>
-								<td></td>
 							</tr>
 							<!-- 여기서 반복문 쓰면댈듯? -->
 							<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
