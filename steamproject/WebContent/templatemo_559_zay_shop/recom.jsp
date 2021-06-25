@@ -149,14 +149,13 @@
         <br><br>
     </section>
     
-    <!-- Start Footer -->
+ <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
-    <div>
         <div class="container">
             <div class="row right" >
 
                 <div class="col-md-4 pt-5" >
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">SUGE</h2>
+                    <h2 class="h2 text border-bottom pb-3 border-light logo wht" >SUGE</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -169,20 +168,20 @@
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
                             <a class="text-decoration-none" href="mailto:info@company.com">suge@suge.com</a>
-							<br><br><br><br>
+							<br><br>
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Index</h2>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">CONTENTS</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">추천</a></li>
-                        <li><a class="text-decoration-none" href="#">카테고리</a></li>
-                        <li><a class="text-decoration-none" href="#">인기순위</a></li>
-                        <li><a class="text-decoration-none" href="#">게시판</a></li>
+                        <li><a class="text-decoration-none" href="recom.jsp">추천</a></li>
+                        <li><a class="text-decoration-none" href="categoryMain.jsp">카테고리</a></li>
+                        <li><a class="text-decoration-none" href="popChart.jsp">인기순위</a></li>
+                        <li><a class="text-decoration-none" href="board.jsp">게시판</a></li>
                        
                     </ul>
-                </div>  -->
+                </div>  
 
                 
 
@@ -210,7 +209,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
 
         <div class="w-100 bg-black py-3">
             <div class="container">
@@ -226,7 +224,7 @@
         </div>
 
     </footer>
-    <!-- End Footer -->    
+    <!-- End Footer -->
     
 
 
