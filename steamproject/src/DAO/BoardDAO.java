@@ -92,7 +92,7 @@ public class BoardDAO {
 		try {
 			conn();
 
-			String sql = "select * from game_board order by board_date";
+			String sql = "select * from game_board order by board_date desc";
 			pst = conn.prepareStatement(sql);
 
 			rs = pst.executeQuery();
