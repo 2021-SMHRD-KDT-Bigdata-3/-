@@ -160,17 +160,8 @@ https://templatemo.com/tm-559-zay-shop
             <div class="carousel-item">
                 <div class="container">
                     <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/bg2.png" alt="">
-                        </div>
+                            <img class="img-fluid" src="./assets/img/mainP2.jpg" alt="">
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">머신러닝 기반 학습</h1>
-                                <h3 class="h2">게임을 추천해주는 머신러닝</h3>
-                                <p>
-                                    100개의 게임중 20개를 고르면 그것의 특성에 기반해 공통점을 찾아 게임을 추천해 드립니다.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,17 +169,8 @@ https://templatemo.com/tm-559-zay-shop
             <div class="carousel-item">
                 <div class="container">
                     <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/bg2.png" alt="">
-                        </div>
+                            <img class="img-fluid" src="./assets/img/mainP3.jpg" alt="">
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">비지도학습 이용</h1>
-                                <h3 class="h2">배우진 않았지만 사용했습니다.</h3>
-                                <p>
-                                	PCA를 활용한 비지도학습을 사용했습니다 !
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
