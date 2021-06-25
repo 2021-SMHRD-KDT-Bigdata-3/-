@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.MemberDAO;
 
@@ -19,9 +20,14 @@ public class Withdrawal extends HttpServlet {
 		System.out.println(id);
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.delete(id);
+		HttpSession session = request.getSession();
+		//"member"키를 가진 세션을 삭제
+		session.invalidate();
+		//session.invalidate();
+		
 
 		if (cnt > 0) {
-			response.sendRedirect("templatemo_559_zay_shop/myPage.jsp");
+			response.sendRedirect("templatemo_559_zay_shop/mainPage.jsp");
 		}
 		
 	

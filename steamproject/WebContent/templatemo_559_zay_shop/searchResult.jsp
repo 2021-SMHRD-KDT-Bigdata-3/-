@@ -1,4 +1,3 @@
-<%@page import="jdk.internal.misc.FileSystemOption"%>
 <%@page import="DTO.realPriceDTO"%>
 <%@page import="DAO.realPriceDAO"%>
 <%@page import="java.util.ArrayList"%>
