@@ -101,7 +101,7 @@
     <br>
     <br>
     <div align="center">
-		<form action = '../join' method = "post" >	   
+		<form action = '../pwchange' method = "post" >	   
 		 	<br>
 		    <h1 style="color:navy; font-weight: 900;">비밀번호 변경</h1>
 		    <br>
@@ -109,17 +109,17 @@
 		    		
 		    	</h4>
 		    	<div>
-			    	<input type="password" name = "pw" style="text-align:center; width:300px; height:30px; ">
+			    	<input type="password" name = "pw2" style="text-align:center; width:300px; height:30px; ">
 		    		<br>
 		    		<span>현재 비밀번호</span>
 		    		<br>
-		    		<input type="password" name="pwdCheck"style="text-align:center; width:300px; height:30px; "> 
+		    		<input type="password" name="pw"style="text-align:center; width:300px; height:30px; "> 
 		    		<br>
 		    		<span>변경할 비밀번호</span>
 		    	</div>
 		    	<br>
 		    	<div>
-		    		<input class="btn btn-success" type="submit" value = "비밀번호 변경하기">
+		    		<input id = "pwchange" class="btn btn-success" type="submit" value = "비밀번호 변경하기">
 		    		<input class="btn btn-success" type="button" value = "뒤로가기" onClick="location.href='myPage.jsp'">
 		    		<br>
 		    		<br>
@@ -138,6 +138,13 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+    $('#pwchange').on({'click',function(){
+    	
+    	alert("비밀번호가 변경되었습니다.");
+    	
+    }})
+    </script>
     
 </body>
 </html>

@@ -238,18 +238,32 @@ public class MemberDAO {
 		  }
 		  return result;
 		 }
-	public int pwchange(String pw) {
+	public int pwchange(String pw, String pw2) {
 		try {
 		conn();
 		String sql = "update game_member set pw = ? where pw = ?";
 		
+		pst = conn.prepareStatement(sql);
+
+		// 4. 바인드변수채우기.
+		pst.setString(1, pw);
+		pst.setString(2, pw2);
 		
+		
+
+		// 5. cnt만들고 변동이 있어야만 가게끔 만들자.
+		cnt = pst.executeUpdate();
+
+		if (cnt != 0) {
+			System.out.println("회원탈퇴 성공");
+		}
 		
 		
 		}catch(Exception e) {
+			System.out.println("회원탈퇴 실패");
 			e.printStackTrace();
 		}finally {
 			close();
-		}return 1;
+		}return cnt;
 	}
 }
