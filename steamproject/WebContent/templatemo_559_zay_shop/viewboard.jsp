@@ -168,7 +168,7 @@
 						<td colspan="4">
 							<%=dto2.getText() %>
 							<br>
-							<img src="../img/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
+							<img src="boardimage/<%=dto2.getImg()%>" width = "200px" height = "200px"><br>
 						</td>
 					</tr>
 					<tr>
