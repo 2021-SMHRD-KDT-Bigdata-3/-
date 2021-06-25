@@ -138,8 +138,10 @@
 		    	</div>
 		    	<div>
            	 	<br>
+
            	 	<input type="button" class="btn btn-success" value="추천게임 목록" style="margin: auto; left:210px;" onClick="location.href='mainPage.jsp'">
            	 	<input id="bans" type="button" class="btn btn-success" value="회원 탈퇴" style="margin: auto; left:210px;">
+
 		    	</div>
     </div>
     
