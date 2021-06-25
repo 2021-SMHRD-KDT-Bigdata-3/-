@@ -152,7 +152,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row p-5">
-                            <img class="img-fluid" src="./assets/img/mainP1.jpg" alt="">
+                            <img class="img-fluid" src="./assets/img/mainP11.jpg" alt="">
                        
                     </div>
                 </div>
