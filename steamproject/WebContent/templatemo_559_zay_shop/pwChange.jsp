@@ -139,11 +139,7 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-    $('#pwchange').on({'click',function(){
-    	
-    	alert("비밀번호가 변경되었습니다.");
-    	
-    }})
+   docu
     </script>
     
 </body>

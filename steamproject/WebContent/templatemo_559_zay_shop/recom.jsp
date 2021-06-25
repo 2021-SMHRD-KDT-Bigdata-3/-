@@ -140,7 +140,7 @@
         	<%if(game_list==null){ %>
         	<button class="btn btn-success before" style="width:200px;height:50px">기존 게임 추천</button>
         	<%}else{ %>
-        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8087/steamproject/recombefore'">기존 게임 추천</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8089/steamproject/recombefore'">기존 게임 추천</button>
         	<%} %>
         	<%} %>
         </div>
