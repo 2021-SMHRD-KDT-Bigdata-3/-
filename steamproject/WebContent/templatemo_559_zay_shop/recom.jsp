@@ -137,11 +137,11 @@
         	<button class="btn btn-success warning" style="width:200px;height:50px">기존 게임 추천</button>
         	<%}else{ %>
         	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'game_search1.jsp'">게임 찾기</button>
-        	<%if(game_list==null){ %>
+        	<%if(game_list==null && dto==null){ %>
         	<button class="btn btn-success before" style="width:200px;height:50px">기존 게임 추천</button>
         	<%}else{ %>
 
-        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = 'http://localhost:8282/steamproject/recombefore'">기존 게임 추천</button>
+        	<button class="btn btn-success" style="width:200px;height:50px" onclick = "location.href = '../recombefore'">기존 게임 추천</button>
 
         	<%} %>
         	<%} %>
