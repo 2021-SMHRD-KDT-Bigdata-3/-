@@ -1,3 +1,5 @@
+<%@page import="DTO.boardDTO"%>
+<%@page import="DAO.BoardDAO"%>
 <%@page import="DTO.realPriceDTO"%>
 <%@page import="DAO.realPriceDAO"%>
 <%@page import="java.util.ArrayList"%>
