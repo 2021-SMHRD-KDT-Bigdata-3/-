@@ -27,7 +27,7 @@ public class recommand extends HttpServlet {
 		String num = "";
 		HttpSession session = request.getSession();
 		memberDTO member = (memberDTO)session.getAttribute("member");
-
+		
 		int group = Integer.parseInt(request.getParameter("group"));
 
 		System.out.println(group);
@@ -63,7 +63,7 @@ public class recommand extends HttpServlet {
 		
 		session.setAttribute("new_dto", new_dto);
 		//request.setAttribute("game_list", game_list);
-
+//		session.setAttribute("game_name", new_dto.get(group).getGame_name());
 		response.sendRedirect("templatemo_559_zay_shop/recomResult.jsp");
 
 		

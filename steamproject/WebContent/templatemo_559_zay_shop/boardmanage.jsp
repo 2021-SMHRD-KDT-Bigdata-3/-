@@ -195,7 +195,7 @@
 						out.print("<td>"+bl.get(i).getTitle()+"</td>");
 						out.print("<td>"+bl.get(i).getId()+"</td>");
 						out.print("<td>"+bl.get(i).getBoard_date()+"</td>");
-						out.print("<td><a href='../deleteview?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>"); 
+						out.print("<td><a href='../deleteviewmanager?num="+bl.get(i).getBoard_num()+"'>삭제</a></td>"); 
 						out.print("</tr>");
 				
 			}

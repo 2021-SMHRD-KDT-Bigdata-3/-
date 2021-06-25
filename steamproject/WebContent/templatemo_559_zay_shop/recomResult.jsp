@@ -218,7 +218,7 @@ https://templatemo.com/tm-559-zay-shop
 
 						</div>
 						<div class="card-body">
-							<a href="game-single.jsp" class="h3 text-decoration-none"><%=game_recom.get(i).getGame_name() %></a>
+							<a href="../recom_game_single?game_name=<%=game_recom.get(i).getGame_name() %>" class="h3 text-decoration-none"><%=game_recom.get(i).getGame_name() %></a>
 							<p></p>
 							<ul
 								class="list-unstyled d-flex justify-content-center mb-1">

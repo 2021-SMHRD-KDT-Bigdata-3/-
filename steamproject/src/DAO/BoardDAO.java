@@ -288,18 +288,18 @@ public boardDTO one_select(int num) {
 		return dto;
 	}
 	// 게시글 사용자 아이디로 검색.
-	public boardDTO id_select(String id) {
+	public ArrayList<boardDTO> id_select(String id) {
 		try {
 		
 		conn();
 
-		String sql = "select * from game_board where id like '?%'";
+		String sql = "select * from game_board where id = ?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, id);
 
 		rs = pst.executeQuery();
 
-		if (rs.next()) {
+		while (rs.next()) {
 			int num = rs.getInt("board_num");
 			String title = rs.getString("title");
 			String text = rs.getString("text");
@@ -309,9 +309,7 @@ public boardDTO one_select(int num) {
 			int board_recom = rs.getInt("board_recom");
 			dto = new boardDTO(num, id, title,text,img,date, count_num, board_recom);
 			System.out.println("게시물 보기 성공!");
-			
-		} else {
-			System.out.println("게시물 보기 실패!");
+			bl.add(dto);
 			
 		}
 		
@@ -319,8 +317,9 @@ public boardDTO one_select(int num) {
 		e.printStackTrace();
 	} finally {
 		close();
-	}return dto;
+	}return bl;
 	}
+	
 	public int count(int board_num) {
 		int num = 0;
 		try {

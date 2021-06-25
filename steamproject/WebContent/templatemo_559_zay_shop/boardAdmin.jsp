@@ -39,6 +39,7 @@
 <body>
 	<!-- Start Top Nav -->
 	<% memberDTO dto = (memberDTO)session.getAttribute("member");
+	
 						
 							%>
     <!-- Start Top Nav -->
@@ -142,10 +143,9 @@
 					</div>
 					<div class="container">
 						<%
-							BoardDAO dao = new BoardDAO();
-							ArrayList<boardDTO> bl = dao.select();
-	
-								%>
+						BoardDAO dao = new BoardDAO();
+						ArrayList<boardDTO> bl = dao.id_select(dto.getId());
+						%>
 		
 			<div id="board" align = "center">
 				<table id = "list" class="table table-striped" border="1px">

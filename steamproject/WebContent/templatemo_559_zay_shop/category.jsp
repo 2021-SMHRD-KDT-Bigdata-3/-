@@ -35,7 +35,9 @@ https://templatemo.com/tm-559-zay-shop
 -->
 </head>
 <style>
-	
+	input.pas {
+	border-color: white;
+}
 </style>
 <body>
     <!-- Start Top Nav -->
@@ -182,7 +184,8 @@ https://templatemo.com/tm-559-zay-shop
 					<br>
 					<br>
 						
-							<table class="table table-bordered table-hover paginated" style="color: black; text-align: center; s">
+							<table class="table table-bordered table-hover paginated" style="color: black; text-align: center;">
+							<tbody style="border-color: white;">
 							<tr>
 								<th width="25%">이미지</th>
 								<th width="25%">게임이름</th>
@@ -193,9 +196,6 @@ https://templatemo.com/tm-559-zay-shop
 								<td colspan="4">
 									<div class="w-100 my-3 border-top"></div>
 								</td>
-								<td></td>
-								<td></td>
-								<td></td>
 							</tr>
 							<!-- 여기서 반복문 쓰면댈듯? -->
 							<%// 테이블을 보여줄대 행과 열을 테이블 길이만큼 만들어야하므로 for문 작성
@@ -205,7 +205,7 @@ https://templatemo.com/tm-559-zay-shop
 									for(int i =0; i<dl.size(); i++){
 									out.print("<tr>");
 									out.print("<td><img src='../templatemo_559_zay_shop/image/"+dl.get(i).getImage()+"'></td>");
-									out.print("<td><a style=\"color:black;\" href='../game_single?game_name="+dl.get(i).getGame_name()+"&genre="+dl.get(i).getGenre()+"' id='next1'>"+dl.get(i).getGame_name()+"</a></td>");
+									out.print("<td><a style=\"color:black;\" href='../game_single?game_name="+dl.get(i).getGame_name()+"&genre="+dl.get(i).getGenre()+"'>"+dl.get(i).getGame_name()+"</a></td>");
 									out.print("<td><ul class=\"list-unstyled d-flex justify-content-center mb-1\">");
 									out.print("<li style=\"width:150px\">");
 									for(int j=0; j<dl.get(i).getScore();j++){

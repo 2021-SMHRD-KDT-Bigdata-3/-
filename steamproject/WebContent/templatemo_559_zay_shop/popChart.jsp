@@ -1,3 +1,4 @@
+<%@page import="DAO.GameDAO"%>
 <%@page import="DTO.gameDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DTO.memberDTO"%>
@@ -42,6 +43,7 @@ https://templatemo.com/tm-559-zay-shop
     <% 
     memberDTO dto = (memberDTO)session.getAttribute("member");
 	ArrayList<gameDTO> game_list = (ArrayList<gameDTO>)session.getAttribute("dto");		
+	GameDAO dao = new GameDAO();
 	%>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -174,7 +176,7 @@ https://templatemo.com/tm-559-zay-shop
 
 						</div>
 						<div class="card-body">
-							<a href="game-single.jsp" class="h3 text-decoration-none"><%=game_list.get(i).getGame_name() %></a>
+							<a href="../popChart_game_single?game_name=<%=game_list.get(i).getGame_name() %>" class="h3 text-decoration-none"><%=game_list.get(i).getGame_name() %></a>
 							<p></p>
 							<ul
 								class="list-unstyled d-flex justify-content-center mb-1">
